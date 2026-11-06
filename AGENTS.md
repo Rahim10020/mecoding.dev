@@ -1,93 +1,226 @@
-# Agents.md – Instructions for AI coding agents
+# Agents.md — Instructions for AI coding agents
 
 ## Project Overview
 
-This is a personal/creative portfolio website built with **Astro + Tailwind CSS**.
-The design is heavily inspired by the Kelo Framer template (minimal, monochrome, editorial, lots of whitespace).
+**mecoding** is a personal portfolio built with **Astro + Tailwind CSS**.
+The visual direction is inspired by the Kelo Framer template: monochrome,
+editorial, generous whitespace, strong typography.
+
+- Brand wordmark: **mecoding**
+- Language (v1): **English only** — the structure should stay ready for i18n later
+- Scope (v1): **Home + Projects + About**
+- Contact lives inside the About page (like Kelo), not on a separate route
 
 Primary goals:
 
-- Extremely lightweight
+- Extremely lightweight (no client framework by default)
 - Excellent SEO
 - Clean, modern, editorial aesthetic (black & white, strong typography)
 
 ## Tech Stack
 
-- Framework: Astro (latest)
-- Styling: Tailwind CSS
-- Package manager: pnpm
-- Language: TypeScript (preferred)
-- Deployment target: Static (Cloudflare Pages / Netlify / Vercel)
+- Framework: Astro 7 (static output)
+- Styling: Tailwind CSS v4 (CSS-first `@theme` config)
+- Language: TypeScript 6 (strict) — `astro check` does not support TS 7 yet
+- Package manager: pnpm 12
+- Image tooling: `sharp` (devDependency, also used by Astro)
+- Deployment target: static (Cloudflare Pages / Netlify / Vercel)
 
-## Core Rules (must follow)
+## Design System Contract
 
-1. **Always prefer official / up-to-date documentation**
-   - Astro: https://docs.astro.build
-   - Tailwind: https://tailwindcss.com/docs
-   - Never invent APIs or outdated patterns.
+These rules are not suggestions. Do not introduce values outside this system
+without explicit approval.
 
-2. **Keep the site extremely light**
-   - Prefer pure `.astro` components.
-   - Only use client-side JavaScript (React/Vue/Svelte islands) when absolutely necessary.
-   - Avoid unnecessary libraries.
+### Colors
 
-3. **Design System (Kelo-inspired)**
-   - Colors: Almost exclusively black (`#000`) and white (`#fff`)
-   - Typography: Clean sans-serif, strong hierarchy, generous whitespace
-   - Layout: Editorial / magazine style, lots of breathing room
-   - Avoid colorful designs, gradients, or heavy decorations unless explicitly requested
+Only one hue: black `#171717` on white `#FFFFFF`.
 
-4. **File & Folder Structure**
-   - Components go in `src/components/`
-   - Layouts in `src/layouts/`
-   - Pages in `src/pages/`
-   - Global styles in `src/styles/global.css`
-   - Prefer small, focused components over large monolithic files
+```text
+black       #171717
+black-90    black @ 90%
+black-80    black @ 80%
+black-70    black @ 70%
+black-60    black @ 60%
+black-50    black @ 50%
+black-40    black @ 40%
+black-30    black @ 30%
+black-20    black @ 20%
+black-10    black @ 10%
+black-5     black @ 5%
+white       #FFFFFF
+```
 
-5. **Code Quality**
-   - Use TypeScript when possible
-   - Write clean, readable, and maintainable code
-   - Prefer semantic HTML
-   - Follow Astro best practices (Content Collections if we add projects later)
-   - Keep accessibility in mind (proper headings, alt texts, contrast)
+Usage:
 
-6. **What NOT to do**
-   - Do not add heavy animation libraries by default
-   - Do not introduce new major dependencies without asking
-   - Do not change the overall design direction without explicit instruction
-   - Do not use outdated Astro or Tailwind syntax
+- Body copy: `text-black` or `text-black-80`
+- Secondary copy: `text-black-60` minimum (≈ 4.6:1 on white)
+- `text-black-50` only for large text or decorative content
+- Hairlines and borders: `border-black-10`
+- Subtle surfaces: `bg-black-5`
+- Inverted sections: `bg-black text-white`, secondary copy `text-white/60`
+
+**Never write raw hex values in components.** Always use the Tailwind tokens.
+
+### Typography
+
+- Family: **Google Sans Flex**, self-hosted only. No Google Fonts CDN.
+- Tokens: `text-display`, `text-headline`, `text-title`, `text-body-lg`,
+  `text-body`, `text-label`
+- Weights available: **300 → 800** (variable `wght`)
+- Optical sizing: variable `opsz` 14 → 96, enabled with `font-optical-sizing: auto`
+- Labels are uppercase with tracking: `text-label uppercase`
+- One `<h1>` per page, headings follow document order
+
+### Layout
+
+- Content width: `max-w-content` (1200px), via `Container`
+- Page width: `max-w-page` (1920px)
+- Page gutter: `px-page` (20px → 40px)
+- Vertical rhythm: `py-section` for sections, `gap-block` / `space-y-block`
+  for blocks inside a section
+- Default border width is 1px; no shadows; no gradients; no decorative radii.
+  Pills use `rounded-full`.
+
+### Motion
+
+- Tokens: `ease-kelo` (expo-out) and `ease-soft` (in-out)
+- Durations: 150–600ms
+- Animate `transform` and `opacity` only (avoid layout properties)
+- `prefers-reduced-motion` is handled globally in `global.css`; do not
+  circumvent it
+- Client JS is limited to: mobile menu, local clock, project carousel.
+  Everything else must be CSS
+
+## Typography Pipeline
+
+The source is a 3.7 MB variable TTF. It must never be served directly.
+
+- Script: `scripts/build-fonts.sh` (`pnpm fonts`)
+- Tooling: `uv run --with fonttools --with brotli` (no Node dependency)
+- Pinned axes: `ROND=0`, `slnt=0`, `wdth=100`
+- Kept axes: `wght` 300–800, `opsz` 14–96
+- Subsets: latin (88 KB) and latin-ext (46 KB), with `unicode-range`
+- Output: `public/fonts/*.woff2` + `OFL.txt`
+- The latin file is preloaded in `src/layouts/Layout.astro`
+
+If a new weight or glyph range is genuinely needed, update the script and
+regenerate. Do not hand-edit the generated files.
+
+## Icons
+
+- Location: `src/components/icons/*.astro`
+- Each icon accepts `size`, `class`, `title`
+- Stroke and fill use `currentColor`; color is inherited from the parent
+- Decorative icons are `aria-hidden="true"` by default; pass `title` to expose
+  a label when the icon carries meaning on its own
+- Do not add an icon until a component needs it
+
+## Assets
+
+- Logos: `src/assets/images/logo{16,32,64,128}.svg`, used through `Logo.astro`
+- Placeholder: `src/assets/images/image_placeholder.svg`, used through
+  `Placeholder.astro`
+- Favicons are generated from the logo source:
+  `pnpm icons` → `favicon.svg`, `favicon.ico` (16/32/48), `apple-touch-icon.png`
+- Project images are placeholders for now. When real assets arrive, put them in
+  `src/assets/images/projects/` and let Astro process them
+
+## Architecture
+
+```text
+src/
+├── assets/images/        logos + placeholder
+├── components/
+│   ├── icons/            SVG icon components (currentColor)
+│   ├── layout/           Container, Section
+│   ├── sections/         page sections (populated in phase 2+)
+│   └── ui/               Logo, Placeholder, buttons, cards…
+├── content/projects/     project markdown (schema in src/content.config.ts)
+├── data/site.ts          identity, nav, socials, contact, location
+├── layouts/Layout.astro  SEO, fonts, favicons, skip link, main landmark
+├── pages/                routes
+├── styles/global.css     font-face + @theme tokens + base
+└── content.config.ts     projects collection schema
+```
+
+Rules:
+
+- `pages/` only composes; no business content inline
+- `sections/` owns page-level composition
+- `ui/` owns reusable primitives
+- Copy lives in `src/data/` or `src/content/`, not hardcoded in components
+- Import alias: `@/*` → `src/*`
+
+## Code Conventions
+
+- `.astro` components by default. React/Vue/Svelte requires explicit approval
+- Props typed with `interface Props`, no `any`
+- Semantic HTML first; `class:list` for conditional classes
+- Comments in French, identifiers in English
+- Prefer `const` and small focused components
+- Use `Astro.props` destructuring with defaults
+- Images always have `width`/`height`; `loading="lazy"` below the fold,
+  `fetchpriority="high"` for the LCP image
+
+## Content & SEO
+
+- Projects: markdown in `src/content/projects/`, validated by
+  `src/content.config.ts`. Required: `title`, `order`, `category`,
+  `description`, `role`, `platform`, `year`
+- `featured: true` marks projects for the home selection
+- Identity, nav, socials, email and location live in `src/data/site.ts`
+- Each page passes `title` and `description` to `Layout.astro`
+- `site` is set in `astro.config.mjs`; sitemap is generated automatically
+- `/styleguide` is internal: `noindex`, excluded from the sitemap and robots
+- No lorem ipsum and no placeholder copy in production
 
 ## Useful Commands
 
-- `pnpm dev` → start development server
-- `pnpm build` → build for production
-- `pnpm preview` → preview production build
-- `pnpm astro add <integration>` → add integrations
+- `pnpm dev` → development server
+- `pnpm build` → production build
+- `pnpm preview` → preview the production build
+- `pnpm check` → Astro + TypeScript diagnostics
+- `pnpm fonts` → regenerate `public/fonts/*.woff2`
+- `pnpm icons` → regenerate favicons from the logo
+- `pnpm astro add <integration>` → add an integration
 
-## Current Status
+## Development Server
 
-- Project just initialized with Astro + Tailwind
-- Goal: Build a clean portfolio inspired by https://kelo-wbs.framer.website/
+Start it in background mode:
 
-## Development
-
-When starting the dev server, use background mode:
-
-```
+```sh
 astro dev --background
 ```
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Manage it with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+## Definition of Done
+
+- `pnpm check` and `pnpm build` pass
+- Responsive at 360 / 768 / 1200 / 1920
+- Keyboard navigation works, focus is visible
+- `prefers-reduced-motion` is respected
+- Lighthouse mobile: Performance ≥ 95, Accessibility 100, SEO 100
+- No new dependency without approval
+- No raw hex, no inline copy blocks, no client JS outside the allowed list
+
+## What NOT to do
+
+- Do not add a heavy animation library (GSAP, Framer Motion, etc.)
+- Do not introduce a client framework for static content
+- Do not change the palette, type scale or layout direction without approval
+- Do not use outdated Astro or Tailwind syntax
+- Do not modify the provided logo SVGs
+- Do not hand-edit the generated `public/fonts/*.woff2`; regenerate them with
+  `pnpm fonts`
 
 ## Documentation
 
 Full documentation: https://docs.astro.build
 
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- [Routing](https://docs.astro.build/en/guides/routing/)
+- [Astro components](https://docs.astro.build/en/basics/astro-components/)
+- [Framework components](https://docs.astro.build/en/guides/framework-components/)
+- [Content collections](https://docs.astro.build/en/guides/content-collections/)
+- [Styling & Tailwind](https://docs.astro.build/en/guides/styling/)
+- [Internationalization](https://docs.astro.build/en/guides/internationalization/)

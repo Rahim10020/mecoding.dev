@@ -9,11 +9,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "check": "astro check",
+    "fonts": "bash scripts/build-fonts.sh",
+    "icons": "node scripts/generate-icons.mjs",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.3.5",
     "astro": "^7.4.7",
     "tailwindcss": "^4.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "sharp": "^0.35.5",
+    "typescript": "^6.0.3"
   }
 }

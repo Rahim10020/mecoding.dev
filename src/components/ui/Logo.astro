@@ -1,0 +1,31 @@
+---
+import logo16 from "@/assets/images/logo16.svg";
+import logo32 from "@/assets/images/logo32.svg";
+import logo64 from "@/assets/images/logo64.svg";
+import logo128 from "@/assets/images/logo128.svg";
+
+const logos = {
+  16: logo16,
+  32: logo32,
+  64: logo64,
+  128: logo128,
+} as const;
+
+interface Props {
+  size?: keyof typeof logos;
+  class?: string;
+  alt?: string;
+}
+
+const { size = 32, class: className, alt = "mecoding" } = Astro.props;
+const logo = logos[size];
+---
+
+<img
+  src={logo.src}
+  width={logo.width}
+  height={logo.height}
+  alt={alt}
+  class={className}
+  decoding="async"
+/>

@@ -1,3 +1,10 @@
+overrides:
+  # @astrojs/astro2tsx (via @astrojs/check) déclare @emnapi/core 1.11.3 mais
+  # laisse pnpm choisir @emnapi/runtime 2.0.0-beta.2 pour le peer de
+  # @napi-rs/wasm-runtime : les deux API sont incompatibles et l'import plante.
+  # On aligne le runtime sur la même branche 1.x.
+  '@napi-rs/wasm-runtime@1.2.4>@emnapi/runtime': 1.11.3
+
 minimumReleaseAgeExclude:
   - '@astrojs/internal-helpers@0.13.1'
   - '@astrojs/markdown-satteri@0.4.7'

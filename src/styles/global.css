@@ -1,1 +1,150 @@
 @import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/*  Google Sans Flex — auto-hébergée                                          */
+/*  Générée par `pnpm fonts` depuis le TTF variable fourni.                   */
+/*  Axes conservés : wght 300-800, opsz 14-96.                                */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Design tokens                                                             */
+/* -------------------------------------------------------------------------- */
+
+@theme {
+  /* Couleurs ------------------------------------------------------------- */
+  --color-white: #ffffff;
+  --color-black: #171717;
+
+  --color-black-5: rgb(23 23 23 / 0.05);
+  --color-black-10: rgb(23 23 23 / 0.1);
+  --color-black-20: rgb(23 23 23 / 0.2);
+  --color-black-30: rgb(23 23 23 / 0.3);
+  --color-black-40: rgb(23 23 23 / 0.4);
+  --color-black-50: rgb(23 23 23 / 0.5);
+  --color-black-60: rgb(23 23 23 / 0.6);
+  --color-black-70: rgb(23 23 23 / 0.7);
+  --color-black-80: rgb(23 23 23 / 0.8);
+  --color-black-90: rgb(23 23 23 / 0.9);
+
+  /* Typographie ---------------------------------------------------------- */
+  --font-sans: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+
+  --text-display: clamp(3rem, 7vw, 6.5rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.03em;
+  --text-display--font-weight: 500;
+
+  --text-headline: clamp(2.25rem, 4.5vw, 4rem);
+  --text-headline--line-height: 1.02;
+  --text-headline--letter-spacing: -0.025em;
+  --text-headline--font-weight: 500;
+
+  --text-title: clamp(1.5rem, 2.5vw, 2.25rem);
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.02em;
+  --text-title--font-weight: 500;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+
+  --text-label: 0.75rem;
+  --text-label--line-height: 1;
+  --text-label--letter-spacing: 0.08em;
+  --text-label--font-weight: 500;
+
+  /* Rythme --------------------------------------------------------------- */
+  --spacing-page: clamp(1.25rem, 4vw, 2.5rem);
+  --spacing-section: clamp(5rem, 12vw, 10rem);
+  --spacing-block: clamp(2.5rem, 5vw, 4rem);
+
+  /* Largeurs ------------------------------------------------------------- */
+  --container-page: 120rem; /* 1920px */
+  --container-content: 75rem; /* 1200px */
+
+  /* Mouvement ------------------------------------------------------------ */
+  --ease-kelo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Base                                                                      */
+/* -------------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-body text-black antialiased;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Les hairlines du design system sont en black-10 par défaut. */
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-black-10);
+  }
+
+  ::selection {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Les ancres ne doivent pas passer sous le header fixe. */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Container from "@/components/layout/Container.astro";
+import Logo from "@/components/ui/Logo.astro";
+import { site } from "@/data/site";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="flex min-h-svh flex-col">
+    <header class="py-6">
+      <Container class="flex items-center gap-3">
+        <Logo size={32} />
+        <span class="text-title lowercase tracking-[-0.04em]">{site.name}</span>
+      </Container>
+    </header>
+
+    <div class="flex flex-1 items-center">
+      <Container>
+        <p class="text-label uppercase text-black-60">Portfolio — 2026</p>
+
+        <h1 class="mt-6 max-w-4xl text-display">
+          You have an idea. Let's make it something people will want to use.
+        </h1>
+
+        <p class="mt-8 max-w-xl text-body-lg text-black-60">
+          I design and code products that make the web simple, intuitive, and alive.
+        </p>
+      </Container>
+    </div>
+
+    <footer class="py-6">
+      <Container
+        class="flex flex-col gap-2 border-t border-black-10 pt-6 text-label uppercase text-black-60 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <span>{site.author}</span>
+        <span>{site.location.city}, {site.location.country}</span>
+      </Container>
+    </footer>
+  </div>
 </Layout>

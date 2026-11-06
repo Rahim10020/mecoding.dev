@@ -1,0 +1,30 @@
+---
+import placeholder from "@/assets/images/image_placeholder.svg";
+
+interface Props {
+  alt?: string;
+  class?: string;
+  width?: number;
+  height?: number;
+  loading?: "lazy" | "eager";
+}
+
+const {
+  alt = "",
+  class: className,
+  width = 360,
+  height = 300,
+  loading = "lazy",
+} = Astro.props;
+---
+
+<img
+  src={placeholder.src}
+  width={width}
+  height={height}
+  alt={alt}
+  loading={loading}
+  decoding="async"
+  aria-hidden={alt ? undefined : "true"}
+  class:list={["h-auto w-full object-cover", className]}
+/>

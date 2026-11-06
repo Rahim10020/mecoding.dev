@@ -1,0 +1,265 @@
+---
+import Container from "@/components/layout/Container.astro";
+import Section from "@/components/layout/Section.astro";
+import Logo from "@/components/ui/Logo.astro";
+import Placeholder from "@/components/ui/Placeholder.astro";
+
+import ArrowUp from "@/components/icons/ArrowUp.astro";
+import ArrowDown from "@/components/icons/ArrowDown.astro";
+import ArrowLeft from "@/components/icons/ArrowLeft.astro";
+import ArrowRight from "@/components/icons/ArrowRight.astro";
+import ChevronLeft from "@/components/icons/ChevronLeft.astro";
+import ChevronRight from "@/components/icons/ChevronRight.astro";
+import Menu from "@/components/icons/Menu.astro";
+import Close from "@/components/icons/Close.astro";
+import Plus from "@/components/icons/Plus.astro";
+import Minus from "@/components/icons/Minus.astro";
+import ExternalLink from "@/components/icons/ExternalLink.astro";
+import Share from "@/components/icons/Share.astro";
+import Asterisk from "@/components/icons/Asterisk.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Instagram from "@/components/icons/Instagram.astro";
+import WhatsApp from "@/components/icons/WhatsApp.astro";
+
+import Layout from "@/layouts/Layout.astro";
+
+const palette = [
+  { name: "black", value: "#171717", className: "bg-black" },
+  { name: "black-90", value: "90%", className: "bg-black-90" },
+  { name: "black-80", value: "80%", className: "bg-black-80" },
+  { name: "black-70", value: "70%", className: "bg-black-70" },
+  { name: "black-60", value: "60%", className: "bg-black-60" },
+  { name: "black-50", value: "50%", className: "bg-black-50" },
+  { name: "black-40", value: "40%", className: "bg-black-40" },
+  { name: "black-30", value: "30%", className: "bg-black-30" },
+  { name: "black-20", value: "20%", className: "bg-black-20" },
+  { name: "black-10", value: "10%", className: "bg-black-10" },
+  { name: "black-5", value: "5%", className: "bg-black-5" },
+  { name: "white", value: "#FFFFFF", className: "bg-white" },
+];
+
+const typeScale = [
+  { token: "text-display", className: "text-display", sample: "mecoding" },
+  {
+    token: "text-headline",
+    className: "text-headline",
+    sample: "Designer and coder",
+  },
+  { token: "text-title", className: "text-title", sample: "Selected work" },
+  {
+    token: "text-body-lg",
+    className: "text-body-lg",
+    sample: "I design and code products that make the web simple.",
+  },
+  {
+    token: "text-body",
+    className: "text-body",
+    sample: "The quick brown fox jumps over the lazy dog.",
+  },
+  { token: "text-label", className: "text-label uppercase", sample: "About" },
+];
+
+const interfaceIcons = [
+  { name: "ArrowUp", Component: ArrowUp },
+  { name: "ArrowDown", Component: ArrowDown },
+  { name: "ArrowLeft", Component: ArrowLeft },
+  { name: "ArrowRight", Component: ArrowRight },
+  { name: "ChevronLeft", Component: ChevronLeft },
+  { name: "ChevronRight", Component: ChevronRight },
+  { name: "Menu", Component: Menu },
+  { name: "Close", Component: Close },
+  { name: "Plus", Component: Plus },
+  { name: "Minus", Component: Minus },
+  { name: "ExternalLink", Component: ExternalLink },
+  { name: "Share", Component: Share },
+  { name: "Asterisk", Component: Asterisk },
+];
+
+const brandIcons = [
+  { name: "GitHub", Component: GitHub },
+  { name: "LinkedIn", Component: LinkedIn },
+  { name: "Instagram", Component: Instagram },
+  { name: "WhatsApp", Component: WhatsApp },
+];
+---
+
+<Layout title="Styleguide — mecoding" noindex>
+  <div class="py-16">
+    <Container>
+      <p class="text-label uppercase text-black-60">Internal</p>
+      <h1 class="mt-4 text-headline">Styleguide</h1>
+      <p class="mt-4 max-w-xl text-black-60">
+        Bench de validation des fondations : couleurs, typographie, rythme,
+        icônes et assets. Page non indexée.
+      </p>
+    </Container>
+  </div>
+
+  <Section labelledby="colors-title">
+    <Container>
+      <h2 id="colors-title" class="text-title">Colors</h2>
+      <p class="mt-2 text-body text-black-60">
+        Une seule teinte, le noir <code>#171717</code>, déclinée en opacités.
+      </p>
+
+      <ul class="mt-8 grid grid-cols-2 gap-px bg-black-10 sm:grid-cols-3 lg:grid-cols-4">
+        {
+          palette.map((color) => (
+            <li class="bg-white p-4">
+              <div class:list={["h-20 w-full border border-black-10", color.className]} />
+              <p class="mt-3 font-mono text-label uppercase">{color.name}</p>
+              <p class="text-label text-black-60">{color.value}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-8 grid gap-px bg-black-10 sm:grid-cols-2">
+        <div class="bg-white p-6">
+          <p class="text-label uppercase text-black-60">On white</p>
+          <p class="mt-4 text-title">Black on white</p>
+          <p class="mt-2 text-black-60">Secondary copy stays readable.</p>
+        </div>
+        <div class="bg-black p-6">
+          <p class="text-label uppercase text-white/60">On black</p>
+          <p class="mt-4 text-title text-white">White on black</p>
+          <p class="mt-2 text-white/60">Secondary copy stays readable.</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section labelledby="type-title" class="border-t border-black-10">
+    <Container>
+      <h2 id="type-title" class="text-title">Typography</h2>
+      <p class="mt-2 text-body text-black-60">
+        Google Sans Flex, auto-hébergée. Axes <code>wght</code> et
+        <code>opsz</code>.
+      </p>
+
+      <dl class="mt-8 divide-y divide-black-10 border-y border-black-10">
+        {
+          typeScale.map((type) => (
+            <div class="grid gap-4 py-6 lg:grid-cols-[10rem_1fr] lg:items-baseline">
+              <dt class="font-mono text-label uppercase text-black-60">
+                {type.token}
+              </dt>
+              <dd class={type.className}>{type.sample}</dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        {[300, 400, 500, 600, 700].map((weight) => (
+          <p style={`font-weight: ${weight}`} class="text-body-lg">
+            {weight} — Design, code, and the details between them.
+          </p>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section labelledby="rhythm-title" class="border-t border-black-10">
+    <Container>
+      <h2 id="rhythm-title" class="text-title">Rhythm & layout</h2>
+
+      <div class="mt-8 space-y-4">
+        <div class="flex items-center gap-4">
+          <span class="w-28 font-mono text-label uppercase text-black-60">page</span>
+          <div class="h-8 flex-1 bg-black-10">
+            <div class="h-full bg-black" style="width: 2.5rem" />
+          </div>
+          <span class="font-mono text-label text-black-60">20 → 40px</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-28 font-mono text-label uppercase text-black-60">section</span>
+          <div class="h-8 flex-1 bg-black-10">
+            <div class="h-full bg-black" style="width: 5rem" />
+          </div>
+          <span class="font-mono text-label text-black-60">80 → 160px</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-28 font-mono text-label uppercase text-black-60">block</span>
+          <div class="h-8 flex-1 bg-black-10">
+            <div class="h-full bg-black" style="width: 2.5rem" />
+          </div>
+          <span class="font-mono text-label text-black-60">40 → 64px</span>
+        </div>
+      </div>
+
+      <p class="mt-8 text-body text-black-60">
+        Contenu : <code>max-w-content</code> (1200px). Page :
+        <code>max-w-page</code> (1920px).
+      </p>
+    </Container>
+  </Section>
+
+  <Section labelledby="icons-title" class="border-t border-black-10">
+    <Container>
+      <h2 id="icons-title" class="text-title">Icons</h2>
+      <p class="mt-2 text-body text-black-60">
+        Composants Astro, couleur héritée via <code>currentColor</code>.
+      </p>
+
+      <h3 class="mt-8 text-label uppercase text-black-60">Interface</h3>
+      <ul class="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+        {
+          interfaceIcons.map(({ name, Component }) => (
+            <li class="flex flex-col items-center gap-3 border border-black-10 p-6">
+              <Component size={20} />
+              <span class="font-mono text-label text-black-60">{name}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <h3 class="mt-10 text-label uppercase text-black-60">Brands</h3>
+      <ul class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {
+          brandIcons.map(({ name, Component }) => (
+            <li class="flex flex-col items-center gap-3 border border-black-10 p-6">
+              <Component size={24} />
+              <span class="font-mono text-label text-black-60">{name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </Section>
+
+  <Section labelledby="assets-title" class="border-t border-black-10">
+    <Container>
+      <h2 id="assets-title" class="text-title">Logos & placeholder</h2>
+
+      <div class="mt-8 flex flex-wrap items-end gap-8">
+        {[16, 32, 64, 128].map((size) => (
+          <div class="flex flex-col items-center gap-3">
+            <Logo size={size as 16 | 32 | 64 | 128} />
+            <span class="font-mono text-label text-black-60">{size}px</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 grid gap-8 sm:grid-cols-2">
+        <div>
+          <p class="mb-3 text-label uppercase text-black-60">Placeholder 360×300</p>
+          <Placeholder alt="Project preview placeholder" />
+        </div>
+        <div>
+          <p class="mb-3 text-label uppercase text-black-60">In a 4:3 frame</p>
+          <div class="aspect-4/3 overflow-hidden bg-black-5">
+            <Placeholder class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <footer class="border-t border-black-10 py-8">
+    <Container class="text-label uppercase text-black-60">
+      mecoding — internal styleguide
+    </Container>
+  </footer>
+</Layout>

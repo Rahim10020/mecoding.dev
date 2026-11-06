@@ -1,46 +1,90 @@
-# Astro Starter Kit: Basics
+# mecoding
+
+Personal portfolio of **Rahim ALI** — web developer and UX/UI designer based in
+Lomé, Togo.
+
+Monochrome, editorial, typography-first. Built with Astro and Tailwind CSS v4,
+with almost no client-side JavaScript.
+
+## Stack
+
+- [Astro 7](https://docs.astro.build) — static output
+- [Tailwind CSS v4](https://tailwindcss.com/docs) — CSS-first configuration
+- TypeScript 6 (strict)
+- pnpm
+
+## Getting started
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm install
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The site runs at `http://localhost:4321`.
 
-## 🚀 Project Structure
+```sh
+pnpm build     # production build
+pnpm preview   # preview the build
+pnpm check     # Astro + TypeScript diagnostics
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+## Structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+src/
+├── assets/images/        logos + image placeholder
+├── components/
+│   ├── icons/            inline SVG icons (currentColor)
+│   ├── layout/           Container, Section
+│   ├── sections/         page sections
+│   └── ui/               Logo, Placeholder, primitives
+├── content/projects/     project entries (markdown)
+├── data/site.ts          identity, nav, socials, contact
+├── layouts/Layout.astro  SEO, fonts, favicons, skip link
+├── pages/                routes
+└── styles/global.css     typography, design tokens, base styles
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Design system
 
-## 🧞 Commands
+A single black (`#171717`) on white, declined in opacity steps from
+`black-5` to `black-90`. Typography is set with **Google Sans Flex** and six
+tokens: `text-display`, `text-headline`, `text-title`, `text-body-lg`,
+`text-body`, `text-label`.
 
-All commands are run from the root of the project, from a terminal:
+Full rules live in [`AGENTS.md`](./AGENTS.md). An internal
+[`/styleguide`](src/pages/styleguide.astro) page renders the palette, type
+scale, spacing, icons and assets. It is `noindex` and excluded from the
+sitemap.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Fonts
 
-## 👀 Want to learn more?
+The variable Google Sans Flex TTF is 3.7 MB, so it is never served as-is.
+`scripts/build-fonts.sh` pins the unused axes, keeps `wght` and `opsz`, and
+outputs two woff2 subsets:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```sh
+pnpm fonts
+```
+
+Requires [`uv`](https://docs.astral.sh/uv/). The source path can be overridden:
+
+```sh
+GOOGLE_SANS_FLEX_SRC=/path/to/font.ttf pnpm fonts
+```
+
+Output: `public/fonts/` (latin, latin-ext, `OFL.txt`).
+
+## Icons & favicons
+
+```sh
+pnpm icons
+```
+
+Generates `favicon.svg`, `favicon.ico` (16/32/48) and `apple-touch-icon.png`
+from `src/assets/images/logo128.svg`, using `sharp`.
+
+## License
+
+Source code is personal. Fonts are licensed under the SIL Open Font License —
+see `public/fonts/OFL.txt`.
