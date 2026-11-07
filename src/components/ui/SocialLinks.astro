@@ -8,7 +8,9 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<ul class:list={["flex flex-wrap items-center gap-x-stack gap-y-grid", className]}>
+<ul
+  class:list={["flex flex-wrap items-center gap-x-stack gap-y-grid", className]}
+>
   {
     site.socials.map((social) => (
       <li>
@@ -16,7 +18,7 @@ const { class: className } = Astro.props;
           href={social.href}
           rel="noopener noreferrer"
           target="_blank"
-          class="text-label uppercase text-black-70 transition-colors duration-200 hover:text-black"
+          class="text-label text-black-70 transition-colors duration-200 hover:text-black"
         >
           {social.label}
         </a>
