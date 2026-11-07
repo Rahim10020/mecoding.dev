@@ -64,8 +64,8 @@ Usage:
 ### Typography
 
 - Family: **Google Sans Flex**, self-hosted only. No Google Fonts CDN.
-- Tokens: `text-display`, `text-headline`, `text-title`, `text-body-lg`,
-  `text-body`, `text-label`
+- Tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
+  `text-caption`, `text-body-lg`, `text-body`, `text-label`
 - Weights available: **300 → 800** (variable `wght`)
 - Optical sizing: variable `opsz` 14 → 96, enabled with `font-optical-sizing: auto`
 - Labels are uppercase with tracking: `text-label uppercase`
@@ -73,11 +73,14 @@ Usage:
 
 ### Layout
 
-- Content width: `max-w-content` (1200px), via `Container`
-- Page width: `max-w-page` (1920px)
-- Page gutter: `px-page` (20px → 40px)
-- Vertical rhythm: `py-section` for sections, `gap-block` / `space-y-block`
-  for blocks inside a section
+- Page frame: `Frame` — `max-w-frame` (1920px) + `px-gutter` (20px, fixed)
+- Desktop stage: `Stage` — `md:h-svh` + `md:overflow-hidden`; below 810px it
+  falls back to normal document flow
+- Rythme: `gap-grid` (10px), `gap-meta` (16px), `gap-stack` (30px),
+  `gap-center` (50px), `pb-column` (54px); composition sizes `w-tile` /
+  `h-tile` (300px) and `w-step` (310px)
+- Breakpoints: `md` = 810px, `lg` = 1200px (Kelo's own)
+- No clamped spacing scale: values are measured on Kelo, not derived
 - Default border width is 1px; no shadows; no gradients; no decorative radii.
   Pills use `rounded-full`.
 
@@ -132,8 +135,9 @@ src/
 ├── assets/images/        logos + placeholder
 ├── components/
 │   ├── icons/            SVG icon components (currentColor)
-│   ├── layout/           Container, Section
-│   ├── sections/         page sections (populated in phase 2+)
+│   ├── layout/           Frame, Stage
+│   ├── home/             home-only composition (hero, carousel, featured list)
+│   ├── projects/         project-specific composition (ProjectRow)
 │   └── ui/               Logo, Placeholder, buttons, cards…
 ├── content/projects/     project markdown (schema in src/content.config.ts)
 ├── data/site.ts          identity, nav, socials, contact, location
@@ -146,7 +150,7 @@ src/
 Rules:
 
 - `pages/` only composes; no business content inline
-- `sections/` owns page-level composition
+- `home/` owns home-only composition; a component used by two pages moves to `ui/`
 - `ui/` owns reusable primitives
 - Copy lives in `src/data/` or `src/content/`, not hardcoded in components
 - Import alias: `@/*` → `src/*`

@@ -1,0 +1,145 @@
+---
+import Frame from "@/components/layout/Frame.astro";
+import Availability from "@/components/ui/Availability.astro";
+import LocalClock from "@/components/ui/LocalClock.astro";
+import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+import { site } from "@/data/site";
+import Layout from "@/layouts/Layout.astro";
+
+const services = [
+  {
+    title: "Design an interface",
+    description:
+      "I turn ideas into clear, coherent interfaces that are a pleasure to use — designed around your users and your goal.",
+  },
+  {
+    title: "Build the product",
+    description:
+      "I build fast, responsive front-ends that stay faithful to the design, with close attention to the details.",
+  },
+  {
+    title: "Improve the existing",
+    description:
+      "I can take an existing interface, find the friction, and give it back its clarity, consistency and character.",
+  },
+];
+---
+
+<Layout
+  title="About — mecoding"
+  description="Rahim ALI is a web developer and UX/UI designer based in Lomé, Togo, working at the intersection of design and front-end development."
+>
+  <Frame class="pt-stack">
+    <p class="text-label uppercase text-black-60">About — {site.location.city}, {site.location.country}</p>
+
+    <h1 class="mt-meta max-w-4xl text-display">Designer and coder.</h1>
+
+    <div class="mt-column grid gap-column lg:grid-cols-[16rem_1fr]">
+      <p class="text-label uppercase text-black-60">Behind the screen</p>
+
+      <div class="max-w-2xl">
+        <p class="text-body-lg text-black-80">
+          I'm the kind of developer who notices when a button is off by four
+          pixels.
+        </p>
+
+        <p class="mt-stack text-body-lg text-black-60">
+          I work at the intersection of web design and development, with an
+          obsession for clean interfaces, details that matter, and experiences
+          that feel natural. My goal is simple: build products you'll be proud
+          to show, and that people will enjoy using.
+        </p>
+      </div>
+    </div>
+  </Frame>
+
+  <Frame class="mt-column">
+    <div class="grid gap-column border-t border-black-10 pt-stack lg:grid-cols-[16rem_1fr]">
+      <p class="text-label uppercase text-black-60">What I do</p>
+
+      <ul class="grid gap-stack md:grid-cols-3 md:gap-grid">
+        {
+          services.map((service, index) => (
+            <li class="border-t border-black-10 pt-meta">
+              <p class="text-label uppercase text-black-60">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h2 class="mt-grid text-title">{service.title}</h2>
+              <p class="mt-meta text-body text-black-60">
+                {service.description}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Frame>
+
+  <Frame class="mt-column">
+    <div class="grid gap-column border-t border-black-10 pt-stack lg:grid-cols-[16rem_1fr]">
+      <p class="text-label uppercase text-black-60">Facts</p>
+
+      <dl class="grid max-w-2xl gap-grid sm:grid-cols-2">
+        <div class="flex flex-col gap-2 border-t border-black-10 py-meta">
+          <dt class="text-label uppercase text-black-60">Based in</dt>
+          <dd class="text-body text-black-80">
+            {site.location.city}, {site.location.country}
+          </dd>
+        </div>
+        <div class="flex flex-col gap-2 border-t border-black-10 py-meta">
+          <dt class="text-label uppercase text-black-60">Local time</dt>
+          <dd class="text-body text-black-80">
+            <LocalClock />
+          </dd>
+        </div>
+        <div class="flex flex-col gap-2 border-t border-black-10 py-meta">
+          <dt class="text-label uppercase text-black-60">Status</dt>
+          <dd>
+            <Availability label={site.availability} />
+          </dd>
+        </div>
+        <div class="flex flex-col gap-2 border-t border-black-10 py-meta">
+          <dt class="text-label uppercase text-black-60">Languages</dt>
+          <dd class="text-body text-black-80">French, English</dd>
+        </div>
+      </dl>
+    </div>
+  </Frame>
+
+  <Frame class="mt-column pb-column" id="contact">
+    <section
+      aria-labelledby="contact-title"
+      class="grid gap-column border-t border-black-10 pt-stack lg:grid-cols-[16rem_1fr]"
+    >
+      <p class="text-label uppercase text-black-60">Contact</p>
+
+      <div>
+        <h2 id="contact-title" class="max-w-3xl text-headline">
+          So what are we building?
+        </h2>
+
+        <p class="mt-stack max-w-xl text-body-lg text-black-60">
+          No need to have all the answers. Bring the idea — we'll start there.
+        </p>
+
+        <a
+          href={`mailto:${site.email}`}
+          class="mt-column inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
+        >
+          Start a conversation
+          <ArrowUpRight size={12} />
+        </a>
+
+        <p class="mt-stack text-label uppercase text-black-60">
+          Or write directly —
+          <a
+            href={`mailto:${site.email}`}
+            class="text-black underline underline-offset-4"
+          >
+            <span class="normal-case tracking-normal">{site.email}</span>
+          </a>
+        </p>
+      </div>
+    </section>
+  </Frame>
+</Layout>

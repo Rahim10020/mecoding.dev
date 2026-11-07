@@ -35,8 +35,9 @@ src/
 ├── assets/images/        logos + image placeholder
 ├── components/
 │   ├── icons/            inline SVG icons (currentColor)
-│   ├── layout/           Container, Section
-│   ├── sections/         page sections
+│   ├── layout/           Frame, Stage
+│   ├── home/             home-only composition
+│   ├── projects/         work list rows
 │   └── ui/               Logo, Placeholder, primitives
 ├── content/projects/     project entries (markdown)
 ├── data/site.ts          identity, nav, socials, contact
@@ -48,9 +49,9 @@ src/
 ## Design system
 
 A single black (`#171717`) on white, declined in opacity steps from
-`black-5` to `black-90`. Typography is set with **Google Sans Flex** and six
-tokens: `text-display`, `text-headline`, `text-title`, `text-body-lg`,
-`text-body`, `text-label`.
+`black-5` to `black-90`. Typography is set with **Google Sans Flex** and eight
+tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
+`text-caption`, `text-body-lg`, `text-body`, `text-label`.
 
 Full rules live in [`AGENTS.md`](./AGENTS.md). An internal
 [`/styleguide`](src/pages/styleguide.astro) page renders the palette, type

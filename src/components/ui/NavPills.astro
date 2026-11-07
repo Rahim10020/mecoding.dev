@@ -1,0 +1,45 @@
+---
+import { site } from "@/data/site";
+
+interface Props {
+  class?: string;
+  /** Rend les liens en pills (par défaut) ou en texte simple. */
+  variant?: "pills" | "plain";
+}
+
+const { class: className, variant = "pills" } = Astro.props;
+
+const isActive = (href: string) => {
+  const path = Astro.url.pathname.replace(/\/+$/, "") || "/";
+  const target = href.replace(/\/+$/, "") || "/";
+  return path === target || path.startsWith(`${target}/`);
+};
+---
+
+<nav aria-label="Primary" class:list={[className]}>
+  <ul class="flex items-center gap-grid">
+    {
+      site.nav.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? "page" : undefined}
+            class:list={[
+              "text-label uppercase transition-colors duration-200",
+              variant === "pills" &&
+                "inline-flex items-center rounded-full border px-4 py-2",
+              variant === "pills" && isActive(item.href)
+                ? "border-black bg-black text-white"
+                : "border-black-10 text-black-70 hover:border-black-30 hover:text-black",
+              variant === "plain" && isActive(item.href)
+                ? "text-black"
+                : "text-black-70 hover:text-black",
+            ]}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

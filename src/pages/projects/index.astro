@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+
+import Frame from "@/components/layout/Frame.astro";
+import ProjectRow from "@/components/projects/ProjectRow.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const projects = (
+  await getCollection("projects", ({ data }) => !data.draft)
+).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="Work — mecoding"
+  description="Selected product design and front-end work by Rahim ALI: web platforms, mobile apps and interface systems."
+>
+  <Frame class="pb-column pt-stack">
+    <header class="max-w-3xl">
+      <p class="text-label uppercase text-black-60">Work — {projects.length} projects</p>
+      <h1 class="mt-meta text-display">Selected work.</h1>
+      <p class="mt-stack max-w-xl text-body-lg text-black-60">
+        Interfaces, products and sites built end to end — from the first
+        sketch to the last commit.
+      </p>
+    </header>
+
+    <div class="mt-column border-b border-black-10">
+      {
+        projects.map((project, index) => (
+          <ProjectRow project={project} index={index} />
+        ))
+      }
+    </div>
+  </Frame>
+</Layout>

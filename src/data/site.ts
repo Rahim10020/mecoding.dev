@@ -33,6 +33,9 @@ export const site = {
 
   email: "rahim100codeur@gmail.com",
 
+  /** Statut affiché en haut à gauche du header. */
+  availability: "Available for work",
+
   nav: [
     { label: "Work", href: "/projects" },
     { label: "About", href: "/about" },

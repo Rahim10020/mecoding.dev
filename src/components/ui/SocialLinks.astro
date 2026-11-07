@@ -1,0 +1,26 @@
+---
+import { site } from "@/data/site";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<ul class:list={["flex flex-wrap items-center gap-x-stack gap-y-grid", className]}>
+  {
+    site.socials.map((social) => (
+      <li>
+        <a
+          href={social.href}
+          rel="noopener noreferrer"
+          target="_blank"
+          class="text-label uppercase text-black-70 transition-colors duration-200 hover:text-black"
+        >
+          {social.label}
+        </a>
+      </li>
+    ))
+  }
+</ul>

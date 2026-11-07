@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import Frame from "@/components/layout/Frame.astro";
+import FeaturedList from "@/components/home/FeaturedList.astro";
+import ProjectCarousel from "@/components/home/ProjectCarousel.astro";
+
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="relative flex flex-col md:h-svh md:overflow-hidden">
+  <Frame
+    class="flex flex-1 flex-col justify-end pb-column pt-[6.25rem] md:pt-0"
+  >
+    <div
+      class="flex w-full flex-col gap-stack md:flex-row md:items-end md:justify-between md:gap-grid"
+    >
+      <div
+        class="flex w-full max-w-[350px] flex-col gap-grid md:flex-1 md:gap-meta md:pb-column"
+      >
+        <p class="text-label uppercase text-black-70">
+          <span class="text-black">mecoding.</span> — Design & development
+        </p>
+
+        <h1
+          class="text-statement text-black-60"
+        >
+          I design and build{" "}
+          <span class="text-black">digital products</span> that make the web{" "}
+          <span class="text-black">simple, intuitive and alive.</span>
+        </h1>
+      </div>
+
+      <div
+        class="hidden md:block md:flex-[1.5]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="w-full md:max-w-[350px] md:flex-1 md:pb-column">
+        <a
+          href="/media/reel.webm"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-video w-full overflow-hidden bg-black"
+          aria-label="Play reel (opens in a new tab)"
+        >
+          <img
+            src="/media/reel-poster.webp"
+            width="1280"
+            height="609"
+            alt=""
+            fetchpriority="high"
+            decoding="async"
+            class="h-full w-full object-cover"
+          />
+          <span
+            class="absolute right-5 top-5 inline-flex items-center rounded-full bg-black px-4 py-2 text-label uppercase text-white transition-colors duration-200 group-hover:bg-black-80"
+          >
+            Play reel
+          </span>
+        </a>
+      </div>
+    </div>
+  </Frame>
+
+  <ProjectCarousel projects={projects} />
+</section>
+
+<FeaturedList projects={projects} />

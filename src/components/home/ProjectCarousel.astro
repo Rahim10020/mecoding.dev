@@ -1,0 +1,191 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+import Placeholder from "@/components/ui/Placeholder.astro";
+import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+
+const { projects } = Astro.props;
+
+const COPIES = 3;
+const TILE = 300;
+const GAP = 10;
+const STEP = TILE + GAP;
+
+const items = Array.from({ length: COPIES }, (_, copy) =>
+  projects.map((project, index) => ({
+    project,
+    index,
+    copy,
+    global: copy * projects.length + index,
+  })),
+).flat();
+
+const middleStart = projects.length;
+const trackTop = middleStart * STEP + TILE / 2;
+---
+
+<div
+  class="pointer-events-none absolute inset-0 hidden md:block"
+  data-carousel
+  data-step={STEP}
+  data-count={projects.length}
+>
+  <div
+    class="pointer-events-auto absolute bottom-20 left-1/2 top-20 w-tile -translate-x-1/2 cursor-grab overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black active:cursor-grabbing"
+    role="region"
+    aria-roledescription="carousel"
+    aria-label="Selected projects"
+    tabindex="0"
+    data-carousel-viewport
+  >
+    <div
+      class="absolute inset-x-0 flex flex-col gap-grid"
+      style={`top: calc(50% - ${trackTop}px)`}
+      data-carousel-track
+    >
+      {
+        items.map(({ project, index, copy, global }) => (
+          <a
+            href={`/projects#${project.id}`}
+            class:list={[
+              "group relative block h-tile w-tile shrink-0 overflow-hidden",
+              global === middleStart && "is-active",
+            ]}
+            data-carousel-item
+            data-carousel-global={global}
+            data-carousel-index={index}
+            aria-label={`${project.data.title} — ${project.data.category}`}
+            aria-hidden={copy === 1 ? undefined : "true"}
+            tabindex={global === middleStart ? 0 : -1}
+          >
+            {project.data.cover ? (
+              <Image
+                src={project.data.cover}
+                alt={project.data.coverAlt ?? ""}
+                width={600}
+                height={600}
+                fit="cover"
+                loading={global === middleStart ? "eager" : "lazy"}
+                class="h-full w-full object-cover"
+              />
+            ) : (
+              <Placeholder
+                alt={project.data.coverAlt ?? ""}
+                class="h-full w-full object-cover"
+              />
+            )}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div
+    class="pointer-events-none absolute right-[calc(50%+174px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid"
+  >
+    {
+      projects.map((project, index) => (
+        <div
+          class:list={[
+            "col-start-1 row-start-1 flex flex-col items-end",
+            index === 0 ? "is-active" : "",
+          ]}
+          data-carousel-caption
+          data-carousel-caption-index={index}
+          data-title={project.data.title}
+          aria-hidden={index === 0 ? undefined : "true"}
+        >
+          <h2 class="text-caption">{project.data.title}</h2>
+          <p class="mt-grid text-label uppercase text-black-70">
+            {project.data.category}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+
+  <div
+    class="pointer-events-none absolute left-[calc(50%+174px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid"
+  >
+    {
+      projects.map((project, index) => (
+        <div
+          class:list={[
+            "col-start-1 row-start-1 flex flex-col items-start",
+            index === 0 ? "is-active" : "",
+          ]}
+          data-carousel-caption
+          data-carousel-caption-index={index}
+          aria-hidden={index === 0 ? undefined : "true"}
+        >
+          <p class="line-clamp-2 text-body text-black-60">
+            {project.data.description}
+          </p>
+          <a
+            href={`/projects#${project.id}`}
+            class="pointer-events-auto mt-meta inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
+            tabindex={index === 0 ? 0 : -1}
+          >
+            View project
+            <ArrowUpRight size={12} />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="sr-only" aria-live="polite" data-carousel-live>
+    {projects[0]?.data.title}
+  </p>
+</div>
+
+<style>
+  [data-carousel-track] {
+    transition: transform 600ms var(--ease-kelo);
+  }
+
+  [data-carousel-track].is-dragging,
+  [data-carousel-track].no-motion {
+    transition: none;
+  }
+
+  [data-carousel-caption] {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition:
+      opacity 113ms linear,
+      transform 113ms linear,
+      visibility 0s linear 113ms;
+  }
+
+  [data-carousel-caption].is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+      opacity 450ms var(--ease-kelo) 158ms,
+      transform 450ms var(--ease-kelo) 158ms,
+      visibility 0s;
+  }
+
+  [data-carousel-item] img {
+    filter: grayscale(1);
+    transition: filter 600ms var(--ease-kelo);
+  }
+
+  [data-carousel-item].is-active img {
+    filter: grayscale(0);
+  }
+</style>
+
+<script>
+  import { initProjectCarousel } from "@/lib/project-carousel";
+
+  initProjectCarousel();
+</script>

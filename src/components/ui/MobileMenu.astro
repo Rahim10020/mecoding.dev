@@ -1,0 +1,136 @@
+---
+import Availability from "@/components/ui/Availability.astro";
+import LocalClock from "@/components/ui/LocalClock.astro";
+import NavPills from "@/components/ui/NavPills.astro";
+import SocialLinks from "@/components/ui/SocialLinks.astro";
+import { site } from "@/data/site";
+import Close from "@/components/icons/Close.astro";
+import Menu from "@/components/icons/Menu.astro";
+import Logo from "@/components/ui/Logo.astro";
+---
+
+<div class="md:hidden" data-menu-root>
+  <button
+    type="button"
+    class="inline-flex items-center gap-2 text-label uppercase text-black-70"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-menu-toggle
+  >
+    <span>Menu</span>
+    <Menu size={16} />
+  </button>
+
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-50 flex flex-col bg-white"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menu"
+    hidden
+    data-menu-panel
+  >
+    <div class="flex items-center justify-between px-gutter py-gutter">
+      <a href="/" class="flex items-center gap-grid" data-menu-link>
+        <Logo size={32} />
+        <span class="text-title lowercase tracking-[-0.04em]">{site.name}</span>
+      </a>
+
+      <button
+        type="button"
+        class="inline-flex items-center gap-2 text-label uppercase text-black-70"
+        data-menu-close
+      >
+        <span>Close</span>
+        <Close size={16} />
+      </button>
+    </div>
+
+    <div class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack">
+      <NavPills variant="plain" class="[&_a]:text-headline [&_a]:normal-case [&_a]:tracking-[-0.02em]" />
+
+      <div class="flex flex-col gap-stack">
+        <div class="flex flex-col gap-2">
+          <Availability label={site.availability} />
+          <p class="text-label uppercase text-black-70">
+            {site.location.city}, {site.location.country}
+            <span aria-hidden="true"> — </span>
+            <LocalClock class="inline" />
+          </p>
+        </div>
+
+        <SocialLinks />
+      </div>
+    </div>
+  </div>
+</div>
+
+<noscript>
+  <NavPills variant="plain" class="md:hidden" />
+</noscript>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-menu-root]");
+  const toggle = root?.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+  const panel = root?.querySelector<HTMLElement>("[data-menu-panel]");
+  const close = root?.querySelector<HTMLButtonElement>("[data-menu-close]");
+
+  if (root && toggle && panel && close) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.hidden = !open;
+      document.documentElement.style.overflow = open ? "hidden" : "";
+
+      if (open) {
+        close.focus();
+      } else {
+        toggle.focus();
+      }
+    };
+
+    toggle.addEventListener("click", () => setOpen(true));
+    close.addEventListener("click", () => setOpen(false));
+
+    panel.querySelectorAll<HTMLElement>("[data-menu-link], nav a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (panel.hidden) return;
+
+      if (event.key === "Escape") {
+        setOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      // Piège le focus à l'intérieur du panneau.
+      const focusable = Array.from(
+        panel.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.offsetParent !== null);
+
+      if (focusable.length === 0) return;
+
+      const first = focusable[0]!;
+      const last = focusable[focusable.length - 1]!;
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    // La panneau n'existe qu'en dessous de md : on le referme au redimensionnement.
+    window.matchMedia("(min-width: 810px)").addEventListener("change", (event) => {
+      if (event.matches && !panel.hidden) {
+        setOpen(false);
+      }
+    });
+  }
+</script>

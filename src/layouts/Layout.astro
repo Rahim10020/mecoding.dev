@@ -1,6 +1,8 @@
 ---
 import "@/styles/global.css";
 
+import Footer from "@/components/layout/Footer.astro";
+import Header from "@/components/layout/Header.astro";
 import { site } from "@/data/site";
 
 interface Props {
@@ -9,6 +11,8 @@ interface Props {
   /** Image Open Graph relative à la racine du site. */
   image?: string;
   noindex?: boolean;
+  /** Le shell (header + footer) est rendu par défaut. La home le compose elle-même. */
+  shell?: boolean;
 }
 
 const {
@@ -16,6 +20,7 @@ const {
   description = site.description,
   image,
   noindex = false,
+  shell = true,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -71,12 +76,12 @@ const ogImage = image ? new URL(image, Astro.site) : undefined;
       Skip to content
     </a>
 
-    <slot name="header" />
+    {shell ? <Header /> : <slot name="header" />}
 
     <main id="main">
       <slot />
     </main>
 
-    <slot name="footer" />
+    {shell ? <Footer /> : <slot name="footer" />}
   </body>
 </html>

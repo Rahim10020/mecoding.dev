@@ -74,19 +74,39 @@
   --text-body: 1rem;
   --text-body--line-height: 1.6;
 
+  --text-statement: 1.25rem;
+  --text-statement--line-height: 1.2;
+  --text-statement--letter-spacing: -0.03em;
+  --text-statement--font-weight: 600;
+
+  --text-caption: 1.5rem;
+  --text-caption--line-height: 1.15;
+  --text-caption--letter-spacing: -0.03em;
+  --text-caption--font-weight: 600;
+
   --text-label: 0.75rem;
   --text-label--line-height: 1;
   --text-label--letter-spacing: 0.08em;
   --text-label--font-weight: 500;
 
-  /* Rythme --------------------------------------------------------------- */
-  --spacing-page: clamp(1.25rem, 4vw, 2.5rem);
-  --spacing-section: clamp(5rem, 12vw, 10rem);
-  --spacing-block: clamp(2.5rem, 5vw, 4rem);
+  /* Rythme — valeurs relevées sur Kelo ----------------------------------- */
+  --spacing-gutter: 1.25rem; /* 20px — gouttière de page */
+  --spacing-grid: 0.625rem; /* 10px — gap par défaut */
+  --spacing-meta: 1rem; /* 16px — label → contenu */
+  --spacing-stack: 1.875rem; /* 30px — colonne droite / mobile */
+  --spacing-center: 3.125rem; /* 50px — colonne centrale */
+  --spacing-column: 3.375rem; /* 54px — bas des colonnes */
+
+  /* Tailles de composition ----------------------------------------------- */
+  --spacing-tile: 18.75rem; /* 300px — tuile projet */
+  --spacing-step: 19.375rem; /* 310px — tuile + gap */
 
   /* Largeurs ------------------------------------------------------------- */
-  --container-page: 120rem; /* 1920px */
-  --container-content: 75rem; /* 1200px */
+  --container-frame: 120rem; /* 1920px — cadre Kelo */
+
+  /* Breakpoints — ceux de Kelo ------------------------------------------- */
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
 
   /* Mouvement ------------------------------------------------------------ */
   --ease-kelo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -125,7 +145,6 @@
   :focus-visible {
     outline: 2px solid var(--color-black);
     outline-offset: 3px;
-    border-radius: 2px;
   }
 
   /* Les ancres ne doivent pas passer sous le header fixe. */

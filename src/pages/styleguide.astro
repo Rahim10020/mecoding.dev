@@ -1,6 +1,5 @@
 ---
-import Container from "@/components/layout/Container.astro";
-import Section from "@/components/layout/Section.astro";
+import Frame from "@/components/layout/Frame.astro";
 import Logo from "@/components/ui/Logo.astro";
 import Placeholder from "@/components/ui/Placeholder.astro";
 
@@ -39,6 +38,17 @@ const palette = [
   { name: "white", value: "#FFFFFF", className: "bg-white" },
 ];
 
+const rhythm = [
+  { name: "gutter", token: "--spacing-gutter", value: "20px" },
+  { name: "grid", token: "--spacing-grid", value: "10px" },
+  { name: "meta", token: "--spacing-meta", value: "16px" },
+  { name: "stack", token: "--spacing-stack", value: "30px" },
+  { name: "center", token: "--spacing-center", value: "50px" },
+  { name: "column", token: "--spacing-column", value: "54px" },
+  { name: "tile", token: "--spacing-tile", value: "300px" },
+  { name: "step", token: "--spacing-step", value: "310px" },
+];
+
 const typeScale = [
   { token: "text-display", className: "text-display", sample: "mecoding" },
   {
@@ -47,6 +57,16 @@ const typeScale = [
     sample: "Designer and coder",
   },
   { token: "text-title", className: "text-title", sample: "Selected work" },
+  {
+    token: "text-statement",
+    className: "text-statement",
+    sample: "I design and build digital products.",
+  },
+  {
+    token: "text-caption",
+    className: "text-caption",
+    sample: "Meridian Capital",
+  },
   {
     token: "text-body-lg",
     className: "text-body-lg",
@@ -86,18 +106,18 @@ const brandIcons = [
 
 <Layout title="Styleguide — mecoding" noindex>
   <div class="py-16">
-    <Container>
+    <Frame>
       <p class="text-label uppercase text-black-60">Internal</p>
       <h1 class="mt-4 text-headline">Styleguide</h1>
       <p class="mt-4 max-w-xl text-black-60">
         Bench de validation des fondations : couleurs, typographie, rythme,
         icônes et assets. Page non indexée.
       </p>
-    </Container>
+    </Frame>
   </div>
 
-  <Section labelledby="colors-title">
-    <Container>
+  <section aria-labelledby="colors-title" class="py-24">
+    <Frame>
       <h2 id="colors-title" class="text-title">Colors</h2>
       <p class="mt-2 text-body text-black-60">
         Une seule teinte, le noir <code>#171717</code>, déclinée en opacités.
@@ -134,11 +154,14 @@ const brandIcons = [
           <p class="mt-2 text-white/60">Secondary copy stays readable.</p>
         </div>
       </div>
-    </Container>
-  </Section>
+    </Frame>
+  </section>
 
-  <Section labelledby="type-title" class="border-t border-black-10">
-    <Container>
+  <section
+    aria-labelledby="type-title"
+    class="border-t border-black-10 py-24"
+  >
+    <Frame>
       <h2 id="type-title" class="text-title">Typography</h2>
       <p class="mt-2 text-body text-black-60">
         Google Sans Flex, auto-hébergée. Axes <code>wght</code> et
@@ -167,52 +190,66 @@ const brandIcons = [
           ))
         }
       </div>
-    </Container>
-  </Section>
+    </Frame>
+  </section>
 
-  <Section labelledby="rhythm-title" class="border-t border-black-10">
-    <Container>
+  <section
+    aria-labelledby="rhythm-title"
+    class="border-t border-black-10 py-24"
+  >
+    <Frame>
       <h2 id="rhythm-title" class="text-title">Rhythm & layout</h2>
 
       <div class="mt-8 space-y-4">
-        <div class="flex items-center gap-4">
-          <span class="w-28 font-mono text-label uppercase text-black-60"
-            >page</span
-          >
-          <div class="h-8 flex-1 bg-black-10">
-            <div class="h-full bg-black" style="width: 2.5rem"></div>
-          </div>
-          <span class="font-mono text-label text-black-60">20 → 40px</span>
+        {
+          rhythm.map(({ name, token, value }) => (
+            <div class="flex items-center gap-4">
+              <span class="w-28 font-mono text-label uppercase text-black-60">
+                {name}
+              </span>
+              <div class="h-8 flex-1 bg-black-10">
+                <div
+                  class="h-full bg-black"
+                  style={`width: var(${token})`}
+                />
+              </div>
+              <span class="w-36 shrink-0 font-mono text-label text-black-60">
+                {value}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-12 grid gap-grid md:grid-cols-2">
+        <div class="border border-black-10 p-4">
+          <p class="text-label uppercase text-black-60">Frame</p>
+          <p class="mt-2 text-body">
+            <code>max-w-frame</code> (1920px) + <code>px-gutter</code> (20px).
+            Gouttière fixe, sans clamp.
+          </p>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="w-28 font-mono text-label uppercase text-black-60"
-            >section</span
-          >
-          <div class="h-8 flex-1 bg-black-10">
-            <div class="h-full bg-black" style="width: 5rem"></div>
-          </div>
-          <span class="font-mono text-label text-black-60">80 → 160px</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="w-28 font-mono text-label uppercase text-black-60"
-            >block</span
-          >
-          <div class="h-8 flex-1 bg-black-10">
-            <div class="h-full bg-black" style="width: 2.5rem"></div>
-          </div>
-          <span class="font-mono text-label text-black-60">40 → 64px</span>
+        <div class="border border-black-10 p-4">
+          <p class="text-label uppercase text-black-60">Stage</p>
+          <p class="mt-2 text-body">
+            <code>md:h-svh</code> + <code>md:overflow-hidden</code>. Scène plein
+            écran verrouillée sur desktop, flux normal sous 810px.
+          </p>
         </div>
       </div>
 
       <p class="mt-8 text-body text-black-60">
-        Contenu : <code>max-w-content</code> (1200px). Page :
-        <code>max-w-page</code> (1920px).
+        Breakpoints : <code>md</code> 810px, <code>lg</code> 1200px. Les
+        valeurs ci-dessus sont relevées sur Kelo, pas déduites d'une échelle.
       </p>
-    </Container>
-  </Section>
+    </Frame>
+  </section>
 
-  <Section labelledby="icons-title" class="border-t border-black-10">
-    <Container>
+  <section
+    aria-labelledby="icons-title"
+    class="border-t border-black-10 py-24"
+  >
+    <Frame>
       <h2 id="icons-title" class="text-title">Icons</h2>
       <p class="mt-2 text-body text-black-60">
         Composants Astro, couleur héritée via <code>currentColor</code>.
@@ -241,11 +278,14 @@ const brandIcons = [
           ))
         }
       </ul>
-    </Container>
-  </Section>
+    </Frame>
+  </section>
 
-  <Section labelledby="assets-title" class="border-t border-black-10">
-    <Container>
+  <section
+    aria-labelledby="assets-title"
+    class="border-t border-black-10 py-24"
+  >
+    <Frame>
       <h2 id="assets-title" class="text-title">Logos & placeholder</h2>
 
       <div class="mt-8 flex flex-wrap items-end gap-8">
@@ -273,12 +313,6 @@ const brandIcons = [
           </div>
         </div>
       </div>
-    </Container>
-  </Section>
-
-  <footer class="border-t border-black-10 py-8">
-    <Container class="text-label uppercase text-black-60">
-      mecoding — internal styleguide
-    </Container>
-  </footer>
+    </Frame>
+  </section>
 </Layout>
