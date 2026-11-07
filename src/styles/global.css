@@ -108,10 +108,10 @@
   --text-caption--letter-spacing: -0.03em;
   --text-caption--font-weight: 600;
 
-  --text-label: 0.75rem;
+  --text-label: 0.8rem;
   --text-label--line-height: 1;
   --text-label--letter-spacing: 0.08em;
-  --text-label--font-weight: 500;
+  --text-label--font-weight: 600;
 
   /* Rythme — valeurs relevées sur Kelo ----------------------------------- */
   --spacing-gutter: 1.25rem; /* 20px — gouttière de page */
