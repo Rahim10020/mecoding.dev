@@ -13,7 +13,7 @@ export interface NavItem {
 
 export const site = {
   /** Wordmark et nom du site. */
-  name: "mecoding",
+  name: "mecoding.dev",
   url: "https://mecoding.dev",
   lang: "en",
   locale: "en_US",
