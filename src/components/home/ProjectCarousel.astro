@@ -101,7 +101,7 @@ const trackTop = middleStart * STEP + TILE / 2;
           aria-hidden={index === 0 ? undefined : "true"}
         >
           <h2 class="text-caption">{project.data.title}</h2>
-          <p class="mt-grid text-label uppercase text-black-70">
+          <p class="mt-grid text-label text-black-70">
             {project.data.category}
           </p>
         </div>
@@ -128,7 +128,7 @@ const trackTop = middleStart * STEP + TILE / 2;
           </p>
           <a
             href={`/projects#${project.id}`}
-            class="pointer-events-auto mt-meta inline-flex items-center gap-2 bg-black px-3 py-1.5 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
+            class="pointer-events-auto mt-meta inline-flex items-center gap-2 bg-black px-3 py-1 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
             tabindex={index === 0 ? 0 : -1}
           >
             View project
