@@ -49,7 +49,7 @@ src/
 ## Design system
 
 A single black (`#171717`) on white, declined in opacity steps from
-`black-5` to `black-90`. Typography is set with **Google Sans Flex** and eight
+`black-5` to `black-90`. Typography is set with **Rethink Sans** and eight
 tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
 `text-caption`, `text-body-lg`, `text-body`, `text-label`.
 
@@ -60,21 +60,22 @@ sitemap.
 
 ## Fonts
 
-The variable Google Sans Flex TTF is 3.7 MB, so it is never served as-is.
-`scripts/build-fonts.sh` pins the unused axes, keeps `wght` and `opsz`, and
-outputs two woff2 subsets:
+Rethink Sans is self-hosted as woff2. `scripts/build-fonts.sh` keeps the
+`wght` 400–800 range and outputs latin / latin-ext subsets, upright and
+italic:
 
 ```sh
 pnpm fonts
 ```
 
-Requires [`uv`](https://docs.astral.sh/uv/). The source path can be overridden:
+Requires [`uv`](https://docs.astral.sh/uv/). The source paths can be
+overridden:
 
 ```sh
-GOOGLE_SANS_FLEX_SRC=/path/to/font.ttf pnpm fonts
+RETHINK_SANS_SRC=/path/to/RethinkSans-VariableFont_wght.ttf pnpm fonts
 ```
 
-Output: `public/fonts/` (latin, latin-ext, `OFL.txt`).
+Output: `public/fonts/` (latin, latin-ext, italic, `OFL.txt`).
 
 ## Icons & favicons
 

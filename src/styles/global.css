@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 /* -------------------------------------------------------------------------- */
-/*  Google Sans Flex — auto-hébergée                                          */
-/*  Générée par `pnpm fonts` depuis le TTF variable fourni.                   */
-/*  Axes conservés : wght 300-800, opsz 14-96.                                */
+/*  Rethink Sans — auto-hébergée                                              */
+/*  Générée par `pnpm fonts` depuis les TTF variables fournis.                */
+/*  Axe conservé : wght 400-800.                                              */
 /* -------------------------------------------------------------------------- */
 
 @font-face {
-  font-family: "Google Sans Flex";
+  font-family: "Rethink Sans";
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: 400 800;
   font-display: swap;
-  src: url("/fonts/google-sans-flex-latin.woff2") format("woff2");
+  src: url("/fonts/rethink-sans-latin.woff2") format("woff2");
   unicode-range:
     U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
     U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
@@ -19,11 +19,35 @@
 }
 
 @font-face {
-  font-family: "Google Sans Flex";
+  font-family: "Rethink Sans";
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: 400 800;
   font-display: swap;
-  src: url("/fonts/google-sans-flex-latin-ext.woff2") format("woff2");
+  src: url("/fonts/rethink-sans-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Rethink Sans";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/rethink-sans-italic-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Rethink Sans";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/rethink-sans-italic-latin-ext.woff2") format("woff2");
   unicode-range:
     U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
     U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
@@ -51,7 +75,7 @@
   --color-black-90: rgb(23 23 23 / 0.9);
 
   /* Typographie ---------------------------------------------------------- */
-  --font-sans: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
 
   --text-display: clamp(3rem, 7vw, 6.5rem);
   --text-display--line-height: 0.95;
@@ -125,7 +149,6 @@
 
   body {
     @apply bg-white font-sans text-body text-black antialiased;
-    font-optical-sizing: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

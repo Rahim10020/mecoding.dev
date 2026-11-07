@@ -63,11 +63,11 @@ Usage:
 
 ### Typography
 
-- Family: **Google Sans Flex**, self-hosted only. No Google Fonts CDN.
+- Family: **Rethink Sans**, self-hosted only. No Google Fonts CDN.
 - Tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
   `text-caption`, `text-body-lg`, `text-body`, `text-label`
-- Weights available: **300 → 800** (variable `wght`)
-- Optical sizing: variable `opsz` 14 → 96, enabled with `font-optical-sizing: auto`
+- Weights available: **400 → 800** (variable `wght`)
+- Italic: real italic face, loaded only when used
 - Labels are uppercase with tracking: `text-label uppercase`
 - One `<h1>` per page, headings follow document order
 
@@ -96,15 +96,15 @@ Usage:
 
 ## Typography Pipeline
 
-The source is a 3.7 MB variable TTF. It must never be served directly.
+The source is a 117 KB variable TTF. It is never served directly.
 
 - Script: `scripts/build-fonts.sh` (`pnpm fonts`)
 - Tooling: `uv run --with fonttools --with brotli` (no Node dependency)
-- Pinned axes: `ROND=0`, `slnt=0`, `wdth=100`
-- Kept axes: `wght` 300–800, `opsz` 14–96
-- Subsets: latin (88 KB) and latin-ext (46 KB), with `unicode-range`
+- Kept axis: `wght` 400–800 (single-axis family)
+- Subsets: latin and latin-ext, upright and italic, with `unicode-range`
 - Output: `public/fonts/*.woff2` + `OFL.txt`
-- The latin file is preloaded in `src/layouts/Layout.astro`
+- The upright latin file is preloaded in `src/layouts/Layout.astro`; the
+  italic files are only downloaded when italic text is rendered
 
 If a new weight or glyph range is genuinely needed, update the script and
 regenerate. Do not hand-edit the generated files.
