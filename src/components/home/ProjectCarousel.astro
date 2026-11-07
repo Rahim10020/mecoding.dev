@@ -13,7 +13,7 @@ const { projects } = Astro.props;
 
 const COPIES = 3;
 const TILE = 300;
-const GAP = 10;
+const GAP = 24;
 const STEP = TILE + GAP;
 
 const items = Array.from({ length: COPIES }, (_, copy) =>
@@ -86,7 +86,7 @@ const trackTop = middleStart * STEP + TILE / 2;
   </div>
 
   <div
-    class="pointer-events-none absolute right-[calc(50%+174px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid"
+    class="pointer-events-none absolute right-[calc(50%+210px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid"
   >
     {
       projects.map((project, index) => (
@@ -110,7 +110,7 @@ const trackTop = middleStart * STEP + TILE / 2;
   </div>
 
   <div
-    class="pointer-events-none absolute left-[calc(50%+174px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid"
+    class="pointer-events-none absolute left-[calc(50%+210px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid"
   >
     {
       projects.map((project, index) => (
