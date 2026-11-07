@@ -1,5 +1,6 @@
 ---
 import { site } from "@/data/site";
+import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
 
 interface Props {
   class?: string;
@@ -17,7 +18,12 @@ const isActive = (href: string) => {
 ---
 
 <nav aria-label="Primary" class:list={[className]}>
-  <ul class:list={["flex items-center", variant === "pills" ? "gap-px" : "gap-grid"]}>
+  <ul
+    class:list={[
+      "flex items-center",
+      variant === "pills" ? "gap-px" : "gap-grid",
+    ]}
+  >
     {
       site.nav.map((item) => (
         <li>
@@ -27,7 +33,7 @@ const isActive = (href: string) => {
             class:list={[
               "text-label uppercase transition-colors duration-200",
               variant === "pills" &&
-                "inline-flex items-center rounded-none border-0 px-3 py-1.5",
+                "inline-flex w-[6.875rem] items-center justify-between rounded-none border-0 px-2.5 py-1",
               variant === "pills"
                 ? isActive(item.href)
                   ? "bg-black text-white"
@@ -38,6 +44,7 @@ const isActive = (href: string) => {
             ]}
           >
             {item.label}
+            {variant === "pills" && isActive(item.href) && <ArrowUpRight size={10} />}
           </a>
         </li>
       ))

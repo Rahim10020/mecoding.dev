@@ -37,8 +37,9 @@ export const site = {
   availability: "Available for work",
 
   nav: [
+    { label: "Home", href: "/" },
     { label: "Work", href: "/projects" },
-    { label: "About", href: "/about" },
+    { label: "Studio", href: "/about" },
   ] satisfies NavItem[],
 
   socials: [
