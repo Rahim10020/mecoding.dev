@@ -147,7 +147,7 @@ export function initProjectCarousel(): void {
   const desktop = window.matchMedia("(min-width: 810px)");
   let accumulated = 0;
 
-  window.addEventListener(
+  viewport.addEventListener(
     "wheel",
     (event) => {
       if (!desktop.matches) return;
