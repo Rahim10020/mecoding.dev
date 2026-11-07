@@ -163,19 +163,31 @@ export function initProjectCarousel(): void {
     (event) => {
       if (!desktop.matches) return;
       event.preventDefault();
-      event.preventDefault();
-
       const factor =
         event.deltaMode === 1
           ? 16
           : event.deltaMode === 2
             ? viewport.clientHeight
             : 1;
+      const movement = (event.deltaY * factor) / step;
+      const nextPosition = wheelPosition + movement;
+      const minPosition = -count + 0.25;
+      const maxPosition = count - 0.25;
 
-      wheelPosition += (event.deltaY * factor) / step;
+      // Laisse la page défiler lorsque le carousel est déjà à une extrémité.
+      if (
+        (movement < 0 && wheelPosition <= minPosition) ||
+        (movement > 0 && wheelPosition >= maxPosition)
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+
+      wheelPosition += movement;
       wheelPosition = Math.max(
-        -count + 0.25,
-        Math.min(count - 0.25, wheelPosition),
+        minPosition,
+        Math.min(maxPosition, nextPosition),
       );
       track.classList.add("no-motion");
       track.style.transform = `translate3d(0, ${-wheelPosition * step}px, 0)`;
