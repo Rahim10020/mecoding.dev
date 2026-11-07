@@ -25,15 +25,15 @@ const { class: className } = Astro.props;
       </div>
     </a>
 
-    <p
-      class="hidden text-label uppercase text-black-70 md:block md:justify-self-center"
-    >
-      {site.location.city}, {site.location.country}
-      <span aria-hidden="true"> — </span>
-      <LocalClock class="inline" />
-    </p>
+    <div class="hidden items-center justify-end gap-meta md:col-span-2 md:flex">
+      <p class="text-label uppercase text-black-70">
+        {site.location.city}, {site.location.country}
+        <span aria-hidden="true"> — </span>
+        <LocalClock class="inline" />
+      </p>
 
-    <NavPills class="hidden md:block md:justify-self-end" />
+      <NavPills />
+    </div>
 
     <MobileMenu />
   </Frame>

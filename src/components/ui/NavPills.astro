@@ -17,7 +17,7 @@ const isActive = (href: string) => {
 ---
 
 <nav aria-label="Primary" class:list={[className]}>
-  <ul class="flex items-center gap-grid">
+  <ul class:list={["flex items-center", variant === "pills" ? "gap-px" : "gap-grid"]}>
     {
       site.nav.map((item) => (
         <li>
@@ -27,13 +27,14 @@ const isActive = (href: string) => {
             class:list={[
               "text-label uppercase transition-colors duration-200",
               variant === "pills" &&
-                "inline-flex items-center border px-3 py-1.5",
-              variant === "pills" && isActive(item.href)
-                ? "border-black bg-black text-white"
-                : "border-black-10 text-black-70 hover:border-black-30 hover:text-black",
-              variant === "plain" && isActive(item.href)
-                ? "text-black"
-                : "text-black-70 hover:text-black",
+                "inline-flex items-center rounded-none border-0 px-3 py-1.5",
+              variant === "pills"
+                ? isActive(item.href)
+                  ? "bg-black text-white"
+                  : "bg-black-10 text-black-70 hover:bg-black-20 hover:text-black"
+                : isActive(item.href)
+                  ? "text-black"
+                  : "text-black-70 hover:text-black",
             ]}
           >
             {item.label}
