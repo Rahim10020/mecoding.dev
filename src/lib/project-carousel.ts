@@ -9,12 +9,8 @@ interface CarouselElements {
   step: number;
 }
 
-/** Durée de verrouillage entre deux crans (transition 600ms + marge). */
-const COOLDOWN = 650;
-/** Seuil d'accumulation pour un cran à la molette. */
-const WHEEL_THRESHOLD = 30;
-/** Distance minimale d'un glissement pour changer de projet. */
-const DRAG_THRESHOLD = 60;
+/** Délai après le dernier mouvement avant l'alignement sur une tuile. */
+const SNAP_DELAY = 140;
 
 const read = (): CarouselElements | null => {
   const root = document.querySelector<HTMLElement>("[data-carousel]");
@@ -50,8 +46,7 @@ export function initProjectCarousel(): void {
   /** Index virtuel : la copie du milieu commence à `count`. */
   let virtual = count;
   let active = 0;
-  let locked = false;
-  let timer: number | undefined;
+  let snapTimer: number | undefined;
 
   const offset = (drag = 0) => -(virtual - count) * step + drag;
 
@@ -67,6 +62,12 @@ export function initProjectCarousel(): void {
       void track.offsetHeight;
       track.classList.remove("no-motion");
     }
+  };
+
+  const renderNearest = (position: number) => {
+    const nearest = Math.round(position);
+    const index = ((nearest % count) + count) % count;
+    render(index);
   };
 
   const render = (index: number) => {
@@ -109,24 +110,18 @@ export function initProjectCarousel(): void {
     }
 
     apply(0, false);
+    wheelPosition = virtual - count;
     render(((virtual % count) + count) % count);
-  };
-
-  const lock = () => {
-    locked = true;
-    window.clearTimeout(timer);
-    timer = window.setTimeout(() => {
-      locked = false;
-    }, COOLDOWN);
   };
 
   const go = (direction: number) => {
     if (!count || direction === 0) return;
 
     virtual += direction;
+    wheelPosition = virtual - count;
+    track.classList.remove("no-motion");
     apply();
     render(((virtual % count) + count) % count);
-    lock();
   };
 
   const goTo = (target: number) => {
@@ -145,15 +140,30 @@ export function initProjectCarousel(): void {
 
   // Molette et trackpad ------------------------------------------------
   const desktop = window.matchMedia("(min-width: 810px)");
-  let accumulated = 0;
+  let wheelPosition = 0;
+
+  const snapToNearest = () => {
+    const nearest = Math.round(wheelPosition);
+    const target = Math.max(-count + 1, Math.min(count - 1, nearest));
+
+    virtual = count + target;
+    wheelPosition = target;
+    track.classList.remove("no-motion");
+    render(((virtual % count) + count) % count);
+    apply();
+  };
+
+  const scheduleSnap = () => {
+    window.clearTimeout(snapTimer);
+    snapTimer = window.setTimeout(snapToNearest, SNAP_DELAY);
+  };
 
   viewport.addEventListener(
     "wheel",
     (event) => {
       if (!desktop.matches) return;
-
       event.preventDefault();
-      if (locked) return;
+      event.preventDefault();
 
       const factor =
         event.deltaMode === 1
@@ -162,12 +172,15 @@ export function initProjectCarousel(): void {
             ? viewport.clientHeight
             : 1;
 
-      accumulated += event.deltaY * factor;
-
-      if (Math.abs(accumulated) >= WHEEL_THRESHOLD) {
-        go(Math.sign(accumulated));
-        accumulated = 0;
-      }
+      wheelPosition += (event.deltaY * factor) / step;
+      wheelPosition = Math.max(
+        -count + 0.25,
+        Math.min(count - 0.25, wheelPosition),
+      );
+      track.classList.add("no-motion");
+      track.style.transform = `translate3d(0, ${-wheelPosition * step}px, 0)`;
+      renderNearest(wheelPosition);
+      scheduleSnap();
     },
     { passive: false },
   );
@@ -211,7 +224,6 @@ export function initProjectCarousel(): void {
     origin = event.clientY;
     dragged = 0;
     moved = false;
-    accumulated = 0;
 
     viewport.setPointerCapture(event.pointerId);
     track.classList.add("is-dragging");
@@ -232,11 +244,8 @@ export function initProjectCarousel(): void {
     pointer = null;
     track.classList.remove("is-dragging");
 
-    if (Math.abs(dragged) >= DRAG_THRESHOLD) {
-      go(dragged < 0 ? 1 : -1);
-    } else {
-      apply(0);
-    }
+    wheelPosition = virtual - count - dragged / step;
+    snapToNearest();
 
     dragged = 0;
   };
