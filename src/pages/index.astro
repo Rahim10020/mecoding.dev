@@ -8,19 +8,12 @@ import { site } from "@/data/site";
 import Layout from "@/layouts/Layout.astro";
 
 const projects = (
-  await getCollection(
-    "projects",
-    ({ data }) => data.featured && !data.draft,
-  )
+  await getCollection("projects", ({ data }) => data.featured && !data.draft)
 ).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<Layout
-  shell={false}
-  title={site.title}
-  description={site.description}
->
-  <Header slot="header" class="fixed inset-x-0 top-0 z-40 bg-white/95" />
+<Layout shell={false} title={site.title} description={site.description}>
+  <Header slot="header" class="fixed inset-x-0 top-0 z-40" />
 
   <HomeHero projects={projects} />
 
