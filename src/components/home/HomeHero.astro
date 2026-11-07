@@ -13,9 +13,7 @@ const { projects } = Astro.props;
 ---
 
 <section class="relative flex flex-col md:h-svh md:overflow-hidden">
-  <Frame
-    class="flex flex-1 flex-col justify-end pb-column pt-[5rem] md:pt-0"
-  >
+  <Frame class="flex flex-1 flex-col justify-end pb-column pt-[5rem] md:pt-0">
     <div
       class="flex w-full flex-col gap-stack md:flex-row md:items-end md:justify-between md:gap-grid"
     >
@@ -37,29 +35,18 @@ const { projects } = Astro.props;
 
       <div class="hidden md:block md:flex-[1.5]" aria-hidden="true"></div>
 
-      <div class="w-full md:max-w-[350px] md:flex-1 md:pb-column">
-        <a
-          href="/media/reel.webm"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group relative block aspect-video w-full overflow-hidden bg-black"
-          aria-label="Play reel (opens in a new tab)"
-        >
+      <div class="w-full md:max-w-87.5 md:flex-1 md:pb-column">
+        <div class="block w-full overflow-hidden">
           <img
-            src="/media/reel-poster.webp"
-            width="1280"
-            height="609"
-            alt=""
+            src="/images/others/rahim-cartoon.webp"
+            width="587"
+            height="440"
+            alt="Illustration of Rahim"
             fetchpriority="high"
             decoding="async"
-            class="h-full w-full object-cover"
+            class="h-auto w-full"
           />
-          <span
-            class="absolute right-5 top-5 inline-flex items-center bg-black px-3 py-1.5 text-label uppercase text-white transition-colors duration-200 group-hover:bg-black-80"
-          >
-            Play reel
-          </span>
-        </a>
+        </div>
       </div>
     </div>
   </Frame>
