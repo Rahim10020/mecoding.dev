@@ -42,5 +42,18 @@ export const about = {
     { name: "Figma", detail: "Design" },
   ] satisfies AboutEntry[],
 
+  certifications: [
+    {
+      name: "Meta Android Developer",
+      detail: "Coursera — 2025 · 12 courses",
+      href: "https://coursera.org/verify/professional-cert/D9NRRKT23S0A",
+    },
+    {
+      name: "Meta Back-End Developer",
+      detail: "Coursera — 2025 · 9 courses",
+      href: "https://coursera.org/verify/professional-cert/5371WRWBPVRH",
+    },
+  ] satisfies AboutEntry[],
+
   languages: ["French", "English"],
 } as const;

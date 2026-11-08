@@ -19,6 +19,8 @@ interface Props {
 const { label, entries, columns = 1, class: className } = Astro.props;
 
 const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
+const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
 ---
 
 <section class:list={[className]} aria-labelledby={titleId}>
@@ -38,6 +40,8 @@ const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
           {entry.href ? (
             <a
               href={entry.href}
+              target={isExternal(entry.href) ? "_blank" : undefined}
+              rel={isExternal(entry.href) ? "noopener noreferrer" : undefined}
               class="group inline-flex items-baseline gap-1 font-semibold text-black-80 transition-colors duration-200 hover:text-black"
             >
               <span class="underline-offset-4 group-hover:underline">
@@ -53,7 +57,7 @@ const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
           )}
 
           {entry.detail && (
-            <span class="text-black-60">
+            <span class="whitespace-nowrap text-black-60">
               <span aria-hidden="true"> • </span>
               {entry.detail}
             </span>
