@@ -68,8 +68,10 @@ export function initProjectCarousel(): void {
 
   const renderNearest = (position: number) => {
     const nearest = Math.round(position);
-    const index = ((nearest % count) + count) % count;
-    render(index);
+    // `render` s'appuie sur `virtual` pour désigner la tuile active : on le
+    // garde aligné sur la position affichée pendant le défilement.
+    virtual = count + nearest;
+    render(((nearest % count) + count) % count);
   };
 
   const render = (index: number) => {
@@ -99,14 +101,14 @@ export function initProjectCarousel(): void {
   };
 
   const normalize = () => {
-    if (virtual >= count * 2) {
-      virtual -= count;
-    } else if (virtual < count) {
-      virtual += count;
-    } else {
-      return;
-    }
+    // Ramène l'index virtuel dans la copie du milieu ; le track est décalé
+    // d'une copie entière, ce qui reste invisible puisque les copies sont
+    // identiques.
+    const wrapped = count + ((((virtual - count) % count) + count) % count);
 
+    if (wrapped === virtual) return;
+
+    virtual = wrapped;
     apply(0, false);
     wheelPosition = virtual - count;
     render(((virtual % count) + count) % count);
@@ -138,13 +140,12 @@ export function initProjectCarousel(): void {
 
   // Molette et trackpad ------------------------------------------------
   // Sur desktop la molette pilote le carrousel quelle que soit la position du
-  // curseur ; à une extrémité on laisse la page reprendre la main.
+  // curseur, en boucle : la position est ramenée dans une fenêtre d'une copie.
   const desktop = window.matchMedia("(min-width: 810px)");
   let wheelPosition = 0;
 
   const snapToNearest = () => {
-    const nearest = Math.round(wheelPosition);
-    const target = Math.max(-count + 1, Math.min(count - 1, nearest));
+    const target = Math.round(wheelPosition);
 
     virtual = count + target;
     wheelPosition = target;
@@ -156,6 +157,14 @@ export function initProjectCarousel(): void {
   const scheduleSnap = () => {
     window.clearTimeout(snapTimer);
     snapTimer = window.setTimeout(snapToNearest, SNAP_DELAY);
+  };
+
+  // Ramène une position dans [-count/2, count/2) : se décaler d'une copie
+  // entière est invisible et garantit qu'aucun trou n'apparaît aux bords.
+  const wrapPosition = (position: number) => {
+    const half = count / 2;
+
+    return ((((position + half) % count) + count) % count) - half;
   };
 
   window.addEventListener(
@@ -171,25 +180,13 @@ export function initProjectCarousel(): void {
           : event.deltaMode === 2
             ? window.innerHeight
             : 1;
-      const movement = (event.deltaY * factor) / step;
-      const nextPosition = wheelPosition + movement;
-      const minPosition = -count + 0.25;
-      const maxPosition = count - 0.25;
-
-      // Laisse la page défiler lorsque le carrousel est déjà à une extrémité.
-      if (
-        (movement < 0 && wheelPosition <= minPosition) ||
-        (movement > 0 && wheelPosition >= maxPosition)
-      ) {
-        return;
-      }
 
       event.preventDefault();
 
-      wheelPosition = Math.max(
-        minPosition,
-        Math.min(maxPosition, nextPosition),
+      wheelPosition = wrapPosition(
+        wheelPosition + (event.deltaY * factor) / step,
       );
+
       track.classList.add("no-motion");
       track.style.transform = `translate3d(0, ${-wheelPosition * step}px, 0)`;
       renderNearest(wheelPosition);
