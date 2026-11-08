@@ -27,7 +27,9 @@ const read = (): CarouselElements | null => {
     root,
     viewport,
     track,
-    items: Array.from(root.querySelectorAll<HTMLElement>("[data-carousel-item]")),
+    items: Array.from(
+      root.querySelectorAll<HTMLElement>("[data-carousel-item]"),
+    ),
     captions: Array.from(
       root.querySelectorAll<HTMLElement>("[data-carousel-caption]"),
     ),
@@ -80,22 +82,18 @@ export function initProjectCarousel(): void {
     });
 
     captions.forEach((caption) => {
-      const current =
-        Number(caption.dataset.carouselCaptionIndex) === index;
+      const current = Number(caption.dataset.carouselCaptionIndex) === index;
       caption.classList.toggle("is-active", current);
       caption.setAttribute("aria-hidden", String(!current));
       caption
         .querySelectorAll<HTMLElement>("a")
-        .forEach((link) =>
-          link.setAttribute("tabindex", current ? "0" : "-1"),
-        );
+        .forEach((link) => link.setAttribute("tabindex", current ? "0" : "-1"));
     });
 
     if (live) {
       live.textContent =
         captions.find(
-          (caption) =>
-            Number(caption.dataset.carouselCaptionIndex) === index,
+          (caption) => Number(caption.dataset.carouselCaptionIndex) === index,
         )?.dataset.title ?? "";
     }
   };
@@ -125,7 +123,7 @@ export function initProjectCarousel(): void {
   };
 
   const goTo = (target: number) => {
-    let delta = ((target - active + count) % count + count) % count;
+    let delta = (((target - active + count) % count) + count) % count;
     if (delta > count / 2) delta -= count;
     if (delta === 0) return;
 
@@ -139,6 +137,8 @@ export function initProjectCarousel(): void {
   render(active);
 
   // Molette et trackpad ------------------------------------------------
+  // Sur desktop la molette pilote le carrousel quelle que soit la position du
+  // curseur ; à une extrémité on laisse la page reprendre la main.
   const desktop = window.matchMedia("(min-width: 810px)");
   let wheelPosition = 0;
 
@@ -158,23 +158,25 @@ export function initProjectCarousel(): void {
     snapTimer = window.setTimeout(snapToNearest, SNAP_DELAY);
   };
 
-  viewport.addEventListener(
+  window.addEventListener(
     "wheel",
     (event) => {
       if (!desktop.matches) return;
-      event.preventDefault();
+      // Le zoom natif (ctrl + molette) n'est pas intercepté.
+      if (event.ctrlKey) return;
+
       const factor =
         event.deltaMode === 1
           ? 16
           : event.deltaMode === 2
-            ? viewport.clientHeight
+            ? window.innerHeight
             : 1;
       const movement = (event.deltaY * factor) / step;
       const nextPosition = wheelPosition + movement;
       const minPosition = -count + 0.25;
       const maxPosition = count - 0.25;
 
-      // Laisse la page défiler lorsque le carousel est déjà à une extrémité.
+      // Laisse la page défiler lorsque le carrousel est déjà à une extrémité.
       if (
         (movement < 0 && wheelPosition <= minPosition) ||
         (movement > 0 && wheelPosition >= maxPosition)
@@ -184,7 +186,6 @@ export function initProjectCarousel(): void {
 
       event.preventDefault();
 
-      wheelPosition += movement;
       wheelPosition = Math.max(
         minPosition,
         Math.min(maxPosition, nextPosition),

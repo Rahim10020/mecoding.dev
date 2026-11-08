@@ -46,8 +46,13 @@ import Logo from "@/components/ui/Logo.astro";
       </button>
     </div>
 
-    <div class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack">
-      <NavPills variant="plain" class="[&_a]:text-headline [&_a]:normal-case [&_a]:tracking-[-0.02em]" />
+    <div
+      class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack"
+    >
+      <NavPills
+        variant="plain"
+        class="[&_a]:text-headline [&_a]:normal-case [&_a]:tracking-[-0.02em]"
+      />
 
       <div class="flex flex-col gap-stack">
         <div class="flex flex-col gap-2">
@@ -81,19 +86,23 @@ import Logo from "@/components/ui/Logo.astro";
       panel.hidden = !open;
       document.documentElement.style.overflow = open ? "hidden" : "";
 
+      // `preventScroll` évite de remonter la page sur les vues où le header
+      // n'est pas fixe (projets, à propos, études de cas).
       if (open) {
-        close.focus();
+        close.focus({ preventScroll: true });
       } else {
-        toggle.focus();
+        toggle.focus({ preventScroll: true });
       }
     };
 
     toggle.addEventListener("click", () => setOpen(true));
     close.addEventListener("click", () => setOpen(false));
 
-    panel.querySelectorAll<HTMLElement>("[data-menu-link], nav a").forEach((link) => {
-      link.addEventListener("click", () => setOpen(false));
-    });
+    panel
+      .querySelectorAll<HTMLElement>("[data-menu-link], nav a")
+      .forEach((link) => {
+        link.addEventListener("click", () => setOpen(false));
+      });
 
     document.addEventListener("keydown", (event) => {
       if (panel.hidden) return;
@@ -127,10 +136,12 @@ import Logo from "@/components/ui/Logo.astro";
     });
 
     // La panneau n'existe qu'en dessous de md : on le referme au redimensionnement.
-    window.matchMedia("(min-width: 810px)").addEventListener("change", (event) => {
-      if (event.matches && !panel.hidden) {
-        setOpen(false);
-      }
-    });
+    window
+      .matchMedia("(min-width: 810px)")
+      .addEventListener("change", (event) => {
+        if (event.matches && !panel.hidden) {
+          setOpen(false);
+        }
+      });
   }
 </script>
