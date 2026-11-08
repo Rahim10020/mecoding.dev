@@ -32,6 +32,18 @@ export const site = {
   },
 
   email: "rahim100codeur@gmail.com",
+  phone: "+228 91 79 61 15",
+  phoneHref: "tel:+22891796115",
+
+  /**
+   * Formulaire de contact. Sans `accessKey`, le formulaire retombe sur
+   * `mailto:` ; renseigner la clé Web3Forms active l'envoi via leur API.
+   */
+  contact: {
+    endpoint: "https://api.web3forms.com/submit",
+    accessKey: "",
+    subject: "New message from mecoding.dev",
+  },
 
   /** Statut affiché en haut à gauche du header. */
   availability: "Available for work",

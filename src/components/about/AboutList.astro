@@ -1,0 +1,65 @@
+---
+import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+
+export interface AboutEntry {
+  name: string;
+  detail?: string;
+  href?: string;
+}
+
+interface Props {
+  /** Libellé du bloc, aussi utilisé pour l'identifiant du titre. */
+  label: string;
+  entries: readonly AboutEntry[];
+  /** Répartit les entrées sur deux colonnes à partir de 640px. */
+  columns?: 1 | 2;
+  class?: string;
+}
+
+const { label, entries, columns = 1, class: className } = Astro.props;
+
+const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+---
+
+<section class:list={[className]} aria-labelledby={titleId}>
+  <h2 id={titleId} class="text-label uppercase text-black-60">
+    {label}
+  </h2>
+
+  <ul
+    class:list={[
+      "mt-stack flex flex-col gap-1 text-body",
+      columns === 2 && "sm:grid sm:grid-cols-2 sm:gap-x-stack",
+    ]}
+  >
+    {
+      entries.map((entry) => (
+        <li>
+          {entry.href ? (
+            <a
+              href={entry.href}
+              class="group inline-flex items-baseline gap-1 font-semibold text-black-80 transition-colors duration-200 hover:text-black"
+            >
+              <span class="underline-offset-4 group-hover:underline">
+                {entry.name}
+              </span>
+              <ArrowUpRight
+                size={9}
+                class="translate-y-px text-black-40 transition-colors duration-200 group-hover:text-black"
+              />
+            </a>
+          ) : (
+            <span class="font-semibold">{entry.name}</span>
+          )}
+
+          {entry.detail && (
+            <span class="text-black-60">
+              <span aria-hidden="true"> • </span>
+              {entry.detail}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>
