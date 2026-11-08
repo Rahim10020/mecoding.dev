@@ -49,6 +49,8 @@ export function initProjectCarousel(): void {
   let virtual = count;
   let active = 0;
   let snapTimer: number | undefined;
+  /** Position de la molette, en tuiles, ramenée en continu dans une copie. */
+  let wheelPosition = 0;
 
   const offset = (drag = 0) => -(virtual - count) * step + drag;
 
@@ -100,16 +102,45 @@ export function initProjectCarousel(): void {
     }
   };
 
-  const normalize = () => {
-    // Ramène l'index virtuel dans la copie du milieu ; le track est décalé
-    // d'une copie entière, ce qui reste invisible puisque les copies sont
-    // identiques.
+  /** Ramène une valeur dans `[-period / 2, period / 2)`. */
+  const wrapWithin = (value: number, period: number) => {
+    const half = period / 2;
+
+    return ((((value + half) % period) + period) % period) - half;
+  };
+
+  /** Pose le track sur une translation, sans transition. */
+  const place = (translation: number) => {
+    track.classList.add("no-motion");
+    track.style.transform = `translate3d(0, ${translation}px, 0)`;
+    // Force le recalcul avant de rendre la transition.
+    void track.offsetHeight;
+    track.classList.remove("no-motion");
+  };
+
+  /**
+   * Ramène `virtual` dans la copie du milieu et renvoie la translation de
+   * départ décalée du même multiple de la période. Comme les copies sont
+   * identiques, la position affichée ne change pas.
+   */
+  const rebase = (from: number) => {
     const wrapped = count + ((((virtual - count) % count) + count) % count);
+    if (wrapped === virtual) return from;
 
-    if (wrapped === virtual) return;
-
+    const shift = wrapped - virtual;
     virtual = wrapped;
-    apply(0, false);
+
+    return from - shift * step;
+  };
+
+  const normalize = () => {
+    // Filet de sécurité : les mouvements rebasent déjà `virtual` en continu.
+    const target = offset();
+    const start = rebase(target);
+
+    if (start === target) return;
+
+    place(start);
     wheelPosition = virtual - count;
     render(((virtual % count) + count) % count);
   };
@@ -117,9 +148,16 @@ export function initProjectCarousel(): void {
   const go = (direction: number) => {
     if (!count || direction === 0) return;
 
+    // Pose le track sur sa cible avant d'avancer : sans cela, les répétitions
+    // rapides du clavier accumulent du retard et décalent le track de
+    // plusieurs copies, jusqu'à sortir de la bande.
+    const from = offset();
+
     virtual += direction;
+    const start = rebase(from);
+
+    place(start);
     wheelPosition = virtual - count;
-    track.classList.remove("no-motion");
     apply();
     render(((virtual % count) + count) % count);
   };
@@ -142,14 +180,15 @@ export function initProjectCarousel(): void {
   // Sur desktop la molette pilote le carrousel quelle que soit la position du
   // curseur, en boucle : la position est ramenée dans une fenêtre d'une copie.
   const desktop = window.matchMedia("(min-width: 810px)");
-  let wheelPosition = 0;
 
   const snapToNearest = () => {
-    const target = Math.round(wheelPosition);
+    const from = -wheelPosition * step;
 
-    virtual = count + target;
-    wheelPosition = target;
-    track.classList.remove("no-motion");
+    virtual = count + Math.round(wheelPosition);
+    const start = rebase(from);
+
+    place(start);
+    wheelPosition = virtual - count;
     render(((virtual % count) + count) % count);
     apply();
   };
@@ -161,11 +200,7 @@ export function initProjectCarousel(): void {
 
   // Ramène une position dans [-count/2, count/2) : se décaler d'une copie
   // entière est invisible et garantit qu'aucun trou n'apparaît aux bords.
-  const wrapPosition = (position: number) => {
-    const half = count / 2;
-
-    return ((((position + half) % count) + count) % count) - half;
-  };
+  const wrapPosition = (position: number) => wrapWithin(position, count);
 
   window.addEventListener(
     "wheel",
@@ -227,6 +262,12 @@ export function initProjectCarousel(): void {
   let dragged = 0;
   let moved = false;
 
+  viewport.addEventListener("dragstart", (event) => {
+    // Sans cela, le glissement d'une image déclenche le drag natif du
+    // navigateur et annule le pointeur (pointercancel) dès le premier move.
+    event.preventDefault();
+  });
+
   viewport.addEventListener("pointerdown", (event) => {
     if (event.button !== 0) return;
 
@@ -242,7 +283,7 @@ export function initProjectCarousel(): void {
   viewport.addEventListener("pointermove", (event) => {
     if (pointer !== event.pointerId) return;
 
-    dragged = event.clientY - origin;
+    dragged = wrapWithin(event.clientY - origin, count * step);
     if (Math.abs(dragged) > 4) moved = true;
 
     apply(dragged);
