@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 
+import Button from "@/components/ui/Button.astro";
 import Placeholder from "@/components/ui/Placeholder.astro";
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
 
@@ -126,14 +127,15 @@ const trackTop = middleStart * STEP + TILE / 2;
           <p class="line-clamp-2 text-body text-black-80">
             {project.data.description}
           </p>
-          <a
+          <Button
             href={`/projects#${project.id}`}
-            class="pointer-events-auto mt-meta inline-flex items-center gap-2 bg-black px-3 py-1 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
+            size="sm"
+            class="pointer-events-auto mt-meta"
             tabindex={index === 0 ? 0 : -1}
           >
             View project
-            <ArrowUpRight size={12} />
-          </a>
+            <ArrowUpRight slot="icon-end" size={12} />
+          </Button>
         </div>
       ))
     }

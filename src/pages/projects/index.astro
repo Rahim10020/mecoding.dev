@@ -1,13 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-
 import Frame from "@/components/layout/Frame.astro";
 import ProjectRow from "@/components/projects/ProjectRow.astro";
+import Overline from "@/components/ui/Overline.astro";
 import Layout from "@/layouts/Layout.astro";
+import { getAllProjects } from "@/lib/projects";
 
-const projects = (
-  await getCollection("projects", ({ data }) => !data.draft)
-).sort((a, b) => a.data.order - b.data.order);
+const projects = await getAllProjects();
 ---
 
 <Layout
@@ -16,7 +14,7 @@ const projects = (
 >
   <Frame class="pb-column pt-stack">
     <header class="max-w-3xl">
-      <p class="text-label uppercase text-black-60">Work — {projects.length} projects</p>
+      <Overline>Work — {projects.length} projects</Overline>
       <h1 class="mt-meta text-display">Selected work.</h1>
       <p class="mt-stack max-w-xl text-body-lg text-black-60">
         Interfaces, products and sites built end to end — from the first

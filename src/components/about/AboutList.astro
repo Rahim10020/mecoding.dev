@@ -1,5 +1,7 @@
 ---
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+import Overline from "@/components/ui/Overline.astro";
+import { externalLinkProps } from "@/lib/url";
 
 export interface AboutEntry {
   name: string;
@@ -19,14 +21,12 @@ interface Props {
 const { label, entries, columns = 1, class: className } = Astro.props;
 
 const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-
-const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
 ---
 
 <section class:list={[className]} aria-labelledby={titleId}>
-  <h2 id={titleId} class="text-label text-black-70">
+  <Overline as="h2" tone="soft" uppercase={false} id={titleId}>
     {label}
-  </h2>
+  </Overline>
 
   <ul
     class:list={[
@@ -40,8 +40,7 @@ const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
           {entry.href ? (
             <a
               href={entry.href}
-              target={isExternal(entry.href) ? "_blank" : undefined}
-              rel={isExternal(entry.href) ? "noopener noreferrer" : undefined}
+              {...externalLinkProps(entry.href)}
               class="group inline-flex items-baseline gap-1 font-semibold text-black-80 transition-colors duration-200 hover:text-black"
             >
               <span class="underline-offset-4 group-hover:underline">

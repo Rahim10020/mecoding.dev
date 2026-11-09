@@ -1,16 +1,14 @@
 ---
-import { getCollection } from "astro:content";
-
 import AboutContact from "@/components/about/AboutContact.astro";
 import AboutList from "@/components/about/AboutList.astro";
 import AboutStatement from "@/components/about/AboutStatement.astro";
 import Frame from "@/components/layout/Frame.astro";
+import Overline from "@/components/ui/Overline.astro";
 import { about } from "@/data/about";
 import Layout from "@/layouts/Layout.astro";
+import { getAllProjects } from "@/lib/projects";
 
-const projects = (
-  await getCollection("projects", ({ data }) => !data.draft)
-).sort((a, b) => a.data.order - b.data.order);
+const projects = await getAllProjects();
 
 const selectedWork = projects.map((project) => ({
   name: project.data.title,
@@ -31,9 +29,9 @@ const selectedWork = projects.map((project) => ({
         <AboutStatement />
 
         <section aria-labelledby="about-expertise">
-          <h2 id="about-expertise" class="text-label text-black-70">
+          <Overline as="h2" tone="soft" uppercase={false} id="about-expertise">
             Expertise
-          </h2>
+          </Overline>
           <p class="mt-1 max-w-2xl text-body font-medium text-black">
             {about.expertise.join(", ")}
           </p>

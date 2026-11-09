@@ -45,9 +45,6 @@ export const site = {
     subject: "New message from mecoding.dev",
   },
 
-  /** Statut affiché en haut à gauche du header. */
-  availability: "Available for work",
-
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/projects" },

@@ -1,5 +1,5 @@
 ---
-import Availability from "@/components/ui/Availability.astro";
+import Button from "@/components/ui/Button.astro";
 import LocalClock from "@/components/ui/LocalClock.astro";
 import NavPills from "@/components/ui/NavPills.astro";
 import SocialLinks from "@/components/ui/SocialLinks.astro";
@@ -10,16 +10,17 @@ import Logo from "@/components/ui/Logo.astro";
 ---
 
 <div class="md:hidden" data-menu-root>
-  <button
+  <Button
     type="button"
-    class="inline-flex items-center gap-2 text-label uppercase text-black-70"
+    variant="ghost"
+    size="none"
     aria-expanded="false"
     aria-controls="mobile-menu"
     data-menu-toggle
   >
     <span>Menu</span>
-    <Menu size={16} />
-  </button>
+    <Menu slot="icon-end" size={16} />
+  </Button>
 
   <div
     id="mobile-menu"
@@ -36,14 +37,15 @@ import Logo from "@/components/ui/Logo.astro";
         <span class="text-title lowercase tracking-[-0.04em]">{site.name}</span>
       </a>
 
-      <button
+      <Button
         type="button"
-        class="inline-flex items-center gap-2 text-label uppercase text-black-70"
+        variant="ghost"
+        size="none"
         data-menu-close
       >
         <span>Close</span>
-        <Close size={16} />
-      </button>
+        <Close slot="icon-end" size={16} />
+      </Button>
     </div>
 
     <div
@@ -55,14 +57,11 @@ import Logo from "@/components/ui/Logo.astro";
       />
 
       <div class="flex flex-col gap-stack">
-        <div class="flex flex-col gap-2">
-          <Availability label={site.availability} />
-          <p class="text-label uppercase text-black-70">
-            {site.location.city}, {site.location.country}
-            <span aria-hidden="true"> — </span>
-            <LocalClock class="inline" />
-          </p>
-        </div>
+        <p class="text-label uppercase text-black-70">
+          {site.location.city}, {site.location.country}
+          <span aria-hidden="true"> — </span>
+          <LocalClock class="inline" />
+        </p>
 
         <SocialLinks />
       </div>

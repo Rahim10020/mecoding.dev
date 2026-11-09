@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
 import Frame from "@/components/layout/Frame.astro";
+import Overline from "@/components/ui/Overline.astro";
 
 interface Props {
   projects: CollectionEntry<"projects">[];
@@ -13,9 +14,9 @@ const { projects } = Astro.props;
 
 <section class="md:hidden" aria-labelledby="featured-title">
   <Frame class="pb-column pt-stack">
-    <p id="featured-title" class="text-label uppercase text-black-60">
+    <Overline id="featured-title">
       Selected work — {projects.length} projects
-    </p>
+    </Overline>
 
     <ul class="mt-meta border-t border-black-10">
       {
@@ -26,9 +27,9 @@ const { projects } = Astro.props;
               class="group flex items-start justify-between gap-stack border-b border-black-10 py-stack"
             >
               <span>
-                <span class="block text-label uppercase text-black-60">
+                <Overline as="span" class="block">
                   {project.data.category} — {project.data.year}
-                </span>
+                </Overline>
                 <span class="mt-grid block text-title">
                   {project.data.title}
                 </span>

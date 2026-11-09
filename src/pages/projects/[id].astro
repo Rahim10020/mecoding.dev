@@ -1,16 +1,17 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 import ExternalLink from "@/components/icons/ExternalLink.astro";
 import ArrowRight from "@/components/icons/ArrowRight.astro";
 import Frame from "@/components/layout/Frame.astro";
+import Button from "@/components/ui/Button.astro";
+import Overline from "@/components/ui/Overline.astro";
 import Layout from "@/layouts/Layout.astro";
+import { getAllProjects } from "@/lib/projects";
 
 export async function getStaticPaths() {
-  const projects = (
-    await getCollection("projects", ({ data }) => !data.draft)
-  ).sort((a, b) => a.data.order - b.data.order);
+  const projects = await getAllProjects();
 
   return projects.map((project, index) => ({
     params: { id: project.id },
@@ -45,9 +46,9 @@ const { data } = project;
         All projects
       </a>
 
-      <p class="mt-column text-label uppercase text-black-60">
+      <Overline class="mt-column">
         {data.category} — {data.year}
-      </p>
+      </Overline>
 
       <h1 class="mt-meta max-w-4xl text-headline">{data.title}</h1>
 
@@ -59,37 +60,36 @@ const { data } = project;
         class="mt-column grid gap-grid border-t border-black-10 pt-meta sm:grid-cols-3"
       >
         <div>
-          <dt class="text-label uppercase text-black-60">Role</dt>
+          <Overline as="dt">Role</Overline>
           <dd class="mt-grid text-body text-black-80">{data.role}</dd>
         </div>
         <div>
-          <dt class="text-label uppercase text-black-60">Platform</dt>
+          <Overline as="dt">Platform</Overline>
           <dd class="mt-grid text-body text-black-80">{data.platform}</dd>
         </div>
         <div>
-          <dt class="text-label uppercase text-black-60">Year</dt>
+          <Overline as="dt">Year</Overline>
           <dd class="mt-grid text-body text-black-80">{data.year}</dd>
         </div>
       </dl>
 
       {
         data.link && (
-          <a
-            href={data.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-stack inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
-          >
-            Visit live site
-            <ExternalLink size={12} />
-          </a>
+        <Button
+          href={data.link}
+          size="md"
+          class="mt-stack rounded-full"
+        >
+          Visit live site
+          <ExternalLink slot="icon-end" size={12} />
+        </Button>
         )
       }
     </Frame>
 
     <Frame class="mt-column grid gap-column pb-column lg:grid-cols-[16rem_1fr]">
       <aside class="hidden lg:block">
-        <p class="text-label uppercase text-black-60">Stack</p>
+        <Overline>Stack</Overline>
         <ul class="mt-grid flex flex-wrap gap-2">
           {
             data.tags.map((tag) => (
@@ -100,7 +100,7 @@ const { data } = project;
           }
         </ul>
 
-        <p class="mt-column text-label uppercase text-black-60">Year</p>
+        <Overline class="mt-column">Year</Overline>
         <p class="mt-grid text-body text-black-80">{data.year}</p>
       </aside>
 
@@ -115,7 +115,7 @@ const { data } = project;
         class="group flex flex-col gap-grid md:flex-row md:items-end md:justify-between"
       >
         <div>
-          <p class="text-label uppercase text-black-60">Next project</p>
+          <Overline>Next project</Overline>
           <p class="mt-meta text-title">{next.data.title}</p>
         </div>
         <ArrowRight

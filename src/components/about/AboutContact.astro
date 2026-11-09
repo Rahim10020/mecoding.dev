@@ -1,12 +1,14 @@
 ---
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+import Button from "@/components/ui/Button.astro";
+import Input from "@/components/ui/Input.astro";
+import Overline from "@/components/ui/Overline.astro";
+import Textarea from "@/components/ui/Textarea.astro";
 import { about } from "@/data/about";
 import { site } from "@/data/site";
 
 const usesEndpoint = site.contact.accessKey.length > 0;
 const action = usesEndpoint ? site.contact.endpoint : `mailto:${site.email}`;
-
-const fieldClass = "w-full bg-black-5 text-body text-black text-body";
 
 const highlightClass =
   "inline-block max-w-full bg-black px-1 text-white transition-colors duration-200 hover:bg-black-80";
@@ -17,9 +19,14 @@ const highlightClass =
   class="grid gap-column md:grid-cols-[minmax(0,36rem)_13rem] md:gap-center"
 >
   <div>
-    <h2 id="about-contact-title" class="text-label text-black-80">
+    <Overline
+      as="h2"
+      tone="strong"
+      uppercase={false}
+      id="about-contact-title"
+    >
       Get in touch
-    </h2>
+    </Overline>
 
     <form
       action={action}
@@ -49,63 +56,45 @@ const highlightClass =
         )
       }
 
-      <div class="grid sm:grid-cols-[6rem_1fr] sm:items-baseline">
-        <label for="contact-name" class="text-body font-semibold">
-          Full name:
-        </label>
-        <input
-          id="contact-name"
-          name="name"
-          placeholder="Denzel Beau"
-          type="text"
-          autocomplete="name"
-          required
-          class={fieldClass}
-        />
-      </div>
+      <Input
+        id="contact-name"
+        name="name"
+        label="Full name"
+        placeholder="Your name"
+        type="text"
+        autocomplete="name"
+        required
+      />
 
-      <div class="grid sm:grid-cols-[6rem_1fr] sm:items-baseline">
-        <label for="contact-email" class="text-body font-semibold">
-          Email:
-        </label>
-        <input
-          id="contact-email"
-          name="email"
-          type="email"
-          placeholder="hello@gmail.com"
-          autocomplete="email"
-          required
-          class={fieldClass}
-        />
-      </div>
+      <Input
+        id="contact-email"
+        name="email"
+        label="Email"
+        type="email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      />
 
-      <div>
-        <label for="contact-message" class="text-body font-semibold">
-          Message
-        </label>
-        <textarea
-          id="contact-message"
-          name="message"
-          placeholder="Tell us about you project..."
-          rows="4"
-          required
-          class="mt-1 min-h-16 w-full resize-y bg-black-5 pt-2 pl-2 text-body text-black"
-        ></textarea>
-      </div>
+      <Textarea
+        id="contact-message"
+        name="message"
+        label="Message"
+        placeholder="Tell us about your project…"
+        rows="4"
+        required
+      />
 
-      <button
-        type="submit"
-        class="inline-flex cursor-pointer w-fit items-center gap-1 bg-black pl-2 pr-6 py-1 text-label uppercase text-white transition-colors duration-200 hover:bg-black-80"
-      >
+      <Button type="submit" size="xs" class="cursor-pointer w-fit">
         Send
-        <ArrowUpRight size={10} />
-      </button>
+        <ArrowUpRight slot="icon-end" size={10} />
+      </Button>
     </form>
   </div>
 
   <div class="flex flex-col gap-stack">
     <div>
-      <h3 class="text-label text-black-80">Contact</h3>
+      <Overline as="h3" tone="strong" uppercase={false}>Contact</Overline>
       <ul class="mt-meta flex flex-col items-start gap-1 text-body">
         <li>
           <a href={`mailto:${site.email}`} class={highlightClass}>
@@ -121,7 +110,7 @@ const highlightClass =
     </div>
 
     <div>
-      <h3 class="text-label text-black-80">Location</h3>
+      <Overline as="h3" tone="strong" uppercase={false}>Location</Overline>
       <address
         class="mt-meta flex flex-col items-start gap-1 text-body not-italic"
       >
@@ -131,7 +120,7 @@ const highlightClass =
     </div>
 
     <div>
-      <h3 class="text-label text-black-80">Languages</h3>
+      <Overline as="h3" tone="strong" uppercase={false}>Languages</Overline>
       <p class="mt-meta text-body text-black-80">
         {about.languages.join(", ")}
       </p>
