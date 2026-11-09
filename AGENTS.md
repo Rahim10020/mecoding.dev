@@ -63,11 +63,14 @@ Usage:
 
 ### Typography
 
-- Family: **Rethink Sans**, self-hosted only. No Google Fonts CDN.
+- Primary family: **Inter**, self-hosted only. No Google Fonts CDN.
+- Editorial family: **Rethink Sans**, self-hosted only, reserved for page
+  `h1` titles via `--font-editorial` (`font-editorial`).
 - Tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
   `text-caption`, `text-body-lg`, `text-body`, `text-label`
-- Weights available: **400 → 800** (variable `wght`)
-- Italic: real italic face, loaded only when used
+- Weights available: **400 → 800** (variable `wght`) for both families
+- Inter keeps the `opsz` 14–32 axis; optical sizing is enabled on `body`
+- Italic: real italic faces, loaded only when used
 - Labels are uppercase with tracking: `text-label uppercase`
 - One `<h1>` per page, headings follow document order
 
@@ -96,14 +99,17 @@ Usage:
 
 ## Typography Pipeline
 
-The source is a 117 KB variable TTF. It is never served directly.
+The sources are variable TTFs (Inter and Rethink Sans, upright and italic).
+They are never served directly.
 
 - Script: `scripts/build-fonts.sh` (`pnpm fonts`)
 - Tooling: `uv run --with fonttools --with brotli` (no Node dependency)
-- Kept axis: `wght` 400–800 (single-axis family)
+- Inter: keeps `opsz` 14–32, restricts `wght` to 400–800
+- Rethink Sans: restricts the single `wght` axis to 400–800
 - Subsets: latin and latin-ext, upright and italic, with `unicode-range`
-- Output: `public/fonts/*.woff2` + `OFL.txt`
-- The upright latin file is preloaded in `src/layouts/Layout.astro`; the
+- Output: `public/fonts/inter-*.woff2`, `rethink-sans-*.woff2` +
+  `OFL-Inter.txt`, `OFL-RethinkSans.txt`
+- Both upright latin files are preloaded in `src/layouts/Layout.astro`; the
   italic files are only downloaded when italic text is rendered
 
 If a new weight or glyph range is genuinely needed, update the script and
