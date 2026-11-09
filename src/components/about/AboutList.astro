@@ -24,13 +24,13 @@ const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
 ---
 
 <section class:list={[className]} aria-labelledby={titleId}>
-  <h2 id={titleId} class="text-label uppercase text-black-60">
+  <h2 id={titleId} class="text-label text-black-70">
     {label}
   </h2>
 
   <ul
     class:list={[
-      "mt-stack flex flex-col gap-1 text-body",
+      "mt-4 flex flex-col gap-1 text-body",
       columns === 2 && "sm:grid sm:grid-cols-2 sm:gap-x-stack",
     ]}
   >
@@ -49,7 +49,7 @@ const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
               </span>
               <ArrowUpRight
                 size={9}
-                class="translate-y-px text-black-40 transition-colors duration-200 group-hover:text-black"
+                class="translate-y-px text-black-80 transition-colors duration-200 group-hover:text-black"
               />
             </a>
           ) : (
@@ -57,7 +57,7 @@ const isExternal = (href?: string) => Boolean(href?.startsWith("http"));
           )}
 
           {entry.detail && (
-            <span class="whitespace-nowrap text-black-60">
+            <span class="whitespace-nowrap text-black-70">
               <span aria-hidden="true"> • </span>
               {entry.detail}
             </span>
