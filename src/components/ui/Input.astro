@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { id, label, class: className, ...rest } = Astro.props;
+---
+
+<div class="grid sm:grid-cols-[6rem_1fr] sm:items-baseline">
+  <label for={id} class="text-body font-semibold">{label}</label>
+  <input
+    id={id}
+    class:list={["w-full bg-black-5 text-body text-black text-body", className]}
+    {...rest}
+  />
+</div>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  as?: "p" | "h2" | "h3" | "dt" | "span";
+  tone?: "muted" | "soft" | "strong" | "inverse";
+  uppercase?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  as: Tag = "p",
+  tone = "muted",
+  uppercase = true,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const tones = {
+  muted: "text-black-60",
+  soft: "text-black-70",
+  strong: "text-black-80",
+  inverse: "text-white/60",
+} as const;
+---
+
+<Tag
+  {...rest}
+  class:list={["text-label", uppercase && "uppercase", tones[tone], className]}
+>
+  <slot />
+</Tag>

@@ -1,0 +1,52 @@
+---
+import { isExternal } from "@/lib/url";
+
+interface Props {
+  href?: string;
+  variant?: "primary" | "ghost";
+  size?: "xs" | "sm" | "md" | "none";
+  type?: "button" | "submit" | "reset";
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "sm",
+  type = "button",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const Tag = href ? "a" : "button";
+const external = href ? isExternal(href) : false;
+
+const base = "inline-flex items-center text-label uppercase";
+
+const variants = {
+  primary:
+    "bg-black text-white transition-colors duration-200 hover:bg-black-80",
+  ghost: "text-black-70",
+} as const;
+
+const sizes = {
+  xs: "gap-1 pl-2 py-1",
+  sm: "gap-2 px-3 py-1",
+  md: "gap-2 px-4 py-2",
+  none: "gap-2",
+} as const;
+---
+
+<Tag
+  {...rest}
+  href={href}
+  type={href ? undefined : type}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  class:list={[base, variants[variant], sizes[size], className]}
+>
+  <slot name="icon-start" />
+  <slot />
+  <slot name="icon-end" />
+</Tag>
