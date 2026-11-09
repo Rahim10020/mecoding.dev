@@ -19,9 +19,6 @@ const {
   ...rest
 } = Astro.props;
 
-const Tag = href ? "a" : "button";
-const external = href ? isExternal(href) : false;
-
 const base = "inline-flex items-center text-label uppercase";
 
 const variants = {
@@ -36,17 +33,29 @@ const sizes = {
   md: "gap-2 px-4 py-2",
   none: "gap-2",
 } as const;
+
+const classes = [base, variants[variant], sizes[size], className];
+const external = href ? isExternal(href) : false;
 ---
 
-<Tag
-  {...rest}
-  href={href}
-  type={href ? undefined : type}
-  target={external ? "_blank" : undefined}
-  rel={external ? "noopener noreferrer" : undefined}
-  class:list={[base, variants[variant], sizes[size], className]}
->
-  <slot name="icon-start" />
-  <slot />
-  <slot name="icon-end" />
-</Tag>
+{
+  href ? (
+    <a
+      {...rest}
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      class:list={classes}
+    >
+      <slot name="icon-start" />
+      <slot />
+      <slot name="icon-end" />
+    </a>
+  ) : (
+    <button {...rest} type={type} class:list={classes}>
+      <slot name="icon-start" />
+      <slot />
+      <slot name="icon-end" />
+    </button>
+  )
+}

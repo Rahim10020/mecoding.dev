@@ -25,7 +25,12 @@ const tones = {
 
 <Tag
   {...rest}
-  class:list={["text-label", uppercase && "uppercase", tones[tone], className]}
+  class:list={[
+    "text-label",
+    uppercase && "uppercase",
+    tones[tone as keyof typeof tones],
+    className,
+  ]}
 >
   <slot />
 </Tag>

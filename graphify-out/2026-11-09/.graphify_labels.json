@@ -1,0 +1,19 @@
+{
+  "0": "package.json",
+  "1": "styleguide.astro",
+  "2": "[id].astro",
+  "3": "site.ts",
+  "4": "Agents.md — Instructions for AI coding agents",
+  "5": "about.astro",
+  "6": "mecoding",
+  "7": "focusly.md",
+  "8": "murmur.md",
+  "9": "rahim-design.md",
+  "10": "twocoderz.md",
+  "11": "scripts",
+  "12": "tsconfig.json",
+  "13": "project-carousel.ts",
+  "14": "build-fonts.sh",
+  "15": "content.config.ts",
+  "16": "Stage.astro"
+}
