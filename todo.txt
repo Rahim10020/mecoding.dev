@@ -3,3 +3,7 @@
 -- [x] coder la page de about
 -- coder les pages de details des projets (s'inspirer de rahim-design)
 -- faire le responsive
+-- auto scroll de work. ca ralentit quand mon curseur vient dessus. meme avec l'auto scroll, je peux 
+    et je dois toujours pouvoir scroller moi meme. tu vois ce que je veux dire ?
+-- je veux que quand on clique sur le telephone ca conduit sur mon whatsapp.
+-- corriger description de work
