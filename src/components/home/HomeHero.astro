@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import Frame from "@/components/layout/Frame.astro";
 import FeaturedList from "@/components/home/FeaturedList.astro";
 import ProjectCarousel from "@/components/home/ProjectCarousel.astro";
+import Cartoon from "@/components/ui/Cartoon.astro";
 
 interface Props {
   projects: CollectionEntry<"projects">[];
@@ -36,17 +37,7 @@ const { projects } = Astro.props;
       <div class="hidden md:block md:flex-[1.5]" aria-hidden="true"></div>
 
       <div class="w-full md:max-w-80 md:flex-1">
-        <div class="block w-full overflow-hidden">
-          <img
-            src="/images/others/rahim-cartoon.webp"
-            width="487"
-            height="440"
-            alt="Illustration of Rahim"
-            fetchpriority="high"
-            decoding="async"
-            class="h-auto w-full"
-          />
-        </div>
+        <Cartoon priority />
       </div>
     </div>
   </Frame>

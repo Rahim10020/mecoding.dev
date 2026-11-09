@@ -18,6 +18,10 @@ const projects = defineCollection({
       /** Couverture dans src/assets. À défaut, image_placeholder.svg est utilisé. */
       cover: image().optional(),
       coverAlt: z.string().optional(),
+      /** Ratio de la cover dans la grille Work. */
+      coverAspect: z
+        .enum(["4/3", "3/4", "4/5", "1/1", "16/9"])
+        .default("1/1"),
       featured: z.boolean().default(false),
       draft: z.boolean().default(false),
     }),

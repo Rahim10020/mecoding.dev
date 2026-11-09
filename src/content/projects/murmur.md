@@ -10,6 +10,7 @@ year: "2026"
 link: "https://murmur-landing-three.vercel.app"
 cover: "../../assets/images/projects/murmur/cover.webp"
 coverAlt: "Murmur — project preview"
+coverAspect: "4/5"
 featured: true
 ---
 <img src="/images/projects/murmur/home.webp" alt="Murmur home screen — voice capture interface" loading="lazy" width="540" height="1200">

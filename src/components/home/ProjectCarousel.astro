@@ -52,7 +52,7 @@ const trackTop = middleStart * STEP + TILE / 2;
       {
         items.map(({ project, index, copy, global }) => (
           <a
-            href={`/projects#${project.id}`}
+            href={`/projects/${project.id}`}
             class:list={[
               "group relative block h-tile w-tile shrink-0 overflow-hidden",
               global === middleStart && "is-active",
@@ -128,7 +128,7 @@ const trackTop = middleStart * STEP + TILE / 2;
             {project.data.description}
           </p>
           <Button
-            href={`/projects#${project.id}`}
+            href={`/projects/${project.id}`}
             size="sm"
             class="pointer-events-auto mt-meta"
             tabindex={index === 0 ? 0 : -1}

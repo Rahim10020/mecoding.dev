@@ -10,6 +10,7 @@ year: "2026"
 link: "https://rahim-dev-me.vercel.app/"
 cover: "../../assets/images/projects/rahim-design/cover.webp"
 coverAlt: "rahim.design — project preview"
+coverAspect: "1/1"
 featured: true
 ---
 <video class="media-video" poster="/images/projects/rahim-design/home.webp" src="/images/projects/rahim-design/rahim-design.webm" aria-label="rahim.design portfolio demo — home, selected projects and services" controls muted playsinline preload="none"></video>

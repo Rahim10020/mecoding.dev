@@ -1,0 +1,21 @@
+---
+interface Props {
+  /** Charge l'image en priorité (LCP de la page). */
+  priority?: boolean;
+}
+
+const { priority = false } = Astro.props;
+---
+
+<div class="block w-full overflow-hidden">
+  <img
+    src="/images/others/rahim-cartoon.webp"
+    width="487"
+    height="440"
+    alt="Illustration of Rahim"
+    fetchpriority={priority ? "high" : undefined}
+    loading={priority ? undefined : "lazy"}
+    decoding="async"
+    class="h-auto w-full"
+  />
+</div>

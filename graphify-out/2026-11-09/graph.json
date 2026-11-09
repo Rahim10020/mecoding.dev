@@ -1779,6 +1779,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_ui_button_classes",
+      "label": "classes",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "about.astro",
+      "file_type": "code",
+      "norm_label": "classes",
+      "source_file": "src/components/ui/Button.astro",
+      "source_location": "L37"
+    },
+    {
       "id": "src_components_ui_button_sizes",
       "label": "sizes",
       "_origin": "ast",
@@ -1787,7 +1798,7 @@
       "file_type": "code",
       "norm_label": "sizes",
       "source_file": "src/components/ui/Button.astro",
-      "source_location": "L33"
+      "source_location": "L30"
     },
     {
       "id": "src_components_ui_button_variants",
@@ -1798,7 +1809,7 @@
       "file_type": "code",
       "norm_label": "variants",
       "source_file": "src/components/ui/Button.astro",
-      "source_location": "L27"
+      "source_location": "L24"
     },
     {
       "id": "src_components_ui_textarea",
@@ -4348,7 +4359,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Button.astro",
-      "source_location": "L27",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -4359,7 +4370,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/Button.astro",
-      "source_location": "L33",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_ui_button",
+      "target": "src_components_ui_button_classes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/Button.astro",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -5424,5 +5446,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e62745ec960608ce48f98396d9ccae1354f9e414"
+  "built_at_commit": "c3100271a3c973bf46ce3c3a947ade100d670b88"
 }

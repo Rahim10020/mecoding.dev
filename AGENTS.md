@@ -84,8 +84,11 @@ Usage:
   `h-tile` (300px) and `w-step` (310px)
 - Breakpoints: `md` = 810px, `lg` = 1200px (Kelo's own)
 - No clamped spacing scale: values are measured on Kelo, not derived
-- Default border width is 1px; no shadows; no gradients; no decorative radii.
-  Pills use `rounded-full`.
+- Default border width is 1px; no shadows; no decorative radii. Pills use
+  `rounded-full`.
+- Gradients are forbidden except for the project-card hover overlay
+  (`bg-linear-to-t from-black/85 via-black/40 to-transparent`), approved as the
+  single exception.
 
 ### Motion
 
@@ -94,8 +97,8 @@ Usage:
 - Animate `transform` and `opacity` only (avoid layout properties)
 - `prefers-reduced-motion` is handled globally in `global.css`; do not
   circumvent it
-- Client JS is limited to: mobile menu, local clock, project carousel.
-  Everything else must be CSS
+- Client JS is limited to: mobile menu, local clock, project carousel and the
+  Work masonry scroll. Everything else must be CSS
 
 ## Typography Pipeline
 
@@ -143,12 +146,12 @@ src/
 │   ├── icons/            SVG icon components (currentColor)
 │   ├── layout/           Frame, Stage
 │   ├── home/             home-only composition (hero, carousel, featured list)
-│   ├── projects/         project-specific composition (ProjectRow)
-│   └── ui/               Logo, Placeholder, Button, Overline, Input, Textarea
+│   ├── projects/         Work composition (ProjectCard, ProjectsMasonry)
+│   └── ui/               Logo, Placeholder, Cartoon, Button, Overline, Input, Textarea
 ├── content/projects/     project markdown (schema in src/content.config.ts)
 ├── data/site.ts          identity, nav, socials, contact, location
 ├── layouts/Layout.astro  SEO, fonts, favicons, skip link, main landmark
-├── lib/                  project queries, URL helpers, carousel
+├── lib/                  project queries, URL helpers, carousel, masonry scroll
 ├── pages/                routes
 ├── styles/global.css     font-face + @theme tokens + base
 └── content.config.ts     projects collection schema
@@ -182,6 +185,8 @@ Rules:
 - Projects: markdown in `src/content/projects/`, validated by
   `src/content.config.ts`. Required: `title`, `order`, `category`,
   `description`, `role`, `platform`, `year`
+- `coverAspect` (`4/3`, `3/4`, `4/5`, `1/1`, `16/9`) drives the masonry rhythm
+  on the Work page; it defaults to `1/1`
 - `featured: true` marks projects for the home selection
 - Identity, nav, socials, email and location live in `src/data/site.ts`
 - Each page passes `title` and `description` to `Layout.astro`

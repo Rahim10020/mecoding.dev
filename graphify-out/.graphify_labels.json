@@ -12,7 +12,7 @@
   "10": "twocoderz.md",
   "11": "scripts",
   "12": "tsconfig.json",
-  "13": "project-carousel.ts",
+  "13": "ProjectCarousel.astro",
   "14": "build-fonts.sh",
   "15": "content.config.ts",
   "16": "Stage.astro"

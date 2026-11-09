@@ -1,7 +1,9 @@
 ---
+import Footer from "@/components/layout/Footer.astro";
 import Frame from "@/components/layout/Frame.astro";
-import ProjectRow from "@/components/projects/ProjectRow.astro";
-import Overline from "@/components/ui/Overline.astro";
+import Header from "@/components/layout/Header.astro";
+import ProjectsMasonry from "@/components/projects/ProjectsMasonry.astro";
+import Cartoon from "@/components/ui/Cartoon.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getAllProjects } from "@/lib/projects";
 
@@ -9,25 +11,40 @@ const projects = await getAllProjects();
 ---
 
 <Layout
+  shell={false}
   title="Work — mecoding"
   description="Selected product design and front-end work by Rahim ALI: web platforms, mobile apps and interface systems."
 >
-  <Frame class="pb-column pt-stack">
-    <header class="max-w-3xl">
-      <Overline>Work — {projects.length} projects</Overline>
-      <h1 class="mt-meta text-display">Selected work.</h1>
-      <p class="mt-stack max-w-xl text-body-lg text-black-60">
-        Interfaces, products and sites built end to end — from the first
-        sketch to the last commit.
-      </p>
-    </header>
+  <Header slot="header" class="fixed inset-x-0 top-0 z-40" />
 
-    <div class="mt-column border-b border-black-10">
-      {
-        projects.map((project, index) => (
-          <ProjectRow project={project} index={index} />
-        ))
-      }
-    </div>
-  </Frame>
+  <section class="relative flex flex-col md:h-svh md:overflow-hidden">
+    <Frame
+      class="flex min-h-0 flex-1 flex-col justify-end pb-column pt-[5rem] md:pt-0"
+    >
+      <div
+        class="flex w-full flex-col gap-stack md:h-full md:flex-row md:items-end md:justify-between md:gap-grid"
+      >
+        <div
+          class="order-1 flex w-full max-w-tile flex-col gap-grid md:flex-1 md:gap-meta"
+        >
+          <p class="text-label text-black-70">
+            <span class="text-black">mecoding.</span> — {projects.length} projects
+          </p>
+
+          <h1 class="text-statement text-black-60">
+            <span class="text-black">Work.</span> Products, interfaces and sites
+            designed and built end to end.
+          </h1>
+        </div>
+
+        <div class="order-2 w-full md:order-3 md:max-w-80 md:flex-1">
+          <Cartoon priority />
+        </div>
+
+        <ProjectsMasonry projects={projects} />
+      </div>
+    </Frame>
+  </section>
+
+  <Footer slot="footer" class="md:fixed md:inset-x-0 md:bottom-0 md:z-40" />
 </Layout>

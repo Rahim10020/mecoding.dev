@@ -10,6 +10,7 @@ year: "2025"
 link: "https://focusly-work.vercel.app/"
 cover: "../../assets/images/projects/focusly/cover.webp"
 coverAlt: "Focusly — project preview"
+coverAspect: "3/4"
 featured: true
 ---
 <video class="media-video" poster="/images/projects/focusly/focusly-poster.webp" src="/images/projects/focusly/focusly.webm" aria-label="Focusly demo video" controls muted playsinline preload="none"></video>

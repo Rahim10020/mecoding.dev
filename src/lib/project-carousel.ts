@@ -276,7 +276,6 @@ export function initProjectCarousel(): void {
     dragged = 0;
     moved = false;
 
-    viewport.setPointerCapture(event.pointerId);
     track.classList.add("is-dragging");
   });
 
@@ -284,7 +283,12 @@ export function initProjectCarousel(): void {
     if (pointer !== event.pointerId) return;
 
     dragged = wrapWithin(event.clientY - origin, count * step);
-    if (Math.abs(dragged) > 4) moved = true;
+    if (Math.abs(dragged) > 4) {
+      // Capture seulement au-delà du seuil : un clic simple doit atteindre
+      // le lien de la tuile, pas le viewport.
+      if (!moved) viewport.setPointerCapture(event.pointerId);
+      moved = true;
+    }
 
     apply(dragged);
   });
@@ -303,6 +307,8 @@ export function initProjectCarousel(): void {
 
   viewport.addEventListener("pointerup", release);
   viewport.addEventListener("pointercancel", release);
+  window.addEventListener("pointerup", release);
+  window.addEventListener("pointercancel", release);
 
   viewport.addEventListener(
     "click",

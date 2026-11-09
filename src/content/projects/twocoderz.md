@@ -10,6 +10,7 @@ year: "2026"
 link: "https://twocoderz-team.vercel.app"
 cover: "../../assets/images/projects/twocoderz/cover.webp"
 coverAlt: "twocoderz.team — project preview"
+coverAspect: "4/3"
 featured: true
 ---
 <video class="media-video" poster="/images/projects/twocoderz/twocoderz-poster.webp" src="/images/projects/twocoderz/twocoderz.webm" aria-label="twocoderz.team demo video" controls muted playsinline preload="none"></video>
