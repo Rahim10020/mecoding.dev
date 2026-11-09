@@ -144,10 +144,11 @@ src/
 │   ├── layout/           Frame, Stage
 │   ├── home/             home-only composition (hero, carousel, featured list)
 │   ├── projects/         project-specific composition (ProjectRow)
-│   └── ui/               Logo, Placeholder, buttons, cards…
+│   └── ui/               Logo, Placeholder, Button, Overline, Input, Textarea
 ├── content/projects/     project markdown (schema in src/content.config.ts)
 ├── data/site.ts          identity, nav, socials, contact, location
 ├── layouts/Layout.astro  SEO, fonts, favicons, skip link, main landmark
+├── lib/                  project queries, URL helpers, carousel
 ├── pages/                routes
 ├── styles/global.css     font-face + @theme tokens + base
 └── content.config.ts     projects collection schema
@@ -158,6 +159,10 @@ Rules:
 - `pages/` only composes; no business content inline
 - `home/` owns home-only composition; a component used by two pages moves to `ui/`
 - `ui/` owns reusable primitives
+- Use `Button`, `Overline`, `Input` and `Textarea` instead of duplicating
+  button or field classes in pages. Per-instance spacing and geometry stay at
+  the call site via `class` to preserve the intended layout.
+- Do not normalize existing spacing, padding or typography without approval
 - Copy lives in `src/data/` or `src/content/`, not hardcoded in components
 - Import alias: `@/*` → `src/*`
 
