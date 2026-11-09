@@ -3,3 +3,12 @@
 -- [x] coder la page de about
 -- coder les pages de details des projets (s'inspirer de rahim-design)
 -- faire le responsive
+
+voila ce que je veux pour la page work:
+quand on va cliquer sur sur work, on va aller sur la page qui va afficher tous les projets
+sauf que tout ce qu'on va faire c'est remplacer le contenu du mileu (la ligne de projets scrollable)
+donc le header , le footer et mon image cartoon von rester la ou ils sont. maintenant les projets 
+vont continuer a scroller comme la ligne mais cette fois ci ce sera un affichage masonry comme c'est fais
+au niveau  de rahim-design et ce sera en deux colonnes. on va afficher les infos lors du hover sur 
+chaque projet. bref comme c'est fais pour rahim-design. fais moi un plan pour qu'on implemente 
+ca proprement. pose moi des questions si tu en as.

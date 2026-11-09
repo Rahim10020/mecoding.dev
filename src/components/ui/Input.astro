@@ -13,7 +13,7 @@ const { id, label, class: className, ...rest } = Astro.props;
   <label for={id} class="text-body font-semibold">{label}</label>
   <input
     id={id}
-    class:list={["w-full bg-black-5 text-body text-black text-body", className]}
+    class:list={["w-full bg-black-5 text-black text-body", className]}
     {...rest}
   />
 </div>
