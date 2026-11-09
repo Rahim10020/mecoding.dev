@@ -24,11 +24,7 @@ const selectedWork = projects.map((project) => ({
   title="About — mecoding"
   description="About Rahim ALI — web developer and UX/UI designer based in Lomé, Togo, working between design, front-end and product."
 >
-  <Frame class="pb-column pt-column">
-    <p class="text-label uppercase text-black-60">
-      About — {site.availability}
-    </p>
-
+  <Frame class="pb-column">
     <div
       class="mt-column grid gap-column lg:grid-cols-12 lg:items-start lg:gap-grid"
     >
@@ -36,13 +32,10 @@ const selectedWork = projects.map((project) => ({
         <AboutStatement />
 
         <section aria-labelledby="about-expertise">
-          <h2
-            id="about-expertise"
-            class="text-label uppercase text-black-60"
-          >
+          <h2 id="about-expertise" class="text-label text-black-70">
             Expertise
           </h2>
-          <p class="mt-stack max-w-2xl text-body text-black-80">
+          <p class="mt-1 max-w-2xl text-body font-medium text-black">
             {about.expertise.join(", ")}
           </p>
         </section>
@@ -60,10 +53,7 @@ const selectedWork = projects.map((project) => ({
 
         <AboutList label="Stack" entries={about.stack} columns={2} />
 
-        <AboutList
-          label="Certifications"
-          entries={about.certifications}
-        />
+        <AboutList label="Certifications" entries={about.certifications} />
       </div>
     </div>
   </Frame>

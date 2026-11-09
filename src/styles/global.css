@@ -61,7 +61,7 @@
 @theme {
   /* Couleurs ------------------------------------------------------------- */
   --color-white: #ffffff;
-  --color-black: #171717;
+  --color-black: #000000;
 
   --color-black-5: rgb(23 23 23 / 0.05);
   --color-black-10: rgb(23 23 23 / 0.1);
@@ -108,7 +108,7 @@
   --text-caption--letter-spacing: -0.03em;
   --text-caption--font-weight: 600;
 
-  --text-label: 0.78rem;
+  --text-label: 1rem;
   --text-label--line-height: 1;
   --text-label--letter-spacing: 0.08em;
   --text-label--font-weight: 700;

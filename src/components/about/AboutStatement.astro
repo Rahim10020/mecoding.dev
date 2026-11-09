@@ -3,14 +3,16 @@ import { about } from "@/data/about";
 ---
 
 <div>
-  <h1 class="max-w-4xl text-title">
+  <h1 class="max-w-3xl text-title">
     {about.statement}
   </h1>
 
   <div class="mt-stack flex max-w-2xl flex-col gap-meta">
     {
       about.bio.map((paragraph) => (
-        <p class="text-body text-black-70">{paragraph}</p>
+        <p class="text-body lg:text-body-lg font-medium text-black-80">
+          {paragraph}
+        </p>
       ))
     }
   </div>
