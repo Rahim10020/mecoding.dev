@@ -204,6 +204,21 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    scrollbar-color: var(--color-black-40) var(--color-white);
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-white);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-black-40);
   }
 
   body {
