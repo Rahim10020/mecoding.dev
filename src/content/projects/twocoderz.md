@@ -13,7 +13,7 @@ coverAlt: "twocoderz.team — project preview"
 coverAspect: "4/3"
 featured: true
 ---
-<video class="media-video" poster="/images/projects/twocoderz/twocoderz-poster.webp" src="/images/projects/twocoderz/twocoderz.webm" aria-label="twocoderz.team demo video" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/twocoderz/twocoderz-poster.webp" src="/images/projects/twocoderz/twocoderz.webm" aria-label="twocoderz.team demo video" loop muted playsinline preload="none"></video>
 
 ## The context
 
@@ -86,7 +86,7 @@ The live website is available at: [twocoderz-team.vercel.app](https://twocoderz-
 
 **And finally, it looks like this.**
 
-<video class="media-video" poster="/images/projects/twocoderz/twocoderz-poster.webp" src="/images/projects/twocoderz/twocoderz.webm" aria-label="twocoderz.team demo video" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/twocoderz/twocoderz-poster.webp" src="/images/projects/twocoderz/twocoderz.webm" aria-label="twocoderz.team demo video" loop muted playsinline preload="none"></video>
 
 <div class="media-grid cols-4">
   <img class="grid-cell" src="/images/projects/twocoderz/about-mobile.webp" alt="twocoderz.team about on mobile" loading="lazy" width="411" height="851">

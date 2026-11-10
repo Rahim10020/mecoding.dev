@@ -13,7 +13,7 @@ coverAlt: "Focusly — project preview"
 coverAspect: "3/4"
 featured: true
 ---
-<video class="media-video" poster="/images/projects/focusly/focusly-poster.webp" src="/images/projects/focusly/focusly.webm" aria-label="Focusly demo video" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/focusly/focusly-poster.webp" src="/images/projects/focusly/focusly.webm" aria-label="Focusly demo video" loop muted playsinline preload="none"></video>
 
 ## The context
 
@@ -77,7 +77,7 @@ The project is open source and available on GitHub: [github.com/Rahim10020/focus
 
 **And finally, it looks like this.**
 
-<video class="media-video" poster="/images/projects/focusly/focusly-poster.webp" src="/images/projects/focusly/focusly.webm" aria-label="Focusly demo video" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/focusly/focusly-poster.webp" src="/images/projects/focusly/focusly.webm" aria-label="Focusly demo video" loop muted playsinline preload="none"></video>
 
 A single, focused workspace that turns intentions into daily practice — and shows, day after day, how much has actually been accomplished.
 

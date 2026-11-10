@@ -100,9 +100,12 @@ Usage:
 - `prefers-reduced-motion` is handled globally in `global.css`; do not
   circumvent it. The only override is the reading-progress rail: its CSS
   scroll timeline follows the scroll position, it is not autonomous motion.
-- Client JS is limited to: mobile menu, local clock, project carousel and the
-  Work masonry scroll. Everything else must be CSS — the reading progress
-  rail uses `animation-timeline: scroll(root block)`, no JavaScript.
+- Accepted exception: project videos autoplay muted on a loop, without native
+  controls, even under `prefers-reduced-motion` (same as rahim-design).
+- Client JS is limited to: mobile menu, local clock, project carousel, the
+  Work masonry scroll and the project videos (lazy autoplay). Everything else
+  must be CSS — the reading progress rail uses
+  `animation-timeline: scroll(root block)`, no JavaScript.
 
 ## Typography Pipeline
 

@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794307103.0003173,
-    "seen": 1794307147.9962606,
-    "ast_hash": "e5f09ef48aab3424aa1e9da468662b7f",
+    "mtime": 1794307615.7077432,
+    "seen": 1794307636.826723,
+    "ast_hash": "a8641382a3209438c6fb3c9c96a15d0c",
     "semantic_hash": ""
   },
   "README.md": {
@@ -378,9 +378,9 @@
     "semantic_hash": ""
   },
   "src/content/projects/focusly.md": {
-    "mtime": 1794225381.9537916,
-    "seen": 1794226222.7370203,
-    "ast_hash": "202949e43d0fea8670d09a27c1858459",
+    "mtime": 1794307441.0903268,
+    "seen": 1794307636.8267372,
+    "ast_hash": "e98289b9c9099d4c1f1631b57609d48d",
     "semantic_hash": ""
   },
   "src/content/projects/murmur.md": {
@@ -390,15 +390,15 @@
     "semantic_hash": ""
   },
   "src/content/projects/rahim-design.md": {
-    "mtime": 1794306859.0667284,
-    "seen": 1794307147.9962807,
-    "ast_hash": "56f932cf0e3593e445507e3ebff5afca",
+    "mtime": 1794307448.7894797,
+    "seen": 1794307636.8267415,
+    "ast_hash": "d3287c16449b741465f0ec35a24e6a63",
     "semantic_hash": ""
   },
   "src/content/projects/twocoderz.md": {
-    "mtime": 1794225381.9537916,
-    "seen": 1794226222.7370265,
-    "ast_hash": "bc363ac214d95f8ed30ed35dfdf87bf2",
+    "mtime": 1794307455.1986067,
+    "seen": 1794307636.8267436,
+    "ast_hash": "4d9b0cb1bbeee7767c244b416eb8270b",
     "semantic_hash": ""
   },
   "todo.txt": {
@@ -756,9 +756,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectProse.astro": {
-    "mtime": 1794306644.816208,
-    "seen": 1794307147.996188,
-    "ast_hash": "35980edc5ddf0d9e4553534ea6b74c64",
+    "mtime": 1794307488.2682602,
+    "seen": 1794307636.8266513,
+    "ast_hash": "a8d5700e3afbfae5e6205f8be1361bb6",
     "semantic_hash": ""
   },
   "src/components/projects/ReadingProgress.astro": {
@@ -777,6 +777,12 @@
     "mtime": 1794306844.077364,
     "seen": 1794307147.9963837,
     "ast_hash": "96acda263f4a125759e14f4096d083e3",
+    "semantic_hash": ""
+  },
+  "src/lib/lazy-video.ts": {
+    "mtime": 1794307482.2861423,
+    "seen": 1794307636.826697,
+    "ast_hash": "b18eaa15dbbcf836a07352d92dcf7cd5",
     "semantic_hash": ""
   }
 }

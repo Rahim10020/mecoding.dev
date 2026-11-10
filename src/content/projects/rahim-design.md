@@ -13,7 +13,7 @@ coverAlt: "rahim.design — project preview"
 coverAspect: "1/1"
 featured: true
 ---
-<video class="media-video" poster="/images/projects/rahim-design/rahim-design-poster.webp" src="/images/projects/rahim-design/rahim-design.webm" aria-label="rahim.design portfolio demo — home, selected projects and services" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/rahim-design/rahim-design-poster.webp" src="/images/projects/rahim-design/rahim-design.webm" aria-label="rahim.design portfolio demo — home, selected projects and services" loop muted playsinline preload="none"></video>
 
 ## The context
 
@@ -93,7 +93,7 @@ The live portfolio is available at [rahim-dev-me.vercel.app](https://rahim-dev-m
   <img class="grid-cell" src="/images/projects/rahim-design/footer.webp" alt="rahim.design footer — final navigation and contact details" loading="lazy" width="411" height="851">
 </div>
 
-<video class="media-video" poster="/images/projects/rahim-design/rahim-design-poster.webp" src="/images/projects/rahim-design/rahim-design.webm" aria-label="rahim.design portfolio demo — moving from selected work to contact" controls muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/rahim-design/rahim-design-poster.webp" src="/images/projects/rahim-design/rahim-design.webm" aria-label="rahim.design portfolio demo — moving from selected work to contact" loop muted playsinline preload="none"></video>
 
 rahim.design gives visitors a clear view of my work, my approach and the services I offer. If you are looking for someone who can think through an experience and build the interface behind it, [let's talk](https://rahim-dev-me.vercel.app/).
 
