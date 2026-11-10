@@ -13,6 +13,8 @@ interface Props {
   noindex?: boolean;
   /** Le shell (header + footer) est rendu par défaut. La home le compose elle-même. */
   shell?: boolean;
+  /** Classes additionnelles du header du shell (ex. `sticky top-0`). */
+  headerClass?: string;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   image,
   noindex = false,
   shell = true,
+  headerClass,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -77,7 +80,7 @@ const ogImage = image ? new URL(image, Astro.site) : undefined;
   </head>
 
   <body>
-    {shell ? <Header /> : <slot name="header" />}
+    {shell ? <Header class={headerClass} /> : <slot name="header" />}
 
     <main id="main">
       <slot />

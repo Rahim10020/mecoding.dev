@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "src/layouts/Layout.astro": {
-    "mtime": 1794185173.7263668,
-    "seen": 1794222336.9625604,
-    "ast_hash": "1941d102f246ccdef3b2f8fbcc795925",
+    "mtime": 1794310782.0952933,
+    "seen": 1794310956.0664816,
+    "ast_hash": "5c71103bfd374aa3ca0f389db23e43b6",
     "semantic_hash": ""
   },
   "src/lib/project-carousel.ts": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794306362.8115249,
-    "seen": 1794307147.9962513,
-    "ast_hash": "1b15767987df617d7c0ed16cf6da71ed",
+    "mtime": 1794310790.6334472,
+    "seen": 1794310956.0665023,
+    "ast_hash": "1791f5f1d4a3ea7ee3d70d7be022781b",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794307615.7077432,
-    "seen": 1794307636.826723,
-    "ast_hash": "a8641382a3209438c6fb3c9c96a15d0c",
+    "mtime": 1794310931.2489772,
+    "seen": 1794310956.0665116,
+    "ast_hash": "5ced87241a4fe098cb5281879e57e9ff",
     "semantic_hash": ""
   },
   "README.md": {
