@@ -1,8 +1,13 @@
 -- [x] corriger le probleme du scroll
 -- ajouter les autres projets
 -- [x] coder la page de about
--- coder les pages de details des projets (s'inspirer de rahim-design)
 -- faire le responsive
 -- auto scroll de work. ca ralentit quand mon curseur vient dessus. meme avec l'auto scroll, je peux 
     et je dois toujours pouvoir scroller moi meme. tu vois ce que je veux dire ?
 -- je veux que quand on clique sur le telephone au niveau de about ca conduit sur mon whatsapp.
+
+
+-- je veux qu'on s'occupe maintenant de la page de detail des projets. je veux m'inspirer trait 
+pour trait de la page de detail de rahim-design en plus de l'indicateur de scroll et aussi des 
+lien projet suivant et recent. dis moi on fais  comment ? Je veux reconduire le systeme des fichiers 
+markdowns tu vois ? analyse et fais moi un plan pour qu'on mettes ca en place proprement.

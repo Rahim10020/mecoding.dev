@@ -11,6 +11,9 @@ export interface NavItem {
   href: string;
 }
 
+/** Lien WhatsApp unique, partagé par la page About et les socials. */
+const whatsappHref = "https://wa.me/22891796115";
+
 export const site = {
   /** Wordmark et nom du site. */
   name: "mecoding.dev",
@@ -33,7 +36,7 @@ export const site = {
 
   email: "rahim100codeur@gmail.com",
   phone: "+228 91 79 61 15",
-  phoneHref: "tel:+22891796115",
+  whatsappHref,
 
   /**
    * Formulaire de contact. Sans `accessKey`, le formulaire retombe sur
@@ -70,7 +73,7 @@ export const site = {
     {
       id: "whatsapp",
       label: "WhatsApp",
-      href: "https://wa.me/22891796115",
+      href: whatsappHref,
     },
   ] satisfies Social[],
 } as const;

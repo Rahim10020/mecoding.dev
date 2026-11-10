@@ -153,7 +153,7 @@
       "file_type": "code",
       "norm_label": "initworkmasonry()",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L34"
+      "source_location": "L41"
     },
     {
       "id": "src_lib_work_masonry_read",
@@ -165,7 +165,7 @@
       "file_type": "code",
       "norm_label": "read()",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L10"
+      "source_location": "L17"
     },
     {
       "id": "src_lib_work_masonry_wrap",
@@ -177,7 +177,7 @@
       "file_type": "code",
       "norm_label": "wrap()",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L27"
+      "source_location": "L34"
     },
     {
       "id": "src_lib_projects_byorder",
@@ -1542,7 +1542,7 @@
       "file_type": "code",
       "norm_label": "site",
       "source_file": "src/data/site.ts",
-      "source_location": "L14"
+      "source_location": "L17"
     },
     {
       "id": "src_layouts_layout",
@@ -2538,7 +2538,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L35",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -2550,7 +2550,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L63",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -5072,7 +5072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/data/site.ts",
-      "source_location": "L14",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -5226,7 +5226,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L10",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -5237,7 +5237,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L27",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -5248,7 +5248,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L34",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -5682,5 +5682,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "26f677d05e1cb0440c8e8dbec0703de505ada110"
+  "built_at_commit": "b4ee00cab78d426e72e3014d0db278c2eef18522"
 }

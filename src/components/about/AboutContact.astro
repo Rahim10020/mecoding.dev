@@ -102,7 +102,13 @@ const highlightClass =
           </a>
         </li>
         <li>
-          <a href={site.phoneHref} class={highlightClass}>
+          <a
+            href={site.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`WhatsApp — ${site.phone}`}
+            class={highlightClass}
+          >
             {site.phone}
           </a>
         </li>
