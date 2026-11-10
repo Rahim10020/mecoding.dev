@@ -80,8 +80,10 @@ Usage:
 
 - Page frame: `Frame` — `max-w-frame` (1920px) + `px-gutter` (20px, fixed)
 - Header: in flow by default. Work composes its own header (`fixed`), the
-  project detail passes `headerClass="sticky top-0 z-40 bg-white"` to
-  `Layout` so it stays in flow at rest and pins on scroll
+  project detail passes `headerClass="sticky top-0 z-40"` to `Layout` so it
+  stays in flow at rest and pins on scroll. It is left transparent on purpose:
+  the article keeps its y=122 resting position and scrolls up beneath the
+  header instead of being clipped by a white band
 - Desktop stage: `Stage` — `md:h-svh` + `md:overflow-hidden`; below 810px it
   falls back to normal document flow
 - Rythme: `gap-grid` (10px), `gap-meta` (16px), `gap-stack` (30px),
