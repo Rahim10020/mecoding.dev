@@ -1,3 +1,7 @@
 -- ajouter les autres projets
 -- faire le responsive
--- 
+-- le footer dois etre colle au bas de toute les pages  de tous les differents appareils. faut pas 
+que sur un ecran tres grand par exemple pour les pc de bureau que le footer aillent rester en haut. 
+ce que je veux dire c'est que c'est pas un pt sur le footer ou pb sur un element du haut qui 
+va mettre de l'espace entre lui et le footer tu vois non ?  si c'est ca le footer va aller rester 
+en haut pour les grands ecran. dis moi si tu comprends ce que je veux dire.
