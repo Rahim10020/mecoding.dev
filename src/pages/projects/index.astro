@@ -19,7 +19,7 @@ const projects = await getAllProjects();
 
   <section class="relative flex flex-col md:h-svh md:overflow-hidden">
     <Frame
-      class="flex min-h-0 flex-1 flex-col justify-end pb-column pt-[5rem] md:pb-0 md:pt-0"
+      class="flex min-h-0 flex-1 flex-col justify-end pb-column pt-20 md:pb-0 md:pt-0"
     >
       <div
         class="flex w-full flex-col gap-stack md:h-full md:flex-row md:items-end md:justify-between md:gap-grid"
@@ -28,12 +28,13 @@ const projects = await getAllProjects();
           class="order-1 flex w-full max-w-tile flex-col gap-grid md:flex-1 md:gap-meta md:pb-column"
         >
           <p class="text-label text-black-70">
-            <span class="text-black">mecoding.</span> — {projects.length} projects
+            <span class="text-black text-body-lg">Work</span> — {
+              projects.length
+            } projects
           </p>
 
           <h1 class="text-statement text-black-60">
-            <span class="text-black">Work.</span> Products, interfaces and sites
-            designed and built end to end.
+            Products, interfaces and sites designed and built end to end.
           </h1>
         </div>
 
