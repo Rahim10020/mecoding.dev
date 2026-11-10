@@ -17,6 +17,19 @@
       "source_location": "L16"
     },
     {
+      "id": "src_lib_work_masonry_masonryelements",
+      "label": "MasonryElements",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "work-masonry.ts",
+      "file_type": "code",
+      "norm_label": "masonryelements",
+      "source_file": "src/lib/work-masonry.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_project_carousel_carouselelements",
       "label": "CarouselElements",
       "_callable": true,
@@ -27,19 +40,6 @@
       "file_type": "code",
       "norm_label": "carouselelements",
       "source_file": "src/lib/project-carousel.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_work_masonry_masonryelements",
-      "label": "MasonryElements",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "masonryelements",
-      "source_file": "src/lib/work-masonry.ts",
       "source_location": "L1"
     },
     {
@@ -120,6 +120,42 @@
       "source_location": "L13"
     },
     {
+      "id": "src_lib_work_masonry_initworkmasonry",
+      "label": "initWorkMasonry()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "work-masonry.ts",
+      "file_type": "code",
+      "norm_label": "initworkmasonry()",
+      "source_file": "src/lib/work-masonry.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_lib_work_masonry_read",
+      "label": "read()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "work-masonry.ts",
+      "file_type": "code",
+      "norm_label": "read()",
+      "source_file": "src/lib/work-masonry.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_work_masonry_wrap",
+      "label": "wrap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "work-masonry.ts",
+      "file_type": "code",
+      "norm_label": "wrap()",
+      "source_file": "src/lib/work-masonry.ts",
+      "source_location": "L34"
+    },
+    {
       "id": "src_lib_project_carousel_initprojectcarousel",
       "label": "initProjectCarousel()",
       "_callable": true,
@@ -142,42 +178,6 @@
       "norm_label": "read()",
       "source_file": "src/lib/project-carousel.ts",
       "source_location": "L15"
-    },
-    {
-      "id": "src_lib_work_masonry_initworkmasonry",
-      "label": "initWorkMasonry()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "initworkmasonry()",
-      "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L41"
-    },
-    {
-      "id": "src_lib_work_masonry_read",
-      "label": "read()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "read()",
-      "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_lib_work_masonry_wrap",
-      "label": "wrap()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "wrap()",
-      "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L34"
     },
     {
       "id": "src_lib_projects_byorder",
@@ -225,7 +225,7 @@
       "file_type": "code",
       "norm_label": "getstaticpaths()",
       "source_file": "src/pages/projects/[id].astro",
-      "source_location": "L13"
+      "source_location": "L15"
     },
     {
       "id": "src_components_ui_localclock_render",
@@ -442,6 +442,94 @@
       "source_location": "L2"
     },
     {
+      "id": "package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_scripts_astro",
+      "label": "astro",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "astro",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_scripts_check",
+      "label": "check",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "check",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_scripts_fonts",
+      "label": "fonts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "fonts",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "package_scripts_icons",
+      "label": "icons",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "icons",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "package_scripts_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "preview",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
       "id": "package_type",
       "label": "type",
       "_origin": "ast",
@@ -585,17 +673,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_icons_arrowleft",
-      "label": "ArrowLeft.astro",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "styleguide.astro",
-      "file_type": "code",
-      "norm_label": "arrowleft.astro",
-      "source_file": "src/components/icons/ArrowLeft.astro",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_icons_arrowup",
       "label": "ArrowUp.astro",
       "_origin": "ast",
@@ -648,6 +725,17 @@
       "file_type": "code",
       "norm_label": "close.astro",
       "source_file": "src/components/icons/Close.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_icons_externallink",
+      "label": "ExternalLink.astro",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "styleguide.astro",
+      "file_type": "code",
+      "norm_label": "externallink.astro",
+      "source_file": "src/components/icons/ExternalLink.astro",
       "source_location": "L1"
     },
     {
@@ -950,92 +1038,15 @@
       "source_location": "L99"
     },
     {
-      "id": "package_scripts",
-      "label": "scripts",
+      "id": "src_lib_work_masonry",
+      "label": "work-masonry.ts",
       "_origin": "ast",
       "community": 11,
-      "community_name": "scripts",
+      "community_name": "work-masonry.ts",
       "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "package_scripts_astro",
-      "label": "astro",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "astro",
-      "source_file": "package.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "package.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "package_scripts_check",
-      "label": "check",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "check",
-      "source_file": "package.json",
-      "source_location": "L12"
-    },
-    {
-      "id": "package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "package_scripts_fonts",
-      "label": "fonts",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "fonts",
-      "source_file": "package.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "package_scripts_icons",
-      "label": "icons",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "icons",
-      "source_file": "package.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "package_scripts_preview",
-      "label": "preview",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "preview",
-      "source_file": "package.json",
-      "source_location": "L11"
+      "norm_label": "work-masonry.ts",
+      "source_file": "src/lib/work-masonry.ts",
+      "source_location": "L1"
     },
     {
       "id": "tsconfig",
@@ -1269,17 +1280,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_lib_work_masonry",
-      "label": "work-masonry.ts",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "work-masonry.ts",
-      "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_build_fonts",
       "label": "build-fonts.sh",
       "_origin": "ast",
@@ -1369,6 +1369,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_icons_arrowleft",
+      "label": "ArrowLeft.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "arrowleft.astro",
+      "source_file": "src/components/icons/ArrowLeft.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_icons_arrowright",
       "label": "ArrowRight.astro",
       "_origin": "ast",
@@ -1380,15 +1391,81 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_icons_externallink",
-      "label": "ExternalLink.astro",
+      "id": "src_components_projects_projectmeta",
+      "label": "ProjectMeta.astro",
       "_origin": "ast",
       "community": 2,
       "community_name": "[id].astro",
       "file_type": "code",
-      "norm_label": "externallink.astro",
-      "source_file": "src/components/icons/ExternalLink.astro",
+      "norm_label": "projectmeta.astro",
+      "source_file": "src/components/projects/ProjectMeta.astro",
       "source_location": "L1"
+    },
+    {
+      "id": "src_components_projects_projectmeta_columns",
+      "label": "columns",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "columns",
+      "source_file": "src/components/projects/ProjectMeta.astro",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_components_projects_projectnav",
+      "label": "ProjectNav.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "projectnav.astro",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_projects_projectprose",
+      "label": "ProjectProse.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "projectprose.astro",
+      "source_file": "src/components/projects/ProjectProse.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_projects_readingprogress",
+      "label": "ReadingProgress.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "readingprogress.astro",
+      "source_file": "src/components/projects/ReadingProgress.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_data_project_detail",
+      "label": "project-detail.ts",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "project-detail.ts",
+      "source_file": "src/data/project-detail.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_data_project_detail_projectdetail",
+      "label": "projectDetail",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "projectdetail",
+      "source_file": "src/data/project-detail.ts",
+      "source_location": "L5"
     },
     {
       "id": "src_lib_projects",
@@ -1610,7 +1687,7 @@
       "node_kind": "heading",
       "norm_label": "architecture",
       "source_file": "AGENTS.md",
-      "source_location": "L140"
+      "source_location": "L144"
     },
     {
       "id": "agents_assets",
@@ -1622,7 +1699,7 @@
       "node_kind": "heading",
       "norm_label": "assets",
       "source_file": "AGENTS.md",
-      "source_location": "L130"
+      "source_location": "L134"
     },
     {
       "id": "agents_code_conventions",
@@ -1634,7 +1711,7 @@
       "node_kind": "heading",
       "norm_label": "code conventions",
       "source_file": "AGENTS.md",
-      "source_location": "L172"
+      "source_location": "L178"
     },
     {
       "id": "agents_colors",
@@ -1658,7 +1735,7 @@
       "node_kind": "heading",
       "norm_label": "content & seo",
       "source_file": "AGENTS.md",
-      "source_location": "L183"
+      "source_location": "L189"
     },
     {
       "id": "agents_definition_of_done",
@@ -1670,7 +1747,7 @@
       "node_kind": "heading",
       "norm_label": "definition of done",
       "source_file": "AGENTS.md",
-      "source_location": "L217"
+      "source_location": "L223"
     },
     {
       "id": "agents_design_system_contract",
@@ -1694,7 +1771,7 @@
       "node_kind": "heading",
       "norm_label": "development server",
       "source_file": "AGENTS.md",
-      "source_location": "L207"
+      "source_location": "L213"
     },
     {
       "id": "agents_documentation",
@@ -1706,7 +1783,7 @@
       "node_kind": "heading",
       "norm_label": "documentation",
       "source_file": "AGENTS.md",
-      "source_location": "L237"
+      "source_location": "L243"
     },
     {
       "id": "agents_icons",
@@ -1718,7 +1795,7 @@
       "node_kind": "heading",
       "norm_label": "icons",
       "source_file": "AGENTS.md",
-      "source_location": "L121"
+      "source_location": "L125"
     },
     {
       "id": "agents_layout",
@@ -1730,7 +1807,7 @@
       "node_kind": "heading",
       "norm_label": "layout",
       "source_file": "AGENTS.md",
-      "source_location": "L77"
+      "source_location": "L79"
     },
     {
       "id": "agents_motion",
@@ -1742,7 +1819,7 @@
       "node_kind": "heading",
       "norm_label": "motion",
       "source_file": "AGENTS.md",
-      "source_location": "L93"
+      "source_location": "L95"
     },
     {
       "id": "agents_project_overview",
@@ -1790,7 +1867,7 @@
       "node_kind": "heading",
       "norm_label": "typography pipeline",
       "source_file": "AGENTS.md",
-      "source_location": "L103"
+      "source_location": "L107"
     },
     {
       "id": "agents_useful_commands",
@@ -1802,7 +1879,7 @@
       "node_kind": "heading",
       "norm_label": "useful commands",
       "source_file": "AGENTS.md",
-      "source_location": "L197"
+      "source_location": "L203"
     },
     {
       "id": "agents_what_not_to_do",
@@ -1814,7 +1891,7 @@
       "node_kind": "heading",
       "norm_label": "what not to do",
       "source_file": "AGENTS.md",
-      "source_location": "L227"
+      "source_location": "L233"
     },
     {
       "id": "src_components_about_aboutcontact",
@@ -2388,6 +2465,7 @@
         "link": "https://rahim-dev-me.vercel.app/",
         "cover": "../../assets/images/projects/rahim-design/cover.webp",
         "coverAlt": "rahim.design \u2014 project preview",
+        "coverAspect": "1/1",
         "featured": "true"
       },
       "node_kind": "page",
@@ -2405,7 +2483,7 @@
       "node_kind": "heading",
       "norm_label": "development",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L78"
+      "source_location": "L79"
     },
     {
       "id": "src_content_projects_rahim_design_important_decisions",
@@ -2417,7 +2495,7 @@
       "node_kind": "heading",
       "norm_label": "important decisions",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L69"
+      "source_location": "L70"
     },
     {
       "id": "src_content_projects_rahim_design_the_approach",
@@ -2429,7 +2507,7 @@
       "node_kind": "heading",
       "norm_label": "the approach",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "src_content_projects_rahim_design_the_challenge",
@@ -2441,7 +2519,7 @@
       "node_kind": "heading",
       "norm_label": "the challenge",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "src_content_projects_rahim_design_the_context",
@@ -2453,7 +2531,7 @@
       "node_kind": "heading",
       "norm_label": "the context",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "src_content_projects_rahim_design_the_result",
@@ -2465,7 +2543,7 @@
       "node_kind": "heading",
       "norm_label": "the result",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L86"
+      "source_location": "L87"
     },
     {
       "id": "src_content_projects_rahim_design_ui_design",
@@ -2477,7 +2555,7 @@
       "node_kind": "heading",
       "norm_label": "ui design",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "src_content_projects_rahim_design_ux",
@@ -2489,7 +2567,7 @@
       "node_kind": "heading",
       "norm_label": "ux",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "src_content_projects_rahim_design_what_i_learned",
@@ -2501,7 +2579,7 @@
       "node_kind": "heading",
       "norm_label": "what i learned",
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L99"
+      "source_location": "L100"
     }
   ],
   "links": [
@@ -2562,7 +2640,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/projects/[id].astro",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -2722,6 +2800,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_projects_projectnav",
+      "target": "src_data_project_detail_projectdetail",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_projects_projectnav",
+      "target": "src_lib_projects_project",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_components_ui_mobilemenu",
       "target": "src_data_site_site",
       "relation": "imports",
@@ -2795,6 +2897,18 @@
     },
     {
       "source": "src_pages_projects_id",
+      "target": "src_data_project_detail_projectdetail",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/projects/[id].astro",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_projects_id",
       "target": "src_lib_projects_getallprojects",
       "relation": "imports",
       "_origin": "ast",
@@ -2802,7 +2916,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/pages/projects/[id].astro",
-      "source_location": "L11",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_projects_id",
+      "target": "src_lib_projects_project",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/projects/[id].astro",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -3166,6 +3292,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_projects_projectnav",
+      "target": "src_components_icons_arrowright",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_projects_projectnav",
+      "target": "src_data_project_detail",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_projects_projectnav",
+      "target": "src_lib_projects",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/projects/ProjectNav.astro",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_components_projects_projectsmasonry",
       "target": "src_components_projects_projectcard",
       "relation": "imports_from",
@@ -3455,7 +3617,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_layouts_layout",
+      "target": "src_data_project_detail",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3467,7 +3629,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_lib_projects",
+      "target": "src_layouts_layout",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3479,7 +3641,31 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_components_icons_externallink",
+      "target": "src_lib_projects",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/projects/[id].astro",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_projects_id",
+      "target": "src_components_icons_arrowleft",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/projects/[id].astro",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_projects_id",
+      "target": "src_components_icons_arrowupright",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3491,7 +3677,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_components_icons_arrowright",
+      "target": "src_components_projects_projectmeta",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3503,7 +3689,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_components_layout_frame",
+      "target": "src_components_projects_projectnav",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3515,7 +3701,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_components_ui_button",
+      "target": "src_components_projects_projectprose",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3527,7 +3713,7 @@
     },
     {
       "source": "src_pages_projects_id",
-      "target": "src_components_ui_overline",
+      "target": "src_components_projects_readingprogress",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3928,7 +4114,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L103",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -3939,7 +4125,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L121",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -3950,7 +4136,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L130",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -3961,7 +4147,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L140",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -3972,7 +4158,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L172",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -3983,18 +4169,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_useful_commands",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": "L197",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -4010,13 +4185,24 @@
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
+      "target": "agents_useful_commands",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agents_md_instructions_for_ai_coding_agents",
       "target": "agents_development_server",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L207",
+      "source_location": "L213",
       "weight": 1.0
     },
     {
@@ -4027,7 +4213,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L217",
+      "source_location": "L223",
       "weight": 1.0
     },
     {
@@ -4038,7 +4224,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L227",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -4049,7 +4235,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L237",
+      "source_location": "L243",
       "weight": 1.0
     },
     {
@@ -4104,7 +4290,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L77",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -4115,7 +4301,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L93",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -4515,6 +4701,17 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_projects_projectmeta",
+      "target": "src_components_projects_projectmeta_columns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/projects/ProjectMeta.astro",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
       "source": "src_components_projects_projectsmasonry",
       "target": "src_components_projects_projectsmasonry_copies",
       "relation": "contains",
@@ -4835,13 +5032,24 @@
     },
     {
       "source": "src_content_projects_rahim_design",
+      "target": "src_content_projects_rahim_design_what_i_learned",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahim-design.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahim_design",
       "target": "src_content_projects_rahim_design_the_context",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4852,7 +5060,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -4863,7 +5071,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -4874,7 +5082,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -4885,7 +5093,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4896,7 +5104,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -4907,7 +5115,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -4918,18 +5126,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "src_content_projects_rahim_design",
-      "target": "src_content_projects_rahim_design_what_i_learned",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/content/projects/rahim-design.md",
-      "source_location": "L99",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -5051,6 +5248,17 @@
       "confidence_score": 1.0,
       "source_file": "src/data/about.ts",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_project_detail",
+      "target": "src_data_project_detail_projectdetail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/data/project-detail.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5270,7 +5478,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/projects/[id].astro",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -5514,6 +5722,24 @@
       "source_file": "src/components/projects/ProjectCard.astro"
     },
     {
+      "source": "src_components_projects_projectmeta",
+      "target": "src_data_project_detail",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/projects/ProjectMeta.astro"
+    },
+    {
+      "source": "src_components_projects_projectnav",
+      "target": "src_components_icons_arrowleft",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/projects/ProjectNav.astro"
+    },
+    {
       "source": "src_components_projects_projectsmasonry",
       "target": "astro_content",
       "relation": "imports_from",
@@ -5682,5 +5908,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b4ee00cab78d426e72e3014d0db278c2eef18522"
+  "built_at_commit": "0d61212d751254cdeb3c972f3676f67a6205be0a"
 }

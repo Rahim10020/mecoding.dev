@@ -5,3 +5,6 @@ que sur un ecran tres grand par exemple pour les pc de bureau que le footer aill
 ce que je veux dire c'est que c'est pas un pt sur le footer ou pb sur un element du haut qui 
 va mettre de l'espace entre lui et le footer tu vois non ?  si c'est ca le footer va aller rester 
 en haut pour les grands ecran. dis moi si tu comprends ce que je veux dire.
+
+- je ne veux pas voir les options de controls sur les video webm que tu as mis c'est vilain. et aussi le 
+truc est en loop par defaut.

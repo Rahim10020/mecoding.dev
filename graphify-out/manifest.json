@@ -318,15 +318,15 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794217155.1832757,
-    "seen": 1794222336.9625714,
-    "ast_hash": "40f0664bbf83c65ec3df2f4305c9ce60",
+    "mtime": 1794306362.8115249,
+    "seen": 1794307147.9962513,
+    "ast_hash": "1b15767987df617d7c0ed16cf6da71ed",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
-    "mtime": 1794304507.1097233,
-    "seen": 1794305045.7497268,
-    "ast_hash": "e0dae1d01847d83311d5c2e2ce99c7f8",
+    "mtime": 1794305540.1681404,
+    "seen": 1794307147.9962535,
+    "ast_hash": "ce457a3c1a330065547c520efa45a831",
     "semantic_hash": ""
   },
   "src/pages/styleguide.astro": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794225894.6957724,
-    "seen": 1794226222.7370062,
-    "ast_hash": "edcf2dd12f0907def11597ff60d64183",
+    "mtime": 1794307103.0003173,
+    "seen": 1794307147.9962606,
+    "ast_hash": "e5f09ef48aab3424aa1e9da468662b7f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -390,9 +390,9 @@
     "semantic_hash": ""
   },
   "src/content/projects/rahim-design.md": {
-    "mtime": 1794225381.9537916,
-    "seen": 1794226222.7370245,
-    "ast_hash": "513cad562251d51fe6f424478830dd72",
+    "mtime": 1794306859.0667284,
+    "seen": 1794307147.9962807,
+    "ast_hash": "56f932cf0e3593e445507e3ebff5afca",
     "semantic_hash": ""
   },
   "src/content/projects/twocoderz.md": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794305116.4621203,
-    "seen": 1794305225.6665683,
-    "ast_hash": "9c9e2fed0f0eda6ae742bf0d8ed3090d",
+    "mtime": 1794307142.5841742,
+    "seen": 1794307147.9962852,
+    "ast_hash": "ab6d89d90113b9178d99bac7e821e16b",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -738,9 +738,45 @@
     "semantic_hash": ""
   },
   "src/lib/work-masonry.ts": {
-    "mtime": 1794305122.9751701,
-    "seen": 1794305225.6665027,
-    "ast_hash": "ce50dee0f9d17eed31cb243106634617",
+    "mtime": 1794305373.8201773,
+    "seen": 1794307147.9962442,
+    "ast_hash": "ae9a689602db4b1a7727bdb66ee3ec04",
+    "semantic_hash": ""
+  },
+  "src/components/projects/ProjectMeta.astro": {
+    "mtime": 1794306609.4702222,
+    "seen": 1794307147.996181,
+    "ast_hash": "10a245ae5e587bc4555c24656bd2c12b",
+    "semantic_hash": ""
+  },
+  "src/components/projects/ProjectNav.astro": {
+    "mtime": 1794306600.1629584,
+    "seen": 1794307147.996185,
+    "ast_hash": "b1d50fd7631693e5f45cb22a5e1c76bd",
+    "semantic_hash": ""
+  },
+  "src/components/projects/ProjectProse.astro": {
+    "mtime": 1794306644.816208,
+    "seen": 1794307147.996188,
+    "ast_hash": "35980edc5ddf0d9e4553534ea6b74c64",
+    "semantic_hash": ""
+  },
+  "src/components/projects/ReadingProgress.astro": {
+    "mtime": 1794306947.7158291,
+    "seen": 1794307147.996193,
+    "ast_hash": "0b1dc8400ba6660adccc1312a3eb8b32",
+    "semantic_hash": ""
+  },
+  "src/data/project-detail.ts": {
+    "mtime": 1794306345.0899048,
+    "seen": 1794307147.9962292,
+    "ast_hash": "d7c79a0991738ca632cfcb2681a08fe8",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahim-design/rahim-design-poster.webp": {
+    "mtime": 1794306844.077364,
+    "seen": 1794307147.9963837,
+    "ast_hash": "96acda263f4a125759e14f4096d083e3",
     "semantic_hash": ""
   }
 }

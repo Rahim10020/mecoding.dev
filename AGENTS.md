@@ -67,7 +67,9 @@ Usage:
 - Editorial family: **Rethink Sans**, self-hosted only, reserved for page
   `h1` titles via `--font-editorial` (`font-editorial`).
 - Tokens: `text-display`, `text-headline`, `text-title`, `text-statement`,
-  `text-caption`, `text-body-lg`, `text-body`, `text-label`
+  `text-caption`, `text-body-lg`, `text-body`, `text-reading`, `text-label`
+- `text-reading` (20px / 35px) is reserved for long-form copy: project detail
+  body, description and bottom navigation
 - Weights available: **400 → 800** (variable `wght`) for both families
 - Inter keeps the `opsz` 14–32 axis; optical sizing is enabled on `body`
 - Italic: real italic faces, loaded only when used
@@ -96,9 +98,11 @@ Usage:
 - Durations: 150–600ms
 - Animate `transform` and `opacity` only (avoid layout properties)
 - `prefers-reduced-motion` is handled globally in `global.css`; do not
-  circumvent it
+  circumvent it. The only override is the reading-progress rail: its CSS
+  scroll timeline follows the scroll position, it is not autonomous motion.
 - Client JS is limited to: mobile menu, local clock, project carousel and the
-  Work masonry scroll. Everything else must be CSS
+  Work masonry scroll. Everything else must be CSS — the reading progress
+  rail uses `animation-timeline: scroll(root block)`, no JavaScript.
 
 ## Typography Pipeline
 
@@ -146,10 +150,12 @@ src/
 │   ├── icons/            SVG icon components (currentColor)
 │   ├── layout/           Frame, Stage
 │   ├── home/             home-only composition (hero, carousel, featured list)
-│   ├── projects/         Work composition (ProjectCard, ProjectsMasonry)
+│   ├── projects/         Work + détail (ProjectCard, ProjectsMasonry, ProjectProse,
+│   │                     ProjectMeta, ProjectNav, ReadingProgress)
 │   └── ui/               Logo, Placeholder, Cartoon, Button, Overline, Input, Textarea
 ├── content/projects/     project markdown (schema in src/content.config.ts)
 ├── data/site.ts          identity, nav, socials, contact, location
+├── data/project-detail.ts  libellés de la page détail projet
 ├── layouts/Layout.astro  SEO, fonts, favicons, skip link, main landmark
 ├── lib/                  project queries, URL helpers, carousel, masonry scroll
 ├── pages/                routes

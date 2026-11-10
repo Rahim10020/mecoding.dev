@@ -1,0 +1,86 @@
+---
+import { projectDetail } from "@/data/project-detail";
+
+interface Props {
+  role: string;
+  platform: string;
+  year: string;
+}
+
+const { role, platform, year } = Astro.props;
+
+const columns = [
+  { label: projectDetail.meta.role, value: role },
+  { label: projectDetail.meta.platform, value: platform },
+  { label: projectDetail.meta.year, value: year },
+];
+---
+
+<div class="project-meta">
+  <table>
+    <thead>
+      <tr>
+        {columns.map((column) => <th scope="col">{column.label}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {columns.map((column) => <td>{column.value}</td>)}
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .project-meta {
+    /* Filet de sécurité : le tableau ne doit jamais élargir la page. */
+    overflow-x: auto;
+  }
+
+  .project-meta table {
+    width: 100%;
+    max-width: 36rem;
+    margin-inline: auto;
+    border-collapse: collapse;
+    border: 1px solid var(--color-black-10);
+  }
+
+  .project-meta th,
+  .project-meta td {
+    padding: 0.5rem 0.75rem;
+    border-right: 1px solid var(--color-black-10);
+    text-align: left;
+  }
+
+  .project-meta th:last-child,
+  .project-meta td:last-child {
+    border-right: 0;
+  }
+
+  .project-meta thead th {
+    border-bottom: 1px solid var(--color-black-10);
+    color: var(--color-black-60);
+    font-size: var(--text-label);
+    font-weight: var(--text-label--font-weight);
+    letter-spacing: var(--text-label--letter-spacing);
+    text-transform: uppercase;
+  }
+
+  .project-meta tbody td {
+    color: var(--color-black-80);
+    font-size: var(--text-body-lg);
+    line-height: 1.4;
+  }
+
+  @media (min-width: 810px) {
+    .project-meta th,
+    .project-meta td {
+      padding: 0.5rem 1rem;
+    }
+
+    .project-meta tbody td {
+      font-size: var(--text-reading);
+      line-height: var(--text-reading--line-height);
+    }
+  }
+</style>

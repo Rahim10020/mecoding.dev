@@ -1,0 +1,63 @@
+---
+/**
+ * Barre de progression de lecture.
+ *
+ * Rail fixe à droite, rempli au fil du scroll. Purement décoratif :
+ * l'information est déjà portée par la position de scroll elle-même, d'où
+ * `aria-hidden` plutôt qu'un faux `progressbar` sans valeur.
+ *
+ * Rendu en CSS scroll-driven, sans JavaScript. Le rail n'apparaît que si le
+ * navigateur supporte `animation-timeline` : ailleurs, pas de barre figée.
+ */
+---
+
+<div
+  class="reading-progress pointer-events-none fixed right-6 top-1/2 z-30 -translate-y-1/2"
+  aria-hidden="true"
+>
+  <div class="reading-progress__rail">
+    <div class="reading-progress__bar"></div>
+  </div>
+</div>
+
+<style>
+  .reading-progress {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    @supports (animation-timeline: scroll()) {
+      .reading-progress {
+        display: block;
+      }
+    }
+  }
+
+  .reading-progress__rail {
+    width: 1rem;
+    height: 12rem;
+    overflow: hidden;
+    background-color: var(--color-black-5);
+  }
+
+  .reading-progress__bar {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: reading-progress linear both;
+    animation-duration: auto;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes reading-progress {
+    from {
+      transform: scaleY(0);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+</style>

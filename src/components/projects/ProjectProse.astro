@@ -1,0 +1,177 @@
+---
+/**
+ * Rendu de lecture d'un projet.
+ *
+ * Le Markdown produit du HTML brut (`<div class="media-grid">`,
+ * `<video class="media-video">`), donc les styles sont globaux. Tous les
+ * sélecteurs sont préfixés par `.project-prose` : rien ne fuit hors du bloc.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={["project-prose", className]}>
+  <slot />
+</div>
+
+<style is:global>
+  .project-prose {
+    /* Largeur de lecture de la référence : max-w-xl, 576 px. */
+    --prose-column: 36rem;
+    color: var(--color-black-80);
+  }
+
+  /* Rythme vertical ------------------------------------------------------ */
+  .project-prose > * + * {
+    margin-top: var(--spacing-stack);
+  }
+
+  .project-prose > p + p {
+    margin-top: var(--spacing-meta);
+  }
+
+  .project-prose > * + h2 {
+    margin-top: var(--spacing-column);
+  }
+
+  .project-prose > * + :is(
+      img,
+      .media-grid,
+      .media-video,
+      figure,
+      p:has(> :is(img, video):only-child)
+    ) {
+    margin-top: var(--spacing-column);
+  }
+
+  /* Texte ---------------------------------------------------------------- */
+  .project-prose :where(p, ul, ol, h2, h3) {
+    max-width: var(--prose-column);
+    margin-inline: auto;
+  }
+
+  .project-prose p,
+  .project-prose li {
+    font-size: var(--text-reading);
+    line-height: var(--text-reading--line-height);
+    overflow-wrap: break-word;
+  }
+
+  .project-prose h2 {
+    color: var(--color-black);
+    font-size: var(--text-title);
+    font-weight: var(--text-title--font-weight);
+    line-height: var(--text-title--line-height);
+    letter-spacing: var(--text-title--letter-spacing);
+  }
+
+  .project-prose h3 {
+    color: var(--color-black);
+    font-size: var(--text-statement);
+    font-weight: var(--text-statement--font-weight);
+    line-height: var(--text-statement--line-height);
+    letter-spacing: var(--text-statement--letter-spacing);
+  }
+
+  .project-prose strong {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+
+  .project-prose a {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .project-prose a:hover {
+    color: var(--color-black-60);
+  }
+
+  .project-prose ul {
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .project-prose li + li {
+    margin-top: var(--spacing-grid);
+  }
+
+  /* Médias --------------------------------------------------------------- */
+  .project-prose .media-grid {
+    display: grid;
+    grid-template-rows: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-black-5);
+  }
+
+  .project-prose .media-grid.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-prose .media-grid.cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-prose .media-grid.cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .project-prose .media-grid img,
+  .project-prose .media-grid video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .project-prose .media-video {
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-black-5);
+    object-fit: cover;
+  }
+
+  /* Un média seul (image ou vidéo) occupe la largeur du contenu. Une image
+     garde son ratio naturel : les captures mobiles sont verticales, un
+     cadrage 16:9 les réduirait à une bande. */
+  .project-prose p:has(> :is(img, video):only-child) {
+    max-width: 48rem;
+  }
+
+  .project-prose p > img:only-child {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    background-color: var(--color-black-5);
+  }
+
+  /* Astro rend les balises `<img>` brutes comme enfants directs du contenu. */
+  .project-prose > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    background-color: var(--color-black-5);
+  }
+
+  @media (max-width: 809px) {
+    .project-prose .media-grid.cols-3,
+    .project-prose .media-grid.cols-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

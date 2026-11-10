@@ -2550,7 +2550,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/work-masonry.ts",
-      "source_location": "L92",
+      "source_location": "L89",
       "weight": 1.0
     },
     {

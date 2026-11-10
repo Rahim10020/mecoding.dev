@@ -1,0 +1,41 @@
+---
+import ArrowLeft from "@/components/icons/ArrowLeft.astro";
+import ArrowRight from "@/components/icons/ArrowRight.astro";
+import { projectDetail } from "@/data/project-detail";
+import type { Project } from "@/lib/projects";
+
+interface Props {
+  previous?: Project;
+  next?: Project;
+}
+
+const { previous, next } = Astro.props;
+
+const linkClass =
+  "flex items-center gap-3 whitespace-nowrap text-body-lg underline underline-offset-4 transition-colors duration-200 hover:text-black-60 md:text-reading";
+---
+
+{
+  (previous ?? next) && (
+    <nav
+      aria-label={projectDetail.navigation}
+      class="mt-column flex flex-wrap items-center justify-between gap-stack"
+    >
+      {previous ? (
+        <a href={`/projects/${previous.id}`} class={linkClass}>
+          <ArrowLeft size={16} />
+          {projectDetail.recent}
+        </a>
+      ) : (
+        <span />
+      )}
+
+      {next && (
+        <a href={`/projects/${next.id}`} class={linkClass}>
+          {projectDetail.next}
+          <ArrowRight size={16} />
+        </a>
+      )}
+    </nav>
+  )
+}

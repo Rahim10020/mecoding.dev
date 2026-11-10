@@ -1,7 +1,7 @@
 # Graph Report - mecoding.dev  (2026-11-10)
 
 ## Corpus Check
-- 67 files · ~56,163 words
+- 67 files · ~56,165 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
