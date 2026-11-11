@@ -49,21 +49,11 @@ import Logo from "@/components/ui/Logo.astro";
       </Button>
     </div>
 
-    <div class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack">
+    <div class="flex flex-col justify-between px-gutter pb-column pt-stack">
       <NavPills
         variant="plain"
         class="[&_a]:text-headline [&_a]:normal-case [&_a]:tracking-[-0.02em]"
       />
-
-      <div class="flex flex-col gap-stack">
-        <p class="text-label uppercase text-black-70">
-          {site.location.city}, {site.location.country}
-          <span aria-hidden="true"> — </span>
-          <LocalClock class="inline" />
-        </p>
-
-        <SocialLinks />
-      </div>
     </div>
   </div>
 </div>
