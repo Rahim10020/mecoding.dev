@@ -38,7 +38,7 @@ const copies = Array.from({ length: COPIES }, (_, copy) => copy);
           data-masonry-copy
         >
           {projects.map((project) => (
-            <li class="break-inside-avoid pb-6">
+            <li class="break-inside-avoid pb-12">
               <ProjectCard project={project} interactive={copy === ACTIVE} />
             </li>
           ))}
