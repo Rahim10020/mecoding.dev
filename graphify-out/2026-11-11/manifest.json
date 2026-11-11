@@ -54,8 +54,8 @@
     "semantic_hash": ""
   },
   "src/components/home/FeaturedList.astro": {
-    "mtime": 1794417015.5941694,
-    "seen": 1794417321.065322,
+    "mtime": 1794421000.4568849,
+    "seen": 1794422021.941404,
     "ast_hash": "4a37440a5c98f8fa4ad566ab9050e216",
     "semantic_hash": ""
   },
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.astro": {
-    "mtime": 1794415604.729995,
-    "seen": 1794417321.0653737,
+    "mtime": 1794420818.9478807,
+    "seen": 1794422021.941458,
     "ast_hash": "27a5abcda0ef0f9827f58ec3e9df2b2c",
     "semantic_hash": ""
   },
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "src/pages/about.astro": {
-    "mtime": 1794217105.9455707,
-    "seen": 1794222336.9625673,
-    "ast_hash": "ee7fdf474bc3c593e20a4ecd42cc7ba5",
+    "mtime": 1794421606.6288886,
+    "seen": 1794422021.9415371,
+    "ast_hash": "c0f1db6ad7c37aa77cd0032480cfe731",
     "semantic_hash": ""
   },
   "src/pages/index.astro": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794406001.6894512,
-    "seen": 1794406254.1591654,
-    "ast_hash": "55b173f873553f0089e53535fa474f94",
+    "mtime": 1794422015.25078,
+    "seen": 1794422021.9415522,
+    "ast_hash": "8d0e9509311f8ec0fc3d9a23881ae98c",
     "semantic_hash": ""
   },
   "README.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
-    "mtime": 1794407825.0334885,
-    "seen": 1794417321.0654128,
-    "ast_hash": "e748987fe3b2e2909bd3f2af4858c394",
+    "mtime": 1794421576.5977395,
+    "seen": 1794422021.9414797,
+    "ast_hash": "a0a31bab977602033ee78cf8245b7065",
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {

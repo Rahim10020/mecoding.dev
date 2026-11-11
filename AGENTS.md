@@ -129,6 +129,12 @@ Usage:
   Work masonry scroll and the project videos (lazy autoplay). Everything else
   must be CSS — the reading progress rail uses
   `animation-timeline: scroll(root block)`, no JavaScript.
+- Mobile menu: a curtain. The panel slides from `translateY(-100%)` to `0`
+  in 500ms `ease-soft` and slides back out in 420ms. `hidden`
+  (`display: none`) rules out a CSS-only transition, so the JS keeps `hidden`
+  as the accessible state, drives the visual state with `data-open`, forces a
+  style recalculation on open and only reapplies `hidden` once the exit ends
+  (immediately under `prefers-reduced-motion`).
 
 ## Typography Pipeline
 

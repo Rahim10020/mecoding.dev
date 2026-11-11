@@ -59,6 +59,26 @@ import Logo from "@/components/ui/Logo.astro";
   <NavPills variant="plain" class="md:hidden" />
 </noscript>
 
+<style>
+  /*
+   * Rideau : le panneau descend depuis le haut du viewport. `hidden`
+   * (display: none) interdit toute transition, donc l'ouverture est
+   * déclenchée en JS par `data-open` après un recalcul de style, et la
+   * fermeture rejoue la transition inverse avant que `hidden` revienne.
+   */
+  [data-menu-panel] {
+    transform: translateY(-100%);
+    transition: transform 420ms var(--ease-soft);
+    pointer-events: none;
+  }
+
+  [data-menu-panel][data-open] {
+    transform: translateY(0);
+    transition-duration: 500ms;
+    pointer-events: auto;
+  }
+</style>
+
 <script>
   const root = document.querySelector<HTMLElement>("[data-menu-root]");
   const toggle = root?.querySelector<HTMLButtonElement>("[data-menu-toggle]");
@@ -66,18 +86,47 @@ import Logo from "@/components/ui/Logo.astro";
   const close = root?.querySelector<HTMLButtonElement>("[data-menu-close]");
 
   if (root && toggle && panel && close) {
-    const setOpen = (open: boolean) => {
-      toggle.setAttribute("aria-expanded", String(open));
-      panel.hidden = !open;
-      document.documentElement.style.overflow = open ? "hidden" : "";
+    /** Durée de sortie du rideau, alignée sur le `transition` ci-dessus. */
+    const CLOSE_MS = 420;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    /** Applique `hidden` une fois le rideau sorti. */
+    let closeTimer: number | undefined;
 
-      // `preventScroll` évite de remonter la page sur les vues où le header
-      // n'est pas fixe (projets, à propos, études de cas).
+    const isOpen = () => panel.hasAttribute("data-open");
+
+    const setOpen = (open: boolean) => {
+      window.clearTimeout(closeTimer);
+      toggle.setAttribute("aria-expanded", String(open));
+
       if (open) {
+        panel.hidden = false;
+        // Force le calcul du style de départ (translateY(-100%)) : sans ce
+        // recalcul, quitter `display: none` et poser `data-open` dans la même
+        // frame ne transitionne pas.
+        void panel.offsetHeight;
+        panel.dataset.open = "";
+        document.documentElement.style.overflow = "hidden";
+
+        // `preventScroll` évite de remonter la page derrière le panneau.
         close.focus({ preventScroll: true });
-      } else {
-        toggle.focus({ preventScroll: true });
+        return;
       }
+
+      // Retire l'état visuel : le rideau remonte, puis `hidden` est appliqué.
+      delete panel.dataset.open;
+      toggle.focus({ preventScroll: true });
+
+      if (reduceMotion.matches) {
+        panel.hidden = true;
+        document.documentElement.style.overflow = "";
+        return;
+      }
+
+      // La page reste verrouillée pendant la sortie du rideau.
+      closeTimer = window.setTimeout(() => {
+        panel.hidden = true;
+        document.documentElement.style.overflow = "";
+      }, CLOSE_MS);
     };
 
     toggle.addEventListener("click", () => setOpen(true));
@@ -90,7 +139,9 @@ import Logo from "@/components/ui/Logo.astro";
       });
 
     document.addEventListener("keydown", (event) => {
-      if (panel.hidden) return;
+      // Pendant la sortie, le panneau n'est plus `hidden` mais n'est plus
+      // ouvert : le piège de focus ne doit pas reprendre la main.
+      if (!isOpen()) return;
 
       if (event.key === "Escape") {
         setOpen(false);
@@ -124,7 +175,7 @@ import Logo from "@/components/ui/Logo.astro";
     window
       .matchMedia("(min-width: 810px)")
       .addEventListener("change", (event) => {
-        if (event.matches && !panel.hidden) {
+        if (event.matches && isOpen()) {
           setOpen(false);
         }
       });
