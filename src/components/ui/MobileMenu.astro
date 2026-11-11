@@ -17,10 +17,10 @@ import Logo from "@/components/ui/Logo.astro";
     aria-expanded="false"
     aria-controls="mobile-menu"
     data-menu-toggle
-    class="-m-2 p-2"
+    class="-m-2 p-2 text-black"
   >
     <span>Menu</span>
-    <Menu slot="icon-end" size={16} />
+    <Menu slot="icon-end" class="text-black" size={16} />
   </Button>
 
   <div
@@ -35,7 +35,6 @@ import Logo from "@/components/ui/Logo.astro";
     <div class="flex items-center justify-between px-gutter py-gutter">
       <a href="/" class="flex items-center gap-grid" data-menu-link>
         <Logo size={32} />
-        <span class="text-title lowercase tracking-[-0.04em]">{site.name}</span>
       </a>
 
       <Button
@@ -43,16 +42,14 @@ import Logo from "@/components/ui/Logo.astro";
         variant="ghost"
         size="none"
         data-menu-close
-        class="-m-2 p-2"
+        class="-m-2 p-2 text-black"
       >
         <span>Close</span>
-        <Close slot="icon-end" size={16} />
+        <Close slot="icon-end" class="text-black" size={16} />
       </Button>
     </div>
 
-    <div
-      class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack"
-    >
+    <div class="flex flex-1 flex-col justify-between px-gutter pb-column pt-stack">
       <NavPills
         variant="plain"
         class="[&_a]:text-headline [&_a]:normal-case [&_a]:tracking-[-0.02em]"

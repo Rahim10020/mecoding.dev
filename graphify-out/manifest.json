@@ -36,8 +36,8 @@
     "semantic_hash": ""
   },
   "src/components/about/AboutContact.astro": {
-    "mtime": 1794398351.5993977,
-    "seen": 1794400681.6196885,
+    "mtime": 1794405757.140039,
+    "seen": 1794406254.1590748,
     "ast_hash": "5bf161f06b7ce77a0f07dc54297d5f06",
     "semantic_hash": ""
   },
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.astro": {
-    "mtime": 1794404926.5000737,
-    "seen": 1794405462.8447762,
-    "ast_hash": "a8d282fba290e876eb4d4426786a2ec7",
+    "mtime": 1794406216.3819208,
+    "seen": 1794406254.159111,
+    "ast_hash": "0dc1abeff0bcf6d335995c7e49b2c0c8",
     "semantic_hash": ""
   },
   "src/components/layout/Frame.astro": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Header.astro": {
-    "mtime": 1794404854.1761587,
-    "seen": 1794405462.8447802,
-    "ast_hash": "52195a57c680149bbdeaa404623f5426",
+    "mtime": 1794405969.4171672,
+    "seen": 1794406254.1591134,
+    "ast_hash": "5196fc22457aad3787eb5faddd80b4d8",
     "semantic_hash": ""
   },
   "src/components/layout/Stage.astro": {
@@ -210,9 +210,9 @@
     "semantic_hash": ""
   },
   "src/components/ui/Input.astro": {
-    "mtime": 1794404876.9241626,
-    "seen": 1794405462.8448055,
-    "ast_hash": "58945b554f6cbeeaa40564579febd76b",
+    "mtime": 1794405919.4982865,
+    "seen": 1794406254.1591291,
+    "ast_hash": "9bb7afa99af2887d9216e4c2a5bd6a3d",
     "semantic_hash": ""
   },
   "src/components/ui/LocalClock.astro": {
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "src/components/ui/MobileMenu.astro": {
-    "mtime": 1794404905.749935,
-    "seen": 1794405462.8448133,
-    "ast_hash": "bb58bdb3699c180690ba57c6c4a2f958",
+    "mtime": 1794406124.1997788,
+    "seen": 1794406254.1591332,
+    "ast_hash": "6ffc5848dec02bf63441ec90e25f2fb8",
     "semantic_hash": ""
   },
   "src/components/ui/NavPills.astro": {
-    "mtime": 1794404897.3952868,
-    "seen": 1794405462.8448153,
-    "ast_hash": "bd94a669765a851271dd80c8be5ea379",
+    "mtime": 1794406361.34615,
+    "seen": 1794406371.4963515,
+    "ast_hash": "81700cec1413de21b1291d9413e26ea0",
     "semantic_hash": ""
   },
   "src/components/ui/Overline.astro": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794404909.8607628,
-    "seen": 1794405462.8448555,
-    "ast_hash": "f353cbb5a37569a06942dca45c7fddc3",
+    "mtime": 1794405741.718406,
+    "seen": 1794406254.15916,
+    "ast_hash": "ea76e89fcd71acc959c9d2a88b661dc5",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794400694.0798836,
-    "seen": 1794401444.7972896,
-    "ast_hash": "4c396e8cc893fc4c2a7110cca09c2c16",
+    "mtime": 1794406001.6894512,
+    "seen": 1794406254.1591654,
+    "ast_hash": "55b173f873553f0089e53535fa474f94",
     "semantic_hash": ""
   },
   "README.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectCard.astro": {
-    "mtime": 1794398683.090377,
-    "seen": 1794400681.61976,
-    "ast_hash": "02eef80bab4fddfb3a52432cfec09422",
+    "mtime": 1794405969.4181674,
+    "seen": 1794406254.159117,
+    "ast_hash": "eb374a7e716ac6fb0174dfce64b6fc93",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {

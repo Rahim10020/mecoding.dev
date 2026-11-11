@@ -28,7 +28,7 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
 <a
   href={`/projects/${project.id}`}
   tabindex={interactive ? undefined : -1}
-  class="group relative block w-full"
+  class="group relative mx-auto block w-full max-md:max-w-[20rem]"
 >
   <div class:list={["relative w-full overflow-hidden bg-black-5", aspect]}>
     {data.cover ? (

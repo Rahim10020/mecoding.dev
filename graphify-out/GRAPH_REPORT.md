@@ -1,7 +1,7 @@
 # Graph Report - mecoding.dev  (2026-11-11)
 
 ## Corpus Check
-- 73 files · ~58,042 words
+- 73 files · ~58,223 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `35f0d144`
+- Built from commit: `00be1a10`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

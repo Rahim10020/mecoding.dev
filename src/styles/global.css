@@ -207,9 +207,16 @@
     scroll-behavior: smooth;
     scrollbar-color: var(--color-black-40) var(--color-white);
     scrollbar-width: thin;
-    /* Le footer sticky occupe le bas du viewport : le défilement au clavier
-       (ou vers une ancre) garde sa hauteur libre sous l'élément visé. */
-    scroll-padding-bottom: 8rem;
+  }
+
+  /* Le footer n'est épinglé qu'à partir de `md` : en dessous il suit le flux,
+     donc aucun décalage de défilement n'est nécessaire. Au-dessus, le
+     défilement au clavier (ou vers une ancre) garde sa hauteur libre sous
+     l'élément visé. */
+  @media (min-width: 810px) {
+    html {
+      scroll-padding-bottom: 8rem;
+    }
   }
 
   ::-webkit-scrollbar {
