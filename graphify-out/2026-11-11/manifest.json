@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/components/about/AboutContact.astro": {
-    "mtime": 1794405757.140039,
-    "seen": 1794406254.1590748,
-    "ast_hash": "5bf161f06b7ce77a0f07dc54297d5f06",
+    "mtime": 1794417015.5941694,
+    "seen": 1794417321.0653136,
+    "ast_hash": "c19be9d020d3f4001eb90cfe4ee486a5",
     "semantic_hash": ""
   },
   "src/components/about/AboutList.astro": {
@@ -54,14 +54,14 @@
     "semantic_hash": ""
   },
   "src/components/home/FeaturedList.astro": {
-    "mtime": 1794407441.683776,
-    "seen": 1794407474.4290826,
-    "ast_hash": "999ad6408e77cbc442a7338fe1cbeae3",
+    "mtime": 1794417015.5941694,
+    "seen": 1794417321.065322,
+    "ast_hash": "4a37440a5c98f8fa4ad566ab9050e216",
     "semantic_hash": ""
   },
   "src/components/home/HomeHero.astro": {
-    "mtime": 1794397645.7114189,
-    "seen": 1794400681.6197004,
+    "mtime": 1794409523.6959665,
+    "seen": 1794417321.0653245,
     "ast_hash": "966439b48e503d2bbf5affb8111a4d6e",
     "semantic_hash": ""
   },
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.astro": {
-    "mtime": 1794407084.648969,
-    "seen": 1794407226.4884765,
-    "ast_hash": "a901572070f643d5e993b1f47a9da09c",
+    "mtime": 1794415604.729995,
+    "seen": 1794417321.0653737,
+    "ast_hash": "27a5abcda0ef0f9827f58ec3e9df2b2c",
     "semantic_hash": ""
   },
   "src/components/layout/Frame.astro": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Header.astro": {
-    "mtime": 1794405969.4171672,
-    "seen": 1794406254.1591134,
-    "ast_hash": "5196fc22457aad3787eb5faddd80b4d8",
+    "mtime": 1794408318.16495,
+    "seen": 1794417321.0653782,
+    "ast_hash": "1b6974e596cee9b4e863b18be1d03406",
     "semantic_hash": ""
   },
   "src/components/layout/Stage.astro": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "src/components/ui/MobileMenu.astro": {
-    "mtime": 1794406639.9120648,
-    "seen": 1794407226.4885309,
-    "ast_hash": "6ffc5848dec02bf63441ec90e25f2fb8",
+    "mtime": 1794417123.3121753,
+    "seen": 1794417321.065429,
+    "ast_hash": "c81141ea5995f06421627c42fc55d3f7",
     "semantic_hash": ""
   },
   "src/components/ui/NavPills.astro": {
@@ -720,21 +720,21 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectCard.astro": {
-    "mtime": 1794407015.071057,
-    "seen": 1794407226.4884853,
-    "ast_hash": "db3cf33335b962f996744866c32fe3e7",
+    "mtime": 1794407990.4283423,
+    "seen": 1794417321.0653837,
+    "ast_hash": "28680953a0db35559c7b8f7ebb5bc80f",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
-    "mtime": 1794404909.8607628,
-    "seen": 1794405462.8447952,
-    "ast_hash": "8c0d5f1f59938fe82822469c72436803",
+    "mtime": 1794407825.0334885,
+    "seen": 1794417321.0654128,
+    "ast_hash": "e748987fe3b2e2909bd3f2af4858c394",
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {
-    "mtime": 1794407523.1935818,
-    "seen": 1794407578.8121054,
-    "ast_hash": "e889bc80e9a535b28a3b4220af2c3671",
+    "mtime": 1794409527.242308,
+    "seen": 1794417321.0654202,
+    "ast_hash": "b8e67d0dea824f65a7b4ad357fe73cff",
     "semantic_hash": ""
   },
   "src/lib/work-masonry.ts": {
@@ -783,6 +783,12 @@
     "mtime": 1794307482.2861423,
     "seen": 1794307636.826697,
     "ast_hash": "b18eaa15dbbcf836a07352d92dcf7cd5",
+    "semantic_hash": ""
+  },
+  "src/data/home.ts": {
+    "mtime": 1794416983.2605371,
+    "seen": 1794417321.0654483,
+    "ast_hash": "a0f545aec55ef23e2a075ec129d0f898",
     "semantic_hash": ""
   }
 }

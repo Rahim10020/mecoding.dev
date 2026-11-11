@@ -1722,7 +1722,7 @@
       "node_kind": "heading",
       "norm_label": "architecture",
       "source_file": "AGENTS.md",
-      "source_location": "L167"
+      "source_location": "L170"
     },
     {
       "id": "agents_assets",
@@ -1734,7 +1734,7 @@
       "node_kind": "heading",
       "norm_label": "assets",
       "source_file": "AGENTS.md",
-      "source_location": "L157"
+      "source_location": "L160"
     },
     {
       "id": "agents_code_conventions",
@@ -1746,7 +1746,7 @@
       "node_kind": "heading",
       "norm_label": "code conventions",
       "source_file": "AGENTS.md",
-      "source_location": "L201"
+      "source_location": "L204"
     },
     {
       "id": "agents_colors",
@@ -1770,7 +1770,7 @@
       "node_kind": "heading",
       "norm_label": "content & seo",
       "source_file": "AGENTS.md",
-      "source_location": "L212"
+      "source_location": "L215"
     },
     {
       "id": "agents_definition_of_done",
@@ -1782,7 +1782,7 @@
       "node_kind": "heading",
       "norm_label": "definition of done",
       "source_file": "AGENTS.md",
-      "source_location": "L246"
+      "source_location": "L249"
     },
     {
       "id": "agents_design_system_contract",
@@ -1806,7 +1806,7 @@
       "node_kind": "heading",
       "norm_label": "development server",
       "source_file": "AGENTS.md",
-      "source_location": "L236"
+      "source_location": "L239"
     },
     {
       "id": "agents_documentation",
@@ -1818,7 +1818,7 @@
       "node_kind": "heading",
       "norm_label": "documentation",
       "source_file": "AGENTS.md",
-      "source_location": "L266"
+      "source_location": "L269"
     },
     {
       "id": "agents_icons",
@@ -1830,7 +1830,7 @@
       "node_kind": "heading",
       "norm_label": "icons",
       "source_file": "AGENTS.md",
-      "source_location": "L148"
+      "source_location": "L151"
     },
     {
       "id": "agents_layout",
@@ -1854,7 +1854,7 @@
       "node_kind": "heading",
       "norm_label": "motion",
       "source_file": "AGENTS.md",
-      "source_location": "L115"
+      "source_location": "L118"
     },
     {
       "id": "agents_project_overview",
@@ -1902,7 +1902,7 @@
       "node_kind": "heading",
       "norm_label": "typography pipeline",
       "source_file": "AGENTS.md",
-      "source_location": "L130"
+      "source_location": "L133"
     },
     {
       "id": "agents_useful_commands",
@@ -1914,7 +1914,7 @@
       "node_kind": "heading",
       "norm_label": "useful commands",
       "source_file": "AGENTS.md",
-      "source_location": "L226"
+      "source_location": "L229"
     },
     {
       "id": "agents_what_not_to_do",
@@ -1926,7 +1926,7 @@
       "node_kind": "heading",
       "norm_label": "what not to do",
       "source_file": "AGENTS.md",
-      "source_location": "L256"
+      "source_location": "L259"
     },
     {
       "id": "src_components_about_aboutcontact",
@@ -4150,7 +4150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L130",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -4161,7 +4161,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L148",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -4172,7 +4172,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L157",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -4183,7 +4183,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L167",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -4205,7 +4205,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L201",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -4216,7 +4216,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L212",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -4227,7 +4227,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L226",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -4238,7 +4238,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L236",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -4249,7 +4249,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L246",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -4260,7 +4260,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L256",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -4271,7 +4271,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L266",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -4304,7 +4304,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L115",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -5973,5 +5973,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cda54b2779059c5094272b5963340dc4e55d26f7"
+  "built_at_commit": "a4232967c25c9f2ee0cde26f91849215bf0d84e0"
 }

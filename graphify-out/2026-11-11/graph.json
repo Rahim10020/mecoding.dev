@@ -36,7 +36,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "carouselelements",
       "source_file": "src/lib/project-carousel.ts",
@@ -156,12 +156,24 @@
       "source_location": "L34"
     },
     {
+      "id": "src_components_ui_navpills_isactive",
+      "label": "isActive()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "FeaturedList.astro",
+      "file_type": "code",
+      "norm_label": "isactive()",
+      "source_file": "src/components/ui/NavPills.astro",
+      "source_location": "L13"
+    },
+    {
       "id": "src_lib_project_carousel_initprojectcarousel",
       "label": "initProjectCarousel()",
       "_callable": true,
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "initprojectcarousel()",
       "source_file": "src/lib/project-carousel.ts",
@@ -173,7 +185,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "read()",
       "source_file": "src/lib/project-carousel.ts",
@@ -262,18 +274,6 @@
       "norm_label": "tick()",
       "source_file": "src/components/ui/LocalClock.astro",
       "source_location": "L37"
-    },
-    {
-      "id": "src_components_ui_navpills_isactive",
-      "label": "isActive()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "isactive()",
-      "source_file": "src/components/ui/NavPills.astro",
-      "source_location": "L13"
     },
     {
       "id": "src_lib_url_externallinkprops",
@@ -762,6 +762,39 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_ui_logo",
+      "label": "Logo.astro",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "styleguide.astro",
+      "file_type": "code",
+      "norm_label": "logo.astro",
+      "source_file": "src/components/ui/Logo.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_logo_logos",
+      "label": "logos",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "styleguide.astro",
+      "file_type": "code",
+      "norm_label": "logos",
+      "source_file": "src/components/ui/Logo.astro",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_components_ui_mobilemenu",
+      "label": "MobileMenu.astro",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "styleguide.astro",
+      "file_type": "code",
+      "norm_label": "mobilemenu.astro",
+      "source_file": "src/components/ui/MobileMenu.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_pages_styleguide",
       "label": "styleguide.astro",
       "_origin": "ast",
@@ -1055,7 +1088,7 @@
       "label": "astro:assets",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "confidence": "EXTRACTED",
       "file_type": "code",
       "norm_label": "astro:assets",
@@ -1066,7 +1099,7 @@
       "label": "astro:content",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "confidence": "EXTRACTED",
       "file_type": "code",
       "norm_label": "astro:content",
@@ -1077,21 +1110,10 @@
       "label": "FeaturedList.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "featuredlist.astro",
       "source_file": "src/components/home/FeaturedList.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_home_homehero",
-      "label": "HomeHero.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "homehero.astro",
-      "source_file": "src/components/home/HomeHero.astro",
       "source_location": "L1"
     },
     {
@@ -1099,7 +1121,7 @@
       "label": "ProjectCarousel.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "projectcarousel.astro",
       "source_file": "src/components/home/ProjectCarousel.astro",
@@ -1110,21 +1132,10 @@
       "label": "ArrowUpRight.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "arrowupright.astro",
       "source_file": "src/components/icons/ArrowUpRight.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_layout_frame",
-      "label": "Frame.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "frame.astro",
-      "source_file": "src/components/layout/Frame.astro",
       "source_location": "L1"
     },
     {
@@ -1132,7 +1143,7 @@
       "label": "ProjectCard.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "projectcard.astro",
       "source_file": "src/components/projects/ProjectCard.astro",
@@ -1143,7 +1154,7 @@
       "label": "string",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "src/components/projects/ProjectCard.astro",
@@ -1154,7 +1165,7 @@
       "label": "ProjectsMasonry.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "projectsmasonry.astro",
       "source_file": "src/components/projects/ProjectsMasonry.astro",
@@ -1165,29 +1176,62 @@
       "label": "copies",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "copies",
       "source_file": "src/components/projects/ProjectsMasonry.astro",
       "source_location": "L19"
     },
     {
+      "id": "src_components_ui_navpills",
+      "label": "NavPills.astro",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "FeaturedList.astro",
+      "file_type": "code",
+      "norm_label": "navpills.astro",
+      "source_file": "src/components/ui/NavPills.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_ui_placeholder",
       "label": "Placeholder.astro",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "placeholder.astro",
       "source_file": "src/components/ui/Placeholder.astro",
       "source_location": "L1"
     },
     {
+      "id": "src_data_home",
+      "label": "home.ts",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "FeaturedList.astro",
+      "file_type": "code",
+      "norm_label": "home.ts",
+      "source_file": "src/data/home.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_data_home_home",
+      "label": "home",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "FeaturedList.astro",
+      "file_type": "code",
+      "norm_label": "home",
+      "source_file": "src/data/home.ts",
+      "source_location": "L5"
+    },
+    {
       "id": "src_lib_project_carousel",
       "label": "project-carousel.ts",
       "_origin": "ast",
       "community": 13,
-      "community_name": "ProjectCarousel.astro",
+      "community_name": "FeaturedList.astro",
       "file_type": "code",
       "norm_label": "project-carousel.ts",
       "source_file": "src/lib/project-carousel.ts",
@@ -1448,17 +1492,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_ui_cartoon",
-      "label": "Cartoon.astro",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "[id].astro",
-      "file_type": "code",
-      "norm_label": "cartoon.astro",
-      "source_file": "src/components/ui/Cartoon.astro",
-      "source_location": "L1"
-    },
-    {
       "id": "src_data_project_detail",
       "label": "project-detail.ts",
       "_origin": "ast",
@@ -1514,14 +1547,14 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pages_projects_index",
-      "label": "projects/index.astro",
+      "id": "src_components_home_homehero",
+      "label": "HomeHero.astro",
       "_origin": "ast",
-      "community": 2,
-      "community_name": "[id].astro",
+      "community": 3,
+      "community_name": "site.ts",
       "file_type": "code",
-      "norm_label": "projects/index.astro",
-      "source_file": "src/pages/projects/index.astro",
+      "norm_label": "homehero.astro",
+      "source_file": "src/components/home/HomeHero.astro",
       "source_location": "L1"
     },
     {
@@ -1547,6 +1580,17 @@
       "source_location": "L11"
     },
     {
+      "id": "src_components_layout_frame",
+      "label": "Frame.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "frame.astro",
+      "source_file": "src/components/layout/Frame.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_layout_header",
       "label": "Header.astro",
       "_origin": "ast",
@@ -1558,6 +1602,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_ui_cartoon",
+      "label": "Cartoon.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "cartoon.astro",
+      "source_file": "src/components/ui/Cartoon.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_ui_localclock",
       "label": "LocalClock.astro",
       "_origin": "ast",
@@ -1566,50 +1621,6 @@
       "file_type": "code",
       "norm_label": "localclock.astro",
       "source_file": "src/components/ui/LocalClock.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_logo",
-      "label": "Logo.astro",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "logo.astro",
-      "source_file": "src/components/ui/Logo.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_logo_logos",
-      "label": "logos",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "logos",
-      "source_file": "src/components/ui/Logo.astro",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_components_ui_mobilemenu",
-      "label": "MobileMenu.astro",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "mobilemenu.astro",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_navpills",
-      "label": "NavPills.astro",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "navpills.astro",
-      "source_file": "src/components/ui/NavPills.astro",
       "source_location": "L1"
     },
     {
@@ -1676,6 +1687,17 @@
       "file_type": "code",
       "norm_label": "pages/index.astro",
       "source_file": "src/pages/index.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_projects_index",
+      "label": "projects/index.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "projects/index.astro",
+      "source_file": "src/pages/projects/index.astro",
       "source_location": "L1"
     },
     {
@@ -2790,6 +2812,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_home_featuredlist",
+      "target": "src_data_home_home",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/home/FeaturedList.astro",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "src_components_layout_footer",
       "target": "src_data_site_site",
       "relation": "imports",
@@ -2835,18 +2869,6 @@
       "context": "import",
       "source_file": "src/components/projects/ProjectNav.astro",
       "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_ui_mobilemenu",
-      "target": "src_data_site_site",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -3091,19 +3113,19 @@
     },
     {
       "source": "src_components_home_featuredlist",
-      "target": "src_components_icons_arrowupright",
+      "target": "src_data_home",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/home/FeaturedList.astro",
-      "source_location": "L4",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
       "source": "src_components_home_featuredlist",
-      "target": "src_components_layout_frame",
+      "target": "src_components_icons_arrowupright",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3115,7 +3137,7 @@
     },
     {
       "source": "src_components_home_featuredlist",
-      "target": "src_components_ui_overline",
+      "target": "src_components_layout_frame",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3123,6 +3145,42 @@
       "context": "import",
       "source_file": "src/components/home/FeaturedList.astro",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_home_featuredlist",
+      "target": "src_components_ui_button",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/home/FeaturedList.astro",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_home_featuredlist",
+      "target": "src_components_ui_overline",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/home/FeaturedList.astro",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_home_featuredlist",
+      "target": "src_components_ui_placeholder",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/home/FeaturedList.astro",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -3355,7 +3413,7 @@
     },
     {
       "source": "src_components_ui_mobilemenu",
-      "target": "src_components_ui_localclock",
+      "target": "src_components_ui_navpills",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3367,7 +3425,7 @@
     },
     {
       "source": "src_components_ui_mobilemenu",
-      "target": "src_components_ui_navpills",
+      "target": "src_components_icons_close",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3379,7 +3437,7 @@
     },
     {
       "source": "src_components_ui_mobilemenu",
-      "target": "src_components_ui_sociallinks",
+      "target": "src_components_icons_menu",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3391,42 +3449,6 @@
     },
     {
       "source": "src_components_ui_mobilemenu",
-      "target": "src_data_site",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_ui_mobilemenu",
-      "target": "src_components_icons_close",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_ui_mobilemenu",
-      "target": "src_components_icons_menu",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_ui_mobilemenu",
       "target": "src_components_ui_logo",
       "relation": "imports_from",
       "_origin": "ast",
@@ -3434,7 +3456,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L9",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -5265,6 +5287,17 @@
       "weight": 1.0
     },
     {
+      "source": "src_data_home",
+      "target": "src_data_home_home",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/data/home.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_data_project_detail",
       "target": "src_data_project_detail_projectdetail",
       "relation": "contains",
@@ -5656,6 +5689,15 @@
     },
     {
       "source": "src_components_home_featuredlist",
+      "target": "astro_assets",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/home/FeaturedList.astro"
+    },
+    {
+      "source": "src_components_home_featuredlist",
       "target": "astro_content",
       "relation": "imports_from",
       "_origin": "ast",
@@ -5931,5 +5973,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "00be1a105a3f719511a3e46fa3b16acf2bc689a3"
+  "built_at_commit": "cda54b2779059c5094272b5963340dc4e55d26f7"
 }

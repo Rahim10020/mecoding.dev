@@ -1,16 +1,16 @@
 # Graph Report - mecoding.dev  (2026-11-11)
 
 ## Corpus Check
-- 73 files · ~58,223 words
+- 74 files · ~58,320 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 220 nodes · 296 edges · 18 communities (15 shown, 2 thin omitted)
+- 222 nodes · 298 edges · 18 communities (15 shown, 2 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `00be1a10`
+- Built from commit: `cda54b27`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,7 @@
 - twocoderz.md
 - work-masonry.ts
 - tsconfig.json
-- ProjectCarousel.astro
+- FeaturedList.astro
 - build-fonts.sh
 - content.config.ts
 - scripts
@@ -37,7 +37,7 @@
 1. `Agents.md — Instructions for AI coding agents` - 15 edges
 2. `scripts` - 8 edges
 3. `mecoding` - 8 edges
-4. `site` - 7 edges
+4. `site` - 6 edges
 5. `getAllProjects()` - 6 edges
 6. `Design System Contract` - 5 edges
 7. `about` - 3 edges
@@ -59,16 +59,16 @@ Cohesion: 0.08
 Nodes (23): dependencies, astro, @astrojs/sitemap, tailwindcss, @tailwindcss/vite, devDependencies, @astrojs/check, sharp (+15 more)
 
 ### Community 1 - "styleguide.astro"
-Cohesion: 0.09
-Nodes (6): list, brandIcons, interfaceIcons, palette, rhythm, typeScale
+Cohesion: 0.08
+Nodes (7): list, logos, brandIcons, interfaceIcons, palette, rhythm, typeScale
 
 ### Community 2 - "[id].astro"
-Cohesion: 0.17
+Cohesion: 0.19
 Nodes (7): columns, projectDetail, byOrder(), getAllProjects(), getFeaturedProjects(), Project, getStaticPaths()
 
 ### Community 3 - "site.ts"
-Cohesion: 0.20
-Nodes (9): year, render(), tick(), logos, NavItem, site, Social, SocialId (+1 more)
+Cohesion: 0.21
+Nodes (8): year, render(), tick(), NavItem, site, Social, SocialId, canonical
 
 ### Community 4 - "Agents.md — Instructions for AI coding agents"
 Cohesion: 0.11
@@ -106,9 +106,9 @@ Nodes (4): initWorkMasonry(), MasonryElements, read(), wrap()
 Cohesion: 0.29
 Nodes (6): astro/tsconfigs/strict, compilerOptions, paths, exclude, extends, include
 
-### Community 13 - "ProjectCarousel.astro"
-Cohesion: 0.19
-Nodes (5): string, copies, CarouselElements, initProjectCarousel(), read()
+### Community 13 - "FeaturedList.astro"
+Cohesion: 0.16
+Nodes (6): string, copies, home, CarouselElements, initProjectCarousel(), read()
 
 ### Community 17 - "scripts"
 Cohesion: 0.25
@@ -123,7 +123,7 @@ Nodes (8): scripts, astro, build, check, dev, fonts, icons, preview
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Agents.md — Instructions for AI coding agents` connect `Agents.md — Instructions for AI coding agents` to `mecoding`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
@@ -131,6 +131,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `styleguide.astro` be split into smaller, more focused modules?**
-  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08307692307692308 - nodes in this community are weakly interconnected._
 - **Should `Agents.md — Instructions for AI coding agents` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

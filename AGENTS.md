@@ -81,7 +81,10 @@ Usage:
 - Page frame: `Frame` — `max-w-frame` (1920px) + `px-gutter` (20px, fixed)
 - Header: in flow by default. Work composes its own header (`fixed`), the
   project detail passes `headerClass="sticky top-0 z-40"` to `Layout` so it
-  stays in flow at rest and pins on scroll. It is white below 810px
+  stays in flow at rest and pins on scroll. About passes
+  `headerClass="max-md:sticky max-md:top-0 max-md:z-40"`: below 810px the
+  header pins so the menu stays reachable on the long page, and from `md` up
+  it stays in flow. It is white below 810px
   (`bg-white md:bg-transparent`) so content never scrolls through the logo
   and the menu on mobile. From `md` up it is transparent on purpose: the
   article keeps its y=122 resting position and scrolls up beneath the
