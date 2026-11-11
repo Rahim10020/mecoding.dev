@@ -597,17 +597,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_icons_arrowright",
-      "label": "ArrowRight.astro",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "styleguide.astro",
-      "file_type": "code",
-      "norm_label": "arrowright.astro",
-      "source_file": "src/components/icons/ArrowRight.astro",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_icons_arrowup",
       "label": "ArrowUp.astro",
       "_origin": "ast",
@@ -1007,17 +996,6 @@
       "source_location": "L5"
     },
     {
-      "id": "tsconfig_compileroptions_baseurl",
-      "label": "baseUrl",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "tsconfig.json",
-      "file_type": "code",
-      "norm_label": "baseurl",
-      "source_file": "tsconfig.json",
-      "source_location": "L6"
-    },
-    {
       "id": "tsconfig_compileroptions_paths",
       "label": "paths",
       "_origin": "ast",
@@ -1026,7 +1004,7 @@
       "file_type": "code",
       "norm_label": "paths",
       "source_file": "tsconfig.json",
-      "source_location": "L7"
+      "source_location": "L6"
     },
     {
       "id": "tsconfig_exclude",
@@ -1139,6 +1117,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_layout_frame",
+      "label": "Frame.astro",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "ProjectCarousel.astro",
+      "file_type": "code",
+      "norm_label": "frame.astro",
+      "source_file": "src/components/layout/Frame.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_projects_projectcard",
       "label": "ProjectCard.astro",
       "_origin": "ast",
@@ -1181,17 +1170,6 @@
       "norm_label": "copies",
       "source_file": "src/components/projects/ProjectsMasonry.astro",
       "source_location": "L19"
-    },
-    {
-      "id": "src_components_ui_cartoon",
-      "label": "Cartoon.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "ProjectCarousel.astro",
-      "file_type": "code",
-      "norm_label": "cartoon.astro",
-      "source_file": "src/components/ui/Cartoon.astro",
-      "source_location": "L1"
     },
     {
       "id": "src_components_ui_placeholder",
@@ -1404,6 +1382,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_icons_arrowright",
+      "label": "ArrowRight.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "arrowright.astro",
+      "source_file": "src/components/icons/ArrowRight.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_projects_projectmeta",
       "label": "ProjectMeta.astro",
       "_origin": "ast",
@@ -1456,6 +1445,17 @@
       "file_type": "code",
       "norm_label": "readingprogress.astro",
       "source_file": "src/components/projects/ReadingProgress.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_cartoon",
+      "label": "Cartoon.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "cartoon.astro",
+      "source_file": "src/components/ui/Cartoon.astro",
       "source_location": "L1"
     },
     {
@@ -1514,6 +1514,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_pages_projects_index",
+      "label": "projects/index.astro",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "[id].astro",
+      "file_type": "code",
+      "norm_label": "projects/index.astro",
+      "source_file": "src/pages/projects/index.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_layout_footer",
       "label": "Footer.astro",
       "_origin": "ast",
@@ -1534,17 +1545,6 @@
       "norm_label": "year",
       "source_file": "src/components/layout/Footer.astro",
       "source_location": "L11"
-    },
-    {
-      "id": "src_components_layout_frame",
-      "label": "Frame.astro",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "frame.astro",
-      "source_file": "src/components/layout/Frame.astro",
-      "source_location": "L1"
     },
     {
       "id": "src_components_layout_header",
@@ -1676,17 +1676,6 @@
       "file_type": "code",
       "norm_label": "pages/index.astro",
       "source_file": "src/pages/index.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_projects_index",
-      "label": "projects/index.astro",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "projects/index.astro",
-      "source_file": "src/pages/projects/index.astro",
       "source_location": "L1"
     },
     {
@@ -5618,24 +5607,13 @@
     },
     {
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_baseurl",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tsconfig.json",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "tsconfig_compileroptions",
       "target": "tsconfig_compileroptions_paths",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tsconfig.json",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -5953,5 +5931,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e62247ce5fdbe6822239d533e91525d038c39762"
+  "built_at_commit": "35f0d144c47cae45753ccfa4bbaf313fa9361d21"
 }

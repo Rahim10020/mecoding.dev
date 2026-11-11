@@ -1711,7 +1711,7 @@
       "node_kind": "heading",
       "norm_label": "architecture",
       "source_file": "AGENTS.md",
-      "source_location": "L152"
+      "source_location": "L162"
     },
     {
       "id": "agents_assets",
@@ -1723,7 +1723,7 @@
       "node_kind": "heading",
       "norm_label": "assets",
       "source_file": "AGENTS.md",
-      "source_location": "L142"
+      "source_location": "L152"
     },
     {
       "id": "agents_code_conventions",
@@ -1735,7 +1735,7 @@
       "node_kind": "heading",
       "norm_label": "code conventions",
       "source_file": "AGENTS.md",
-      "source_location": "L186"
+      "source_location": "L196"
     },
     {
       "id": "agents_colors",
@@ -1759,7 +1759,7 @@
       "node_kind": "heading",
       "norm_label": "content & seo",
       "source_file": "AGENTS.md",
-      "source_location": "L197"
+      "source_location": "L207"
     },
     {
       "id": "agents_definition_of_done",
@@ -1771,7 +1771,7 @@
       "node_kind": "heading",
       "norm_label": "definition of done",
       "source_file": "AGENTS.md",
-      "source_location": "L231"
+      "source_location": "L241"
     },
     {
       "id": "agents_design_system_contract",
@@ -1795,7 +1795,7 @@
       "node_kind": "heading",
       "norm_label": "development server",
       "source_file": "AGENTS.md",
-      "source_location": "L221"
+      "source_location": "L231"
     },
     {
       "id": "agents_documentation",
@@ -1807,7 +1807,7 @@
       "node_kind": "heading",
       "norm_label": "documentation",
       "source_file": "AGENTS.md",
-      "source_location": "L251"
+      "source_location": "L261"
     },
     {
       "id": "agents_icons",
@@ -1819,7 +1819,7 @@
       "node_kind": "heading",
       "norm_label": "icons",
       "source_file": "AGENTS.md",
-      "source_location": "L133"
+      "source_location": "L143"
     },
     {
       "id": "agents_layout",
@@ -1843,7 +1843,7 @@
       "node_kind": "heading",
       "norm_label": "motion",
       "source_file": "AGENTS.md",
-      "source_location": "L100"
+      "source_location": "L110"
     },
     {
       "id": "agents_project_overview",
@@ -1891,7 +1891,7 @@
       "node_kind": "heading",
       "norm_label": "typography pipeline",
       "source_file": "AGENTS.md",
-      "source_location": "L115"
+      "source_location": "L125"
     },
     {
       "id": "agents_useful_commands",
@@ -1903,7 +1903,7 @@
       "node_kind": "heading",
       "norm_label": "useful commands",
       "source_file": "AGENTS.md",
-      "source_location": "L211"
+      "source_location": "L221"
     },
     {
       "id": "agents_what_not_to_do",
@@ -1915,7 +1915,7 @@
       "node_kind": "heading",
       "norm_label": "what not to do",
       "source_file": "AGENTS.md",
-      "source_location": "L241"
+      "source_location": "L251"
     },
     {
       "id": "src_components_about_aboutcontact",
@@ -4139,7 +4139,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L115",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -4150,7 +4150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L133",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -4161,7 +4161,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L142",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -4172,7 +4172,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L152",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -4183,18 +4183,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L186",
-      "weight": 1.0
-    },
-    {
-      "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_content_seo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": "L197",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -4210,18 +4199,18 @@
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_useful_commands",
+      "target": "agents_content_seo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L211",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_development_server",
+      "target": "agents_useful_commands",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4232,7 +4221,7 @@
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_definition_of_done",
+      "target": "agents_development_server",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4243,7 +4232,7 @@
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_what_not_to_do",
+      "target": "agents_definition_of_done",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4254,13 +4243,24 @@
     },
     {
       "source": "agents_agents_md_instructions_for_ai_coding_agents",
-      "target": "agents_documentation",
+      "target": "agents_what_not_to_do",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
       "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agents_md_instructions_for_ai_coding_agents",
+      "target": "agents_documentation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -4293,7 +4293,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L100",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -5953,5 +5953,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6abdbdcefef740f4dd34a0d799f90fc2e92d4dcd"
+  "built_at_commit": "e62247ce5fdbe6822239d533e91525d038c39762"
 }

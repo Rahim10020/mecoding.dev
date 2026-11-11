@@ -2,7 +2,6 @@ pnpm exec astro dev stop
 pnpm dev
 
 -- ajouter les autres projets
--- faire le responsive
 -- s'assurer que tout est propre cote size des polices et espacements et tout
 -- verifier le SEO pour voir si tout est bon et si le site sera tres bien reference
 -- verifier les performances pour voir si le site sera tres rapide et consommera moins de donnees.
