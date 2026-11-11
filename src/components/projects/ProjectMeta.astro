@@ -72,6 +72,40 @@ const columns = [
     line-height: 1.4;
   }
 
+  @media (max-width: 400px) {
+    /* À 320 px, trois colonnes calibrées et un padding réduit : « YEAR » et
+       « PLATFORM » restent lisibles sans débordement horizontal. */
+    .project-meta table {
+      table-layout: fixed;
+    }
+
+    .project-meta th,
+    .project-meta td {
+      padding: 0.375rem;
+      overflow-wrap: break-word;
+    }
+
+    .project-meta :is(th, td):nth-child(1) {
+      width: 44%;
+    }
+
+    .project-meta :is(th, td):nth-child(2) {
+      width: 32%;
+    }
+
+    .project-meta :is(th, td):nth-child(3) {
+      width: 24%;
+    }
+  }
+
+  @media (max-width: 340px) {
+    /* Dernier cran : padding minimal pour que « development » tienne entier. */
+    .project-meta th,
+    .project-meta td {
+      padding: 0.25rem;
+    }
+  }
+
   @media (min-width: 810px) {
     .project-meta th,
     .project-meta td {

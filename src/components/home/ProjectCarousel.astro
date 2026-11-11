@@ -37,7 +37,7 @@ const trackTop = middleStart * STEP + TILE / 2;
   data-count={projects.length}
 >
   <div
-    class="pointer-events-auto absolute inset-y-0 left-1/2 w-card -translate-x-1/2 cursor-grab overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black active:cursor-grabbing"
+    class="pointer-events-auto absolute inset-y-0 left-1/2 w-tile -translate-x-1/2 cursor-grab overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black active:cursor-grabbing lg:w-card"
     role="region"
     aria-roledescription="carousel"
     aria-label="Selected projects"
@@ -53,7 +53,7 @@ const trackTop = middleStart * STEP + TILE / 2;
         <a
           href={`/projects/${project.id}`}
           class:list={[
-            "group relative block h-tile w-card shrink-0 overflow-hidden",
+            "group relative block h-tile w-tile shrink-0 overflow-hidden lg:w-card",
             global === middleStart && "is-active",
           ]}
           data-carousel-item
@@ -84,7 +84,7 @@ const trackTop = middleStart * STEP + TILE / 2;
     </div>
   </div>
 
-  <div class="pointer-events-none absolute right-[calc(50%+340px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid">
+  <div class="pointer-events-none absolute right-[min(calc(50%_+_340px),calc(100%_-_320px))] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid">
     {projects.map((project, index) => (
       <div
         class:list={[
@@ -102,7 +102,7 @@ const trackTop = middleStart * STEP + TILE / 2;
     ))}
   </div>
 
-  <div class="pointer-events-none absolute left-[calc(50%+340px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid">
+  <div class="pointer-events-none absolute left-[min(calc(50%_+_340px),calc(100%_-_320px))] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid">
     {projects.map((project, index) => (
       <div
         class:list={[

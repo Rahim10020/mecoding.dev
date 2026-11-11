@@ -81,8 +81,10 @@ Usage:
 - Page frame: `Frame` — `max-w-frame` (1920px) + `px-gutter` (20px, fixed)
 - Header: in flow by default. Work composes its own header (`fixed`), the
   project detail passes `headerClass="sticky top-0 z-40"` to `Layout` so it
-  stays in flow at rest and pins on scroll. It is left transparent on purpose:
-  the article keeps its y=122 resting position and scrolls up beneath the
+  stays in flow at rest and pins on scroll. It is white below 810px
+  (`bg-white md:bg-transparent`) so content never scrolls through the logo
+  and the menu on mobile. From `md` up it is transparent on purpose: the
+  article keeps its y=122 resting position and scrolls up beneath the
   header instead of being clipped by a white band
 - Desktop stage: `Stage` — `md:h-svh` + `md:overflow-hidden`; below 810px it
   falls back to normal document flow
@@ -98,7 +100,9 @@ Usage:
   `scroll-padding-bottom: 8rem` so keyboard focus never lands under it
 - Rythme: `gap-grid` (10px), `gap-meta` (16px), `gap-stack` (30px),
   `gap-center` (50px), `pb-column` (54px); composition sizes `w-tile` /
-  `h-tile` (300px), `w-card` (448px, carousel tile width) and `w-step` (310px)
+  `h-tile` (300px), `w-card` (448px, carousel tile width from `lg` up — the
+  tile stays 300px wide between 810 and 1199 so it never overlaps the hero
+  columns) and `w-step` (310px)
 - Breakpoints: `md` = 810px, `lg` = 1200px (Kelo's own)
 - No clamped spacing scale: values are measured on Kelo, not derived
 - Default border width is 1px; no shadows; no decorative radii. Pills use

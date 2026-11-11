@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/components/home/ProjectCarousel.astro": {
-    "mtime": 1794397812.175182,
-    "seen": 1794400681.6197026,
-    "ast_hash": "f7b994c272074c1265170609f4244d82",
+    "mtime": 1794404871.9253793,
+    "seen": 1794405462.844731,
+    "ast_hash": "ea03f3e544f903fd267a51fa9da0db4b",
     "semantic_hash": ""
   },
   "src/components/icons/ArrowDown.astro": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.astro": {
-    "mtime": 1794400897.4454453,
-    "seen": 1794401444.7971938,
-    "ast_hash": "287e2c36249b311ae5ff66961a52b830",
+    "mtime": 1794404926.5000737,
+    "seen": 1794405462.8447762,
+    "ast_hash": "a8d282fba290e876eb4d4426786a2ec7",
     "semantic_hash": ""
   },
   "src/components/layout/Frame.astro": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Header.astro": {
-    "mtime": 1794165473.4286854,
-    "seen": 1794222336.96253,
-    "ast_hash": "4467b85d59aabf3579f42be3139d83ea",
+    "mtime": 1794404854.1761587,
+    "seen": 1794405462.8447802,
+    "ast_hash": "52195a57c680149bbdeaa404623f5426",
     "semantic_hash": ""
   },
   "src/components/layout/Stage.astro": {
@@ -204,15 +204,15 @@
     "semantic_hash": ""
   },
   "src/components/ui/Button.astro": {
-    "mtime": 1794222987.0398338,
-    "seen": 1794226222.7369487,
-    "ast_hash": "c24a8ddbe2a012b3d0288a46c92ca5a6",
+    "mtime": 1794405032.4499454,
+    "seen": 1794405462.8448005,
+    "ast_hash": "2a5437665291f09f88f7f8b8e9d8b4ab",
     "semantic_hash": ""
   },
   "src/components/ui/Input.astro": {
-    "mtime": 1794222468.9739435,
-    "seen": 1794222722.264624,
-    "ast_hash": "7e95b10fefc4e217c2e85254be0c9d7c",
+    "mtime": 1794404876.9241626,
+    "seen": 1794405462.8448055,
+    "ast_hash": "58945b554f6cbeeaa40564579febd76b",
     "semantic_hash": ""
   },
   "src/components/ui/LocalClock.astro": {
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "src/components/ui/MobileMenu.astro": {
-    "mtime": 1794217083.8738112,
-    "seen": 1794222336.962542,
-    "ast_hash": "42b4ab397461472c746e3998f772c191",
+    "mtime": 1794404905.749935,
+    "seen": 1794405462.8448133,
+    "ast_hash": "bb58bdb3699c180690ba57c6c4a2f958",
     "semantic_hash": ""
   },
   "src/components/ui/NavPills.astro": {
-    "mtime": 1794184201.7124412,
-    "seen": 1794222336.9625442,
-    "ast_hash": "bb530c443462d9f73852bab4aed27f6c",
+    "mtime": 1794404897.3952868,
+    "seen": 1794405462.8448153,
+    "ast_hash": "bd94a669765a851271dd80c8be5ea379",
     "semantic_hash": ""
   },
   "src/components/ui/Overline.astro": {
@@ -252,15 +252,15 @@
     "semantic_hash": ""
   },
   "src/components/ui/SocialLinks.astro": {
-    "mtime": 1794049011.027737,
-    "seen": 1794222336.9625514,
-    "ast_hash": "caeb31498cd461b01565fbe691db2346",
+    "mtime": 1794405022.2713242,
+    "seen": 1794405462.8448226,
+    "ast_hash": "47b28293c840dce17b3d10278e431671",
     "semantic_hash": ""
   },
   "src/components/ui/Textarea.astro": {
-    "mtime": 1794216967.8480515,
-    "seen": 1794222336.9625533,
-    "ast_hash": "a26aacc64ade0bd87b9b7cbb8250c2e8",
+    "mtime": 1794404876.9241626,
+    "seen": 1794405462.8448246,
+    "ast_hash": "8236c66e78ef9c075619a5e4fcda1b10",
     "semantic_hash": ""
   },
   "src/content.config.ts": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794311678.3163526,
-    "seen": 1794394910.931884,
-    "ast_hash": "0964f322a4bc745417a783b2cdef4783",
+    "mtime": 1794404909.8607628,
+    "seen": 1794405462.8448555,
+    "ast_hash": "f353cbb5a37569a06942dca45c7fddc3",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794398211.5358856,
-    "seen": 1794400681.619879,
-    "ast_hash": "5e35c758059c054c1e6f50120bf70643",
+    "mtime": 1794401620.1912906,
+    "seen": 1794405462.8448892,
+    "ast_hash": "bedb6f07e0c270ccfad44f96041115f0",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -726,9 +726,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
-    "mtime": 1794397042.9787862,
-    "seen": 1794400681.61977,
-    "ast_hash": "4649912671add38df23bab137a3e73d8",
+    "mtime": 1794404909.8607628,
+    "seen": 1794405462.8447952,
+    "ast_hash": "8c0d5f1f59938fe82822469c72436803",
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {
@@ -744,15 +744,15 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectMeta.astro": {
-    "mtime": 1794311683.627542,
-    "seen": 1794394910.931814,
-    "ast_hash": "2388d766cce7c5ed84b818fe90f96b83",
+    "mtime": 1794405191.5544488,
+    "seen": 1794405462.8447886,
+    "ast_hash": "e018d90f0b2e607c868a61a3f28e89b6",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectNav.astro": {
-    "mtime": 1794306600.1629584,
-    "seen": 1794307147.996185,
-    "ast_hash": "b1d50fd7631693e5f45cb22a5e1c76bd",
+    "mtime": 1794405032.4499454,
+    "seen": 1794405462.844791,
+    "ast_hash": "14ab5334caaf3bc122b7069706e3f223",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectProse.astro": {

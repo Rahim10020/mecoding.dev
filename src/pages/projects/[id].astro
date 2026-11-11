@@ -56,19 +56,17 @@ const { data } = project;
       <div class="flex items-start gap-meta">
         <h1 class="text-headline">{data.title}</h1>
 
-        {
-          data.link && (
-            <a
-              href={data.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={projectDetail.openProject(data.title)}
-              class="mt-2 shrink-0 text-black-60 transition-colors duration-200 hover:text-black"
-            >
-              <ArrowUpRight size={20} />
-            </a>
-          )
-        }
+        {data.link && (
+          <a
+            href={data.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={projectDetail.openProject(data.title)}
+            class="mt-1 -mr-1 -mb-1 -ml-1 shrink-0 p-1 text-black-60 transition-colors duration-200 hover:text-black"
+          >
+            <ArrowUpRight size={20} />
+          </a>
+        )}
       </div>
 
       <p class="mt-meta text-reading text-black-60">{data.description}</p>

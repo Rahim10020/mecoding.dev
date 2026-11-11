@@ -9,7 +9,10 @@ const { class: className } = Astro.props;
 ---
 
 <ul
-  class:list={["flex flex-wrap items-center gap-x-stack gap-y-grid", className]}
+  class:list={[
+    "flex flex-wrap items-center gap-x-meta gap-y-1 md:gap-x-stack md:gap-y-grid",
+    className,
+  ]}
 >
   {
     site.socials.map((social) => (
@@ -18,7 +21,7 @@ const { class: className } = Astro.props;
           href={social.href}
           rel="noopener noreferrer"
           target="_blank"
-          class="text-label text-black-70 transition-colors duration-200 hover:text-black"
+          class="inline-block text-label text-black-70 transition-colors duration-200 hover:text-black py-1.5"
         >
           {social.label}
         </a>
