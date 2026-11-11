@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/components/about/AboutContact.astro": {
-    "mtime": 1794304749.1352994,
-    "seen": 1794305045.7495873,
-    "ast_hash": "45450755d823371b60317c3cb2537387",
+    "mtime": 1794398351.5993977,
+    "seen": 1794400681.6196885,
+    "ast_hash": "5bf161f06b7ce77a0f07dc54297d5f06",
     "semantic_hash": ""
   },
   "src/components/about/AboutList.astro": {
@@ -60,15 +60,15 @@
     "semantic_hash": ""
   },
   "src/components/home/HomeHero.astro": {
-    "mtime": 1794226398.5694606,
-    "seen": 1794226769.6685364,
-    "ast_hash": "9750e4c72b2a8a2da469601a752ecce9",
+    "mtime": 1794397645.7114189,
+    "seen": 1794400681.6197004,
+    "ast_hash": "966439b48e503d2bbf5affb8111a4d6e",
     "semantic_hash": ""
   },
   "src/components/home/ProjectCarousel.astro": {
-    "mtime": 1794396464.5526192,
-    "seen": 1794396641.8475854,
-    "ast_hash": "248e7bf54a2ac31c5732dd74a084e071",
+    "mtime": 1794397812.175182,
+    "seen": 1794400681.6197026,
+    "ast_hash": "f7b994c272074c1265170609f4244d82",
     "semantic_hash": ""
   },
   "src/components/icons/ArrowDown.astro": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.astro": {
-    "mtime": 1794050568.1979206,
-    "seen": 1794222336.9625263,
-    "ast_hash": "3d81ae0a431cffebd802a9b47e911510",
+    "mtime": 1794399821.5932424,
+    "seen": 1794400681.6197498,
+    "ast_hash": "20b1729290ada248f0f976d23f93ed08",
     "semantic_hash": ""
   },
   "src/components/layout/Frame.astro": {
@@ -270,9 +270,9 @@
     "semantic_hash": ""
   },
   "src/data/about.ts": {
-    "mtime": 1794165023.851047,
-    "seen": 1794222336.9625568,
-    "ast_hash": "386c5d4838a36fb4aa2795300eca0bdf",
+    "mtime": 1794399811.2022338,
+    "seen": 1794400681.6198053,
+    "ast_hash": "8b5aa4bd25c0b0cb75832afe0514e14d",
     "semantic_hash": ""
   },
   "src/data/site.ts": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "src/pages/index.astro": {
-    "mtime": 1794217091.2440646,
-    "seen": 1794222336.9625695,
-    "ast_hash": "ab59fae50e3b2f1840deb8d7fd47c2ba",
+    "mtime": 1794399821.6022425,
+    "seen": 1794400681.6198304,
+    "ast_hash": "f88e1ddfedcce6052c86f831e3337ce8",
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
@@ -324,15 +324,15 @@
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
-    "mtime": 1794305540.1681404,
-    "seen": 1794307147.9962535,
-    "ast_hash": "ce457a3c1a330065547c520efa45a831",
+    "mtime": 1794399821.6022425,
+    "seen": 1794400681.6198351,
+    "ast_hash": "7d212d32cc0b4a04dccb5ffc111774ca",
     "semantic_hash": ""
   },
   "src/pages/styleguide.astro": {
-    "mtime": 1794396464.5096183,
-    "seen": 1794396641.8477242,
-    "ast_hash": "675d3bfa6b9f98d3c82883c649cb9c50",
+    "mtime": 1794397400.075666,
+    "seen": 1794400681.6198375,
+    "ast_hash": "5a8f40c9f1994fc5583a7745eecc1874",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794396479.9379091,
-    "seen": 1794396641.8477294,
-    "ast_hash": "d505808c0b7302a4be16206c5d71baa4",
+    "mtime": 1794400674.9959354,
+    "seen": 1794400681.6198423,
+    "ast_hash": "39f621165c8eb3a95941e1cb94344d33",
     "semantic_hash": ""
   },
   "README.md": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794396207.3761415,
-    "seen": 1794396641.8477545,
-    "ast_hash": "7ab451aecac96ad0a6ab6ba280b81a72",
+    "mtime": 1794398211.5358856,
+    "seen": 1794400681.619879,
+    "ast_hash": "5e35c758059c054c1e6f50120bf70643",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -720,15 +720,15 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectCard.astro": {
-    "mtime": 1794396464.5086184,
-    "seen": 1794396641.847645,
-    "ast_hash": "bb84300b531ca8617565ff9e63def0be",
+    "mtime": 1794398683.090377,
+    "seen": 1794400681.61976,
+    "ast_hash": "02eef80bab4fddfb3a52432cfec09422",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
-    "mtime": 1794396464.5056183,
-    "seen": 1794396641.8476562,
-    "ast_hash": "0411cb1a0231aa4648098f9b0899bffd",
+    "mtime": 1794397042.9787862,
+    "seen": 1794400681.61977,
+    "ast_hash": "4649912671add38df23bab137a3e73d8",
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {
@@ -738,9 +738,9 @@
     "semantic_hash": ""
   },
   "src/lib/work-masonry.ts": {
-    "mtime": 1794305373.8201773,
-    "seen": 1794307147.9962442,
-    "ast_hash": "ae9a689602db4b1a7727bdb66ee3ec04",
+    "mtime": 1794398128.9867675,
+    "seen": 1794400681.6198254,
+    "ast_hash": "d84feb89329d093be7fbd9af9250531a",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectMeta.astro": {

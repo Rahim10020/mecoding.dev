@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/components/home/ProjectCarousel.astro": {
-    "mtime": 1794225582.395584,
-    "seen": 1794226222.7368867,
-    "ast_hash": "0514082d94a82c886c873c43753834e5",
+    "mtime": 1794396464.5526192,
+    "seen": 1794396641.8475854,
+    "ast_hash": "248e7bf54a2ac31c5732dd74a084e071",
     "semantic_hash": ""
   },
   "src/components/icons/ArrowDown.astro": {
@@ -330,9 +330,9 @@
     "semantic_hash": ""
   },
   "src/pages/styleguide.astro": {
-    "mtime": 1794217201.1698804,
-    "seen": 1794222336.962575,
-    "ast_hash": "75d00040495ca3797c6a68c35c12ceda",
+    "mtime": 1794396464.5096183,
+    "seen": 1794396641.8477242,
+    "ast_hash": "675d3bfa6b9f98d3c82883c649cb9c50",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794311684.7232757,
-    "seen": 1794394910.9318936,
-    "ast_hash": "55a367f6332d70740d94ef03b73356d4",
+    "mtime": 1794396479.9379091,
+    "seen": 1794396641.8477294,
+    "ast_hash": "d505808c0b7302a4be16206c5d71baa4",
     "semantic_hash": ""
   },
   "README.md": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794312310.6704476,
-    "seen": 1794394910.9319177,
-    "ast_hash": "9e083e8290248697403e950de2c36374",
+    "mtime": 1794396207.3761415,
+    "seen": 1794396641.8477545,
+    "ast_hash": "7ab451aecac96ad0a6ab6ba280b81a72",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -720,15 +720,15 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectCard.astro": {
-    "mtime": 1794225437.095372,
-    "seen": 1794226222.7369437,
-    "ast_hash": "e8af1e4db82009cd6c3fe2885343eb7e",
+    "mtime": 1794396464.5086184,
+    "seen": 1794396641.847645,
+    "ast_hash": "bb84300b531ca8617565ff9e63def0be",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
-    "mtime": 1794305122.9081697,
-    "seen": 1794305225.6664214,
-    "ast_hash": "27e29a662d08f463a60aa02c69e0c7bd",
+    "mtime": 1794396464.5056183,
+    "seen": 1794396641.8476562,
+    "ast_hash": "0411cb1a0231aa4648098f9b0899bffd",
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {

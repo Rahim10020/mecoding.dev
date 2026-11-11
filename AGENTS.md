@@ -86,9 +86,19 @@ Usage:
   header instead of being clipped by a white band
 - Desktop stage: `Stage` — `md:h-svh` + `md:overflow-hidden`; below 810px it
   falls back to normal document flow
+- Footer: `sticky bottom-0 z-40 bg-white` — permanently visible, pinned to the
+  bottom of the viewport like the header is pinned to the top. It stays in
+  flow, so its space is reserved at the end of the document and the last
+  content is never hidden for good. The white background is required (content
+  scrolls behind it) and `z-40` keeps it under the mobile menu (`z-50`).
+  Home and Work override it to `md:fixed` + `md:bg-transparent` so their
+  desktop composition keeps the transparent overlay. `body` is a full-height
+  flex column and `main` absorbs the free space, so the footer's natural
+  position is the bottom of the screen even on short pages; `html` keeps
+  `scroll-padding-bottom: 8rem` so keyboard focus never lands under it
 - Rythme: `gap-grid` (10px), `gap-meta` (16px), `gap-stack` (30px),
   `gap-center` (50px), `pb-column` (54px); composition sizes `w-tile` /
-  `h-tile` (300px), `w-card` (360px, carousel tile width) and `w-step` (310px)
+  `h-tile` (300px), `w-card` (448px, carousel tile width) and `w-step` (310px)
 - Breakpoints: `md` = 810px, `lg` = 1200px (Kelo's own)
 - No clamped spacing scale: values are measured on Kelo, not derived
 - Default border width is 1px; no shadows; no decorative radii. Pills use

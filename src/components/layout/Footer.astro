@@ -11,16 +11,12 @@ const { class: className } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
-<footer class:list={["w-full", className]}>
-  <Frame
-    class="flex flex-col gap-stack pb-gutter md:flex-row md:items-end md:justify-between"
-  >
+<footer class:list={["sticky bottom-0 z-40 w-full bg-transparent", className]}>
+  <Frame class="flex flex-col gap-stack pb-gutter md:flex-row md:items-end md:justify-between">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:gap-stack">
       <slot name="meta" />
       <p class="text-label text-black-70">
-        ©{year}
-        {" "}
-        {site.name}
+        ©{year} {site.name}
       </p>
     </div>
 

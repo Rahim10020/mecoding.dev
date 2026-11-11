@@ -207,6 +207,9 @@
     scroll-behavior: smooth;
     scrollbar-color: var(--color-black-40) var(--color-white);
     scrollbar-width: thin;
+    /* Le footer sticky occupe le bas du viewport : le défilement au clavier
+       (ou vers une ancre) garde sa hauteur libre sous l'élément visé. */
+    scroll-padding-bottom: 8rem;
   }
 
   ::-webkit-scrollbar {
@@ -222,11 +225,23 @@
     background: var(--color-black-40);
   }
 
+  /* Colonne pleine hauteur : `main` absorbe l'espace libre, donc le footer
+     occupe sa place naturelle au bas de l'écran même quand le contenu est
+     plus court que le viewport. Sans ça, un footer `sticky bottom-0` ne peut
+     pas descendre sous son emplacement de flux. */
   body {
     @apply bg-white font-sans text-body text-black antialiased;
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    flex-direction: column;
     font-optical-sizing: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    flex: 1 0 auto;
   }
 
   /* Les titres de page gardent la personnalité éditoriale de Rethink. */
