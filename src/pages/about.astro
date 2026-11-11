@@ -7,13 +7,14 @@ import Overline from "@/components/ui/Overline.astro";
 import { about } from "@/data/about";
 import Layout from "@/layouts/Layout.astro";
 import { getAllProjects } from "@/lib/projects";
+import { routes } from "@/lib/routes";
 
 const projects = await getAllProjects();
 
 const selectedWork = projects.map((project) => ({
   name: project.data.title,
   detail: `${project.data.category} — ${project.data.year}`,
-  href: `/projects/${project.id}`,
+  href: routes.project(project.id),
 }));
 ---
 

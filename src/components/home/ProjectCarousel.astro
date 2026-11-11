@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import Button from "@/components/ui/Button.astro";
 import Placeholder from "@/components/ui/Placeholder.astro";
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
+import { routes } from "@/lib/routes";
 
 interface Props {
   projects: CollectionEntry<"projects">[];
@@ -51,7 +52,7 @@ const trackTop = middleStart * STEP + TILE / 2;
     >
       {items.map(({ project, index, copy, global }) => (
         <a
-          href={`/projects/${project.id}`}
+          href={routes.project(project.id)}
           class:list={[
             "group relative block h-tile w-tile shrink-0 overflow-hidden lg:w-card",
             global === middleStart && "is-active",
@@ -117,7 +118,7 @@ const trackTop = middleStart * STEP + TILE / 2;
           {project.data.description}
         </p>
         <Button
-          href={`/projects/${project.id}`}
+          href={routes.project(project.id)}
           size="sm"
           class="pointer-events-auto mt-meta"
           tabindex={index === 0 ? 0 : -1}

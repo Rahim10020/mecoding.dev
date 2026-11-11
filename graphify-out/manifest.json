@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "astro.config.mjs": {
-    "mtime": 1793998687.9568276,
-    "seen": 1794222336.9624708,
-    "ast_hash": "f1252458159a415d003b220f6cf2a38e",
+    "mtime": 1794425351.3448222,
+    "seen": 1794425457.8338277,
+    "ast_hash": "cd8f12025c0739a1a0c225b132fad406",
     "semantic_hash": ""
   },
   "package.json": {
@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "src/components/home/FeaturedList.astro": {
-    "mtime": 1794421000.4568849,
-    "seen": 1794422021.941404,
-    "ast_hash": "4a37440a5c98f8fa4ad566ab9050e216",
+    "mtime": 1794425329.673057,
+    "seen": 1794425457.8338468,
+    "ast_hash": "cd741c91c94f54efe027e78c1957d655",
     "semantic_hash": ""
   },
   "src/components/home/HomeHero.astro": {
@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/components/home/ProjectCarousel.astro": {
-    "mtime": 1794404871.9253793,
-    "seen": 1794405462.844731,
-    "ast_hash": "ea03f3e544f903fd267a51fa9da0db4b",
+    "mtime": 1794425329.673057,
+    "seen": 1794425457.8338528,
+    "ast_hash": "fea05dd95b7e52fdcdcbef925752a315",
     "semantic_hash": ""
   },
   "src/components/icons/ArrowDown.astro": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Header.astro": {
-    "mtime": 1794408318.16495,
-    "seen": 1794417321.0653782,
-    "ast_hash": "1b6974e596cee9b4e863b18be1d03406",
+    "mtime": 1794425320.5378582,
+    "seen": 1794425457.8339093,
+    "ast_hash": "5403f8368b6b833ea3733c86ecc69c14",
     "semantic_hash": ""
   },
   "src/components/layout/Stage.astro": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "src/components/ui/MobileMenu.astro": {
-    "mtime": 1794424347.5075655,
-    "seen": 1794424360.658127,
-    "ast_hash": "54c2d46c2181c92e818955d08ce7b13c",
+    "mtime": 1794425320.5478597,
+    "seen": 1794425457.833944,
+    "ast_hash": "58b17179574039a1112fa3ab25a84340",
     "semantic_hash": ""
   },
   "src/components/ui/NavPills.astro": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "src/data/site.ts": {
-    "mtime": 1794304749.1972995,
-    "seen": 1794305045.7497036,
-    "ast_hash": "3ac58e971593160d01f25d4346de3db8",
+    "mtime": 1794425310.4245079,
+    "seen": 1794425457.8339713,
+    "ast_hash": "d3ee0966b87f16b1e3502c4691fb5d6f",
     "semantic_hash": ""
   },
   "src/layouts/Layout.astro": {
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "src/pages/about.astro": {
-    "mtime": 1794421606.6288886,
-    "seen": 1794422021.9415371,
-    "ast_hash": "c0f1db6ad7c37aa77cd0032480cfe731",
+    "mtime": 1794425337.6880922,
+    "seen": 1794425457.8339915,
+    "ast_hash": "e7628d77722a939d29218e6e205a662e",
     "semantic_hash": ""
   },
   "src/pages/index.astro": {
@@ -318,21 +318,15 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794405741.718406,
-    "seen": 1794406254.15916,
-    "ast_hash": "ea76e89fcd71acc959c9d2a88b661dc5",
+    "mtime": 1794425528.5808125,
+    "seen": 1794425555.9230723,
+    "ast_hash": "5e16a8bf175489146dd84552aee30e27",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
     "mtime": 1794407412.2775278,
     "seen": 1794407474.4291587,
     "ast_hash": "0d311cd99bd6481fb84589b4a5a22aa8",
-    "semantic_hash": ""
-  },
-  "src/pages/styleguide.astro": {
-    "mtime": 1794397400.075666,
-    "seen": 1794400681.6198375,
-    "ast_hash": "5a8f40c9f1994fc5583a7745eecc1874",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -342,15 +336,15 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794424225.3294091,
-    "seen": 1794424339.4144528,
-    "ast_hash": "a00364c2bfa0249ac3a96f650b5e0af9",
+    "mtime": 1794425351.3468225,
+    "seen": 1794425457.8340027,
+    "ast_hash": "199c609d1e2671134111f07d9c60028b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794185236.8147457,
-    "seen": 1794222336.9625804,
-    "ast_hash": "5ea9ac31dfe057caabf07729083f89e5",
+    "mtime": 1794425351.3477817,
+    "seen": 1794425457.8340049,
+    "ast_hash": "8f9acd93e756781774b78bd5379fe2b1",
     "semantic_hash": ""
   },
   "pnpm-workspace.yaml": {
@@ -372,9 +366,9 @@
     "semantic_hash": ""
   },
   "public/robots.txt": {
-    "mtime": 1793998692.0929313,
-    "seen": 1794222336.9625874,
-    "ast_hash": "9a04f5b7433e7786bd7e669f36c18666",
+    "mtime": 1794425351.5558486,
+    "seen": 1794425457.8340142,
+    "ast_hash": "cf578930f5ce6db86ce6a956dbcb3359",
     "semantic_hash": ""
   },
   "src/content/projects/focusly.md": {
@@ -402,9 +396,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794407535.5466003,
-    "seen": 1794407578.8121576,
-    "ast_hash": "fa5464ba651dc3dbd5259024be8e7723",
+    "mtime": 1794425172.8101816,
+    "seen": 1794425457.834025,
+    "ast_hash": "39a2cc53626b0fb749c7eefc017d329e",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -720,9 +714,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectCard.astro": {
-    "mtime": 1794407990.4283423,
-    "seen": 1794417321.0653837,
-    "ast_hash": "28680953a0db35559c7b8f7ebb5bc80f",
+    "mtime": 1794425320.5478597,
+    "seen": 1794425457.833915,
+    "ast_hash": "537e920edffe77b016236817a1753a98",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectsMasonry.astro": {
@@ -750,9 +744,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectNav.astro": {
-    "mtime": 1794405032.4499454,
-    "seen": 1794405462.844791,
-    "ast_hash": "14ab5334caaf3bc122b7069706e3f223",
+    "mtime": 1794425477.8159719,
+    "seen": 1794425510.209496,
+    "ast_hash": "69a6cd8f563b9387cc05d5b7b4b5dbb1",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectProse.astro": {
@@ -786,9 +780,15 @@
     "semantic_hash": ""
   },
   "src/data/home.ts": {
-    "mtime": 1794416983.2605371,
-    "seen": 1794417321.0654483,
-    "ast_hash": "a0f545aec55ef23e2a075ec129d0f898",
+    "mtime": 1794425310.4125063,
+    "seen": 1794425457.8339655,
+    "ast_hash": "42a0cf8cd603ec9a520fe43935e2dba8",
+    "semantic_hash": ""
+  },
+  "src/lib/routes.ts": {
+    "mtime": 1794425301.2372594,
+    "seen": 1794425457.8339837,
+    "ast_hash": "a31f0933bcd138b779663118651d17c4",
     "semantic_hash": ""
   }
 }

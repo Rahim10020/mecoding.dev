@@ -4,6 +4,7 @@ import NavPills from "@/components/ui/NavPills.astro";
 import Close from "@/components/icons/Close.astro";
 import Menu from "@/components/icons/Menu.astro";
 import Logo from "@/components/ui/Logo.astro";
+import { routes } from "@/lib/routes";
 ---
 
 <div class="md:hidden" data-menu-root>
@@ -30,7 +31,7 @@ import Logo from "@/components/ui/Logo.astro";
     data-menu-panel
   >
     <div class="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-gutter py-gutter">
-      <a href="/" class="flex items-center gap-grid" data-menu-link>
+      <a href={routes.home} class="flex items-center gap-grid" data-menu-link>
         <Logo size={32} />
       </a>
 

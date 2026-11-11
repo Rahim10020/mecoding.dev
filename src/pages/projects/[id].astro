@@ -10,6 +10,7 @@ import ReadingProgress from "@/components/projects/ReadingProgress.astro";
 import { projectDetail } from "@/data/project-detail";
 import Layout from "@/layouts/Layout.astro";
 import { getAllProjects } from "@/lib/projects";
+import { routes } from "@/lib/routes";
 import type { Project } from "@/lib/projects";
 
 export async function getStaticPaths() {
@@ -46,7 +47,7 @@ const { data } = project;
   <article class="mx-auto w-full max-w-3xl px-gutter pt-center pb-column">
     <header class="mx-auto mb-stack max-w-xl">
       <a
-        href="/projects"
+        href={routes.projects}
         class="mb-stack inline-flex items-center gap-2 text-reading underline underline-offset-4 transition-colors duration-200 hover:text-black-60"
       >
         <ArrowLeft size={14} />

@@ -1,3 +1,5 @@
+import { routes } from "@/lib/routes";
+
 export type SocialId = "github" | "linkedin" | "instagram" | "whatsapp";
 
 export interface Social {
@@ -49,9 +51,9 @@ export const site = {
   },
 
   nav: [
-    { label: "Home", href: "/" },
-    { label: "Work", href: "/projects" },
-    { label: "About", href: "/about" },
+    { label: "Home", href: routes.home },
+    { label: "Work", href: routes.projects },
+    { label: "About", href: routes.about },
   ] satisfies NavItem[],
 
   socials: [

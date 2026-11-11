@@ -54,10 +54,7 @@ A single black (`#171717`) on white, declined in opacity steps from
 `text-headline`, `text-title`, `text-statement`, `text-caption`,
 `text-body-lg`, `text-body`, `text-label`.
 
-Full rules live in [`AGENTS.md`](./AGENTS.md). An internal
-[`/styleguide`](src/pages/styleguide.astro) page renders the palette, type
-scale, spacing, icons and assets. It is `noindex` and excluded from the
-sitemap.
+Full rules live in [`AGENTS.md`](./AGENTS.md).
 
 ## Fonts
 

@@ -189,7 +189,8 @@ src/
 ├── data/site.ts          identity, nav, socials, contact, location
 ├── data/project-detail.ts  libellés de la page détail projet
 ├── layouts/Layout.astro  SEO, fonts, favicons, skip link, main landmark
-├── lib/                  project queries, URL helpers, carousel, masonry scroll
+├── lib/                  project queries, routes registry, URL helpers,
+│                         carousel, masonry scroll
 ├── pages/                routes
 ├── styles/global.css     font-face + @theme tokens + base
 └── content.config.ts     projects collection schema
@@ -229,7 +230,6 @@ Rules:
 - Identity, nav, socials, email and location live in `src/data/site.ts`
 - Each page passes `title` and `description` to `Layout.astro`
 - `site` is set in `astro.config.mjs`; sitemap is generated automatically
-- `/styleguide` is internal: `noindex`, excluded from the sitemap and robots
 - No lorem ipsum and no placeholder copy in production
 
 ## Useful Commands

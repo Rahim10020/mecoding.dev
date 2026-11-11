@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button.astro";
 import Overline from "@/components/ui/Overline.astro";
 import Placeholder from "@/components/ui/Placeholder.astro";
 import { home } from "@/data/home";
+import { routes } from "@/lib/routes";
 
 interface Props {
   projects: CollectionEntry<"projects">[];
@@ -26,7 +27,7 @@ const { projects } = Astro.props;
       {projects.map((project) => (
         <li>
           <a
-            href={`/projects/${project.id}`}
+            href={routes.project(project.id)}
             class="group grid grid-cols-[5rem_minmax(0,1fr)_auto] items-start gap-meta border-b border-black-10 py-stack transition-colors duration-200 active:bg-black-5"
           >
             <span class="block size-20 overflow-hidden bg-black-5">

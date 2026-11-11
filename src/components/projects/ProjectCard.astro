@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 
 import Placeholder from "@/components/ui/Placeholder.astro";
+import { routes } from "@/lib/routes";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -26,7 +27,7 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
 ---
 
 <a
-  href={`/projects/${project.id}`}
+  href={routes.project(project.id)}
   tabindex={interactive ? undefined : -1}
   class="group relative block w-full"
 >
