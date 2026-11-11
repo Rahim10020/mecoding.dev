@@ -35,10 +35,12 @@ export const about = {
 
   stack: [
     { name: "Astro", detail: "Framework" },
+    { name: "Next js", detail: "Framework" },
     { name: "React", detail: "UI library" },
     { name: "TypeScript", detail: "Language" },
     { name: "Tailwind CSS", detail: "Styling" },
     { name: "Flutter", detail: "Mobile" },
+    { name: "JetPack Compose/Kotlin", detail: "Mobile" },
     { name: "Figma", detail: "Design" },
   ] satisfies AboutEntry[],
 

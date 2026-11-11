@@ -45,7 +45,7 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
       <Placeholder alt="" class="h-full w-full object-cover" />
     )}
 
-    {/* Dégradé de survol — exception assumée à la règle « no gradients ». */}
+    {/* Dégradé de survol */}
     <div
       class="pointer-events-none absolute inset-0 hidden bg-linear-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-opacity duration-300 ease-kelo group-hover:opacity-100 group-focus-visible:opacity-100 md:block"
       aria-hidden="true"
