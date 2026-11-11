@@ -21,7 +21,7 @@ export const about = {
   expertise: [
     "Interface design",
     "Front-end",
-    "Design systems",
+    "Mobile Development",
     "Performance",
     "Accessibility",
   ],
