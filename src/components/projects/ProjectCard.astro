@@ -52,14 +52,14 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
     ></div>
   </div>
 
-  <div class="mt-meta flex flex-col gap-1 text-black-60 md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:p-meta md:text-white md:opacity-0 md:translate-y-3 md:transition-[opacity,transform] md:duration-300 md:ease-kelo md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100">
-    <p class="text-label uppercase text-black-60 md:text-white/70">
+  <div class="mt-meta flex flex-col gap-2 text-black-60 md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:p-meta md:text-white md:opacity-0 md:translate-y-3 md:transition-[opacity,transform] md:duration-300 md:ease-kelo md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100">
+    <p class="text-label text-black-60 md:text-white/70">
       {data.category} — {data.year}
     </p>
     <p class="text-statement text-black md:text-caption md:text-white">
       {data.title}
     </p>
-    <p class="line-clamp-2 text-body text-black-70 md:text-white/70">
+    <p class="line-clamp-2 text-body font-medium text-black-70 md:text-white/70">
       {data.description}
     </p>
   </div>
