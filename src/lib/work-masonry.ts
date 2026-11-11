@@ -8,11 +8,11 @@ interface MasonryElements {
 const ACTIVE = 1;
 
 /** Vitesse de défilement ambiant, en pixels par seconde. */
-const AUTO_SPEED = 48;
+const AUTO_SPEED = 88;
 /** Vitesse réduite lorsque le curseur survole la colonne. */
-const AUTO_HOVER_SPEED = 8;
+const AUTO_HOVER_SPEED = 18;
 /** Délai de reprise après une interaction manuelle, en millisecondes. */
-const AUTO_RESUME_DELAY = 1400;
+const AUTO_RESUME_DELAY = 1000;
 
 const read = (): MasonryElements | null => {
   const viewport = document.querySelector<HTMLElement>(
