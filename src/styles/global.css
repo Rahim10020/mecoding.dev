@@ -181,8 +181,9 @@
   --spacing-column: 3.375rem; /* 54px — bas des colonnes */
 
   /* Tailles de composition ----------------------------------------------- */
-  --spacing-tile: 18.75rem; /* 300px — tuile projet */
+  --spacing-tile: 18.75rem; /* 300px — tuile projet (hauteur + colonnes) */
   --spacing-step: 19.375rem; /* 310px — tuile + gap */
+  --spacing-card: 28rem; /* 448px — largeur de la tuile carrousel */
 
   /* Largeurs ------------------------------------------------------------- */
   --container-frame: 120rem; /* 1920px — cadre Kelo */

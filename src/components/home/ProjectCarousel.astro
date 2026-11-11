@@ -37,7 +37,7 @@ const trackTop = middleStart * STEP + TILE / 2;
   data-count={projects.length}
 >
   <div
-    class="pointer-events-auto absolute inset-y-0 left-1/2 w-tile -translate-x-1/2 cursor-grab overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black active:cursor-grabbing"
+    class="pointer-events-auto absolute inset-y-0 left-1/2 w-card -translate-x-1/2 cursor-grab overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black active:cursor-grabbing"
     role="region"
     aria-roledescription="carousel"
     aria-label="Selected projects"
@@ -49,96 +49,84 @@ const trackTop = middleStart * STEP + TILE / 2;
       style={`gap: ${GAP}px; top: calc(50% - ${trackTop}px)`}
       data-carousel-track
     >
-      {
-        items.map(({ project, index, copy, global }) => (
-          <a
-            href={`/projects/${project.id}`}
-            class:list={[
-              "group relative block h-tile w-tile shrink-0 overflow-hidden",
-              global === middleStart && "is-active",
-            ]}
-            data-carousel-item
-            data-carousel-global={global}
-            data-carousel-index={index}
-            aria-label={`${project.data.title} — ${project.data.category}`}
-            aria-hidden={copy === 1 ? undefined : "true"}
-            tabindex={global === middleStart ? 0 : -1}
-          >
-            {project.data.cover ? (
-              <Image
-                src={project.data.cover}
-                alt={project.data.coverAlt ?? ""}
-                width={600}
-                height={600}
-                fit="cover"
-                loading={global === middleStart ? "eager" : "lazy"}
-                class="h-full w-full object-cover"
-              />
-            ) : (
-              <Placeholder
-                alt={project.data.coverAlt ?? ""}
-                class="h-full w-full object-cover"
-              />
-            )}
-          </a>
-        ))
-      }
+      {items.map(({ project, index, copy, global }) => (
+        <a
+          href={`/projects/${project.id}`}
+          class:list={[
+            "group relative block h-tile w-card shrink-0 overflow-hidden",
+            global === middleStart && "is-active",
+          ]}
+          data-carousel-item
+          data-carousel-global={global}
+          data-carousel-index={index}
+          aria-label={`${project.data.title} — ${project.data.category}`}
+          aria-hidden={copy === 1 ? undefined : "true"}
+          tabindex={global === middleStart ? 0 : -1}
+        >
+          {project.data.cover ? (
+            <Image
+              src={project.data.cover}
+              alt={project.data.coverAlt ?? ""}
+              width={800}
+              height={800}
+              fit="cover"
+              loading={global === middleStart ? "eager" : "lazy"}
+              class="h-full w-full object-cover"
+            />
+          ) : (
+            <Placeholder
+              alt={project.data.coverAlt ?? ""}
+              class="h-full w-full object-cover"
+            />
+          )}
+        </a>
+      ))}
     </div>
   </div>
 
-  <div
-    class="pointer-events-none absolute right-[calc(50%+210px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid"
-  >
-    {
-      projects.map((project, index) => (
-        <div
-          class:list={[
-            "col-start-1 row-start-1 flex flex-col items-end",
-            index === 0 ? "is-active" : "",
-          ]}
-          data-carousel-caption
-          data-carousel-caption-index={index}
-          data-title={project.data.title}
-          aria-hidden={index === 0 ? undefined : "true"}
-        >
-          <h2 class="text-caption">{project.data.title}</h2>
-          <p class="mt-grid text-label text-black-70">
-            {project.data.category}
-          </p>
-        </div>
-      ))
-    }
+  <div class="pointer-events-none absolute right-[calc(50%+340px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 text-right lg:grid">
+    {projects.map((project, index) => (
+      <div
+        class:list={[
+          "col-start-1 row-start-1 flex flex-col items-end",
+          index === 0 ? "is-active" : "",
+        ]}
+        data-carousel-caption
+        data-carousel-caption-index={index}
+        data-title={project.data.title}
+        aria-hidden={index === 0 ? undefined : "true"}
+      >
+        <h2 class="text-caption">{project.data.title}</h2>
+        <p class="mt-grid text-label text-black-70">{project.data.category}</p>
+      </div>
+    ))}
   </div>
 
-  <div
-    class="pointer-events-none absolute left-[calc(50%+210px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid"
-  >
-    {
-      projects.map((project, index) => (
-        <div
-          class:list={[
-            "col-start-1 row-start-1 flex flex-col items-start",
-            index === 0 ? "is-active" : "",
-          ]}
-          data-carousel-caption
-          data-carousel-caption-index={index}
-          aria-hidden={index === 0 ? undefined : "true"}
+  <div class="pointer-events-none absolute left-[calc(50%+340px)] top-1/2 hidden w-tile -translate-y-1/2 grid-cols-1 lg:grid">
+    {projects.map((project, index) => (
+      <div
+        class:list={[
+          "col-start-1 row-start-1 flex flex-col items-start",
+          index === 0 ? "is-active" : "",
+        ]}
+        data-carousel-caption
+        data-carousel-caption-index={index}
+        aria-hidden={index === 0 ? undefined : "true"}
+      >
+        <p class="line-clamp-2 text-body text-black-80">
+          {project.data.description}
+        </p>
+        <Button
+          href={`/projects/${project.id}`}
+          size="sm"
+          class="pointer-events-auto mt-meta"
+          tabindex={index === 0 ? 0 : -1}
         >
-          <p class="line-clamp-2 text-body text-black-80">
-            {project.data.description}
-          </p>
-          <Button
-            href={`/projects/${project.id}`}
-            size="sm"
-            class="pointer-events-auto mt-meta"
-            tabindex={index === 0 ? 0 : -1}
-          >
-            View project
-            <ArrowUpRight slot="icon-end" size={12} />
-          </Button>
-        </div>
-      ))
-    }
+          View project
+          <ArrowUpRight slot="icon-end" size={12} />
+        </Button>
+      </div>
+    ))}
   </div>
 
   <p class="sr-only" aria-live="polite" data-carousel-live>

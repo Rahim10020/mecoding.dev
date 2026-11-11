@@ -31,33 +31,28 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
   class="group relative block w-full"
 >
   <div class:list={["relative w-full overflow-hidden bg-black-5", aspect]}>
-    {
-      data.cover ? (
-        <Image
-          src={data.cover}
-          alt=""
-          width={600}
-          height={600}
-          fit="cover"
-          loading="lazy"
-          class="h-full w-full object-cover grayscale transition-[filter,transform] duration-[600ms] ease-kelo group-hover:scale-[1.03] group-hover:grayscale-0 group-focus-visible:scale-[1.03] group-focus-visible:grayscale-0 max-md:grayscale-0"
-        />
-      ) : (
-        <Placeholder alt="" class="h-full w-full object-cover" />
-      )
-    }
+    {data.cover ? (
+      <Image
+        src={data.cover}
+        alt=""
+        width={800}
+        height={800}
+        fit="cover"
+        loading="lazy"
+        class="h-full w-full object-cover grayscale transition-[filter,transform] duration-600 ease-kelo group-hover:scale-[1.03] group-hover:grayscale-0 group-focus-visible:scale-[1.03] group-focus-visible:grayscale-0 max-md:grayscale-0"
+      />
+    ) : (
+      <Placeholder alt="" class="h-full w-full object-cover" />
+    )}
 
     {/* Dégradé de survol — exception assumée à la règle « no gradients ». */}
     <div
       class="pointer-events-none absolute inset-0 hidden bg-linear-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-opacity duration-300 ease-kelo group-hover:opacity-100 group-focus-visible:opacity-100 md:block"
       aria-hidden="true"
-    >
-    </div>
+    ></div>
   </div>
 
-  <div
-    class="mt-meta flex flex-col gap-1 text-black-60 md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:p-meta md:text-white md:opacity-0 md:translate-y-3 md:transition-[opacity,transform] md:duration-300 md:ease-kelo md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100"
-  >
+  <div class="mt-meta flex flex-col gap-1 text-black-60 md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:p-meta md:text-white md:opacity-0 md:translate-y-3 md:transition-[opacity,transform] md:duration-300 md:ease-kelo md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100">
     <p class="text-label uppercase text-black-60 md:text-white/70">
       {data.category} — {data.year}
     </p>

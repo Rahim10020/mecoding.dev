@@ -88,7 +88,7 @@ Usage:
   falls back to normal document flow
 - Rythme: `gap-grid` (10px), `gap-meta` (16px), `gap-stack` (30px),
   `gap-center` (50px), `pb-column` (54px); composition sizes `w-tile` /
-  `h-tile` (300px) and `w-step` (310px)
+  `h-tile` (300px), `w-card` (360px, carousel tile width) and `w-step` (310px)
 - Breakpoints: `md` = 810px, `lg` = 1200px (Kelo's own)
 - No clamped spacing scale: values are measured on Kelo, not derived
 - Default border width is 1px; no shadows; no decorative radii. Pills use

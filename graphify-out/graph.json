@@ -792,7 +792,7 @@
       "file_type": "code",
       "norm_label": "brandicons",
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L104"
+      "source_location": "L105"
     },
     {
       "id": "src_pages_styleguide_interfaceicons",
@@ -803,7 +803,7 @@
       "file_type": "code",
       "norm_label": "interfaceicons",
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L88"
+      "source_location": "L89"
     },
     {
       "id": "src_pages_styleguide_palette",
@@ -836,7 +836,7 @@
       "file_type": "code",
       "norm_label": "typescale",
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L57"
+      "source_location": "L58"
     },
     {
       "id": "src_content_projects_twocoderz",
@@ -5525,7 +5525,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -5558,7 +5558,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -5569,7 +5569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/styleguide.astro",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -5953,5 +5953,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f6ab05d4203561611b97c7fe699ae07aa8240686"
+  "built_at_commit": "6abdbdcefef740f4dd34a0d799f90fc2e92d4dcd"
 }

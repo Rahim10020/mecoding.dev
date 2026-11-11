@@ -19,35 +19,31 @@ const ACTIVE = 1;
 const copies = Array.from({ length: COPIES }, (_, copy) => copy);
 ---
 
-<div
-  class="order-3 w-full md:order-2 md:flex md:flex-[1.5] md:justify-center md:self-stretch"
->
+<div class="order-3 w-full md:order-2 md:flex md:flex-[1.5] md:justify-center md:self-stretch">
   <div
-    class="w-full focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black md:h-full md:max-w-[39rem] md:cursor-grab md:overflow-hidden md:active:cursor-grabbing"
+    class="w-full focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black md:h-full md:max-w-3xl md:cursor-grab md:overflow-hidden md:active:cursor-grabbing"
     role="region"
     aria-label="All projects"
     tabindex="0"
     data-masonry-viewport
   >
     <div class="md:will-change-transform" data-masonry-track>
-      {
-        copies.map((copy) => (
-          <ul
-            class:list={[
-              "columns-1 gap-x-6 lg:columns-2",
-              copy !== ACTIVE && "hidden md:block",
-            ]}
-            aria-hidden={copy === ACTIVE ? undefined : "true"}
-            data-masonry-copy
-          >
-            {projects.map((project) => (
-              <li class="break-inside-avoid pb-6">
-                <ProjectCard project={project} interactive={copy === ACTIVE} />
-              </li>
-            ))}
-          </ul>
-        ))
-      }
+      {copies.map((copy) => (
+        <ul
+          class:list={[
+            "columns-1 gap-x-6 lg:columns-2",
+            copy !== ACTIVE && "hidden md:block",
+          ]}
+          aria-hidden={copy === ACTIVE ? undefined : "true"}
+          data-masonry-copy
+        >
+          {projects.map((project) => (
+            <li class="break-inside-avoid pb-6">
+              <ProjectCard project={project} interactive={copy === ACTIVE} />
+            </li>
+          ))}
+        </ul>
+      ))}
     </div>
   </div>
 </div>
