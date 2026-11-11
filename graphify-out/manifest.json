@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794310790.6334472,
-    "seen": 1794310956.0665023,
-    "ast_hash": "1791f5f1d4a3ea7ee3d70d7be022781b",
+    "mtime": 1794311678.3163526,
+    "seen": 1794394910.931884,
+    "ast_hash": "0964f322a4bc745417a783b2cdef4783",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794310931.2489772,
-    "seen": 1794310956.0665116,
-    "ast_hash": "5ced87241a4fe098cb5281879e57e9ff",
+    "mtime": 1794311684.7232757,
+    "seen": 1794394910.9318936,
+    "ast_hash": "55a367f6332d70740d94ef03b73356d4",
     "semantic_hash": ""
   },
   "README.md": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794307142.5841742,
-    "seen": 1794307147.9962852,
-    "ast_hash": "ab6d89d90113b9178d99bac7e821e16b",
+    "mtime": 1794312310.6704476,
+    "seen": 1794394910.9319177,
+    "ast_hash": "9e083e8290248697403e950de2c36374",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectMeta.astro": {
-    "mtime": 1794306609.4702222,
-    "seen": 1794307147.996181,
-    "ast_hash": "10a245ae5e587bc4555c24656bd2c12b",
+    "mtime": 1794311683.627542,
+    "seen": 1794394910.931814,
+    "ast_hash": "2388d766cce7c5ed84b818fe90f96b83",
     "semantic_hash": ""
   },
   "src/components/projects/ProjectNav.astro": {
