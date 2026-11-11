@@ -31,7 +31,7 @@ const copies = Array.from({ length: COPIES }, (_, copy) => copy);
       {copies.map((copy) => (
         <ul
           class:list={[
-            "columns-1 gap-x-6 md:columns-[20rem]",
+            "columns-1 gap-x-6 md:columns-xs",
             copy !== ACTIVE && "hidden md:block",
           ]}
           aria-hidden={copy === ACTIVE ? undefined : "true"}
