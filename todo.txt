@@ -6,4 +6,4 @@ pnpm dev
 -- verifier le SEO pour voir si tout est bon et si le site sera tres bien reference
 -- verifier les performances pour voir si le site sera tres rapide et consommera moins de donnees.
 
--- remettre le blanc du header uniquement quand on est sur mobile.
+-- centraliser toutes les routes dans un seul fichier. avoir une seule source de verite.

@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "src/components/home/FeaturedList.astro": {
-    "mtime": 1794217023.110737,
-    "seen": 1794222336.9624853,
-    "ast_hash": "a98f45379a6c2bbc98cf993c9789066a",
+    "mtime": 1794407441.683776,
+    "seen": 1794407474.4290826,
+    "ast_hash": "999ad6408e77cbc442a7338fe1cbeae3",
     "semantic_hash": ""
   },
   "src/components/home/HomeHero.astro": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
-    "mtime": 1794399821.6022425,
-    "seen": 1794400681.6198351,
-    "ast_hash": "7d212d32cc0b4a04dccb5ffc111774ca",
+    "mtime": 1794407412.2775278,
+    "seen": 1794407474.4291587,
+    "ast_hash": "0d311cd99bd6481fb84589b4a5a22aa8",
     "semantic_hash": ""
   },
   "src/pages/styleguide.astro": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794401620.1912906,
-    "seen": 1794405462.8448892,
-    "ast_hash": "bedb6f07e0c270ccfad44f96041115f0",
+    "mtime": 1794407535.5466003,
+    "seen": 1794407578.8121576,
+    "ast_hash": "fa5464ba651dc3dbd5259024be8e7723",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -732,9 +732,9 @@
     "semantic_hash": ""
   },
   "src/components/ui/Cartoon.astro": {
-    "mtime": 1794407015.071057,
-    "seen": 1794407226.4885218,
-    "ast_hash": "5dd6e2e53350fe095418e097724abc61",
+    "mtime": 1794407523.1935818,
+    "seen": 1794407578.8121054,
+    "ast_hash": "e889bc80e9a535b28a3b4220af2c3671",
     "semantic_hash": ""
   },
   "src/lib/work-masonry.ts": {

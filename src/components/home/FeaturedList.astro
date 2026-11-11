@@ -19,29 +19,25 @@ const { projects } = Astro.props;
     </Overline>
 
     <ul class="mt-meta border-t border-black-10">
-      {
-        projects.map((project) => (
-          <li>
-            <a
-              href={`/projects/${project.id}`}
-              class="group flex items-start justify-between gap-stack border-b border-black-10 py-stack"
-            >
-              <span>
-                <Overline as="span" class="block">
-                  {project.data.category} — {project.data.year}
-                </Overline>
-                <span class="mt-grid block text-title">
-                  {project.data.title}
-                </span>
-              </span>
-              <ArrowUpRight
-                size={16}
-                class="mt-grid shrink-0 text-black transition-transform duration-300 ease-kelo group-hover:-translate-y-1 group-hover:translate-x-1"
-              />
-            </a>
-          </li>
-        ))
-      }
+      {projects.map((project) => (
+        <li>
+          <a
+            href={`/projects/${project.id}`}
+            class="group flex items-start justify-between gap-stack border-b border-black-10 py-stack"
+          >
+            <span>
+              <Overline as="span" class="block">
+                {project.data.category} — {project.data.year}
+              </Overline>
+              <span class="mt-grid block text-title">{project.data.title}</span>
+            </span>
+            <ArrowUpRight
+              size={16}
+              class="mt-grid shrink-0 text-black transition-transform duration-300 ease-kelo group-hover:-translate-y-1 group-hover:translate-x-1"
+            />
+          </a>
+        </li>
+      ))}
     </ul>
   </Frame>
 </section>
