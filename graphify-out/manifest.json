@@ -54,8 +54,8 @@
     "semantic_hash": ""
   },
   "src/components/home/FeaturedList.astro": {
-    "mtime": 1794425329.673057,
-    "seen": 1794425457.8338468,
+    "mtime": 1794425686.7894187,
+    "seen": 1794520860.884413,
     "ast_hash": "cd741c91c94f54efe027e78c1957d655",
     "semantic_hash": ""
   },
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "src/pages/about.astro": {
-    "mtime": 1794425337.6880922,
-    "seen": 1794425457.8339915,
-    "ast_hash": "e7628d77722a939d29218e6e205a662e",
+    "mtime": 1794520117.4510162,
+    "seen": 1794520860.8845444,
+    "ast_hash": "6eda6848d8623cc9e9dc19fb9b9a5e03",
     "semantic_hash": ""
   },
   "src/pages/index.astro": {
@@ -336,15 +336,15 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794425351.3468225,
-    "seen": 1794425457.8340027,
-    "ast_hash": "199c609d1e2671134111f07d9c60028b",
+    "mtime": 1794520823.968261,
+    "seen": 1794520860.8845556,
+    "ast_hash": "a1568d3cdc59b6cd43759947331a8273",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794425351.3477817,
-    "seen": 1794425457.8340049,
-    "ast_hash": "8f9acd93e756781774b78bd5379fe2b1",
+    "mtime": 1794520837.1777823,
+    "seen": 1794520860.8845575,
+    "ast_hash": "ac63ad7faac4eea10bbd087cfce94e50",
     "semantic_hash": ""
   },
   "pnpm-workspace.yaml": {
@@ -396,9 +396,9 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794425172.8101816,
-    "seen": 1794425457.834025,
-    "ast_hash": "39a2cc53626b0fb749c7eefc017d329e",
+    "mtime": 1794425791.7650907,
+    "seen": 1794520860.8845906,
+    "ast_hash": "b8721fad83af28aa0d81081825085385",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "src/lib/lazy-video.ts": {
-    "mtime": 1794307482.2861423,
-    "seen": 1794307636.826697,
-    "ast_hash": "b18eaa15dbbcf836a07352d92dcf7cd5",
+    "mtime": 1794520674.6369848,
+    "seen": 1794520860.88453,
+    "ast_hash": "c7ba0dfcb66dcd6e6a7d64b87235fa84",
     "semantic_hash": ""
   },
   "src/data/home.ts": {
@@ -786,9 +786,195 @@
     "semantic_hash": ""
   },
   "src/lib/routes.ts": {
-    "mtime": 1794425301.2372594,
-    "seen": 1794425457.8339837,
+    "mtime": 1794425671.8313682,
+    "seen": 1794520860.8845375,
     "ast_hash": "a31f0933bcd138b779663118651d17c4",
+    "semantic_hash": ""
+  },
+  "src/content/projects/habit-tracker.md": {
+    "mtime": 1794520110.593499,
+    "seen": 1794520860.8845727,
+    "ast_hash": "257d40f753afe873fbbe332d3cf8d847",
+    "semantic_hash": ""
+  },
+  "src/content/projects/note-app.md": {
+    "mtime": 1794520110.593314,
+    "seen": 1794520860.884578,
+    "ast_hash": "cb00a244ce99224a4eaea8aa9ae0bf2b",
+    "semantic_hash": ""
+  },
+  "src/content/projects/pixelpulse.md": {
+    "mtime": 1794520110.5931222,
+    "seen": 1794520860.8845806,
+    "ast_hash": "c1ce2201236d6ae94742b5c98d8d7ee9",
+    "semantic_hash": ""
+  },
+  "src/content/projects/rahimdev.md": {
+    "mtime": 1794520110.5920596,
+    "seen": 1794520860.8845854,
+    "ast_hash": "29903e35d3cf747e82f69b5eb8ae78be",
+    "semantic_hash": ""
+  },
+  "public/images/projects/habit-tracker/habit-1.jpeg": {
+    "mtime": 1794432130.7232227,
+    "seen": 1794520860.8846147,
+    "ast_hash": "546fc5be713680289e631baf83bfae8d",
+    "semantic_hash": ""
+  },
+  "public/images/projects/habit-tracker/habit-2.jpeg": {
+    "mtime": 1794432130.7240531,
+    "seen": 1794520860.8846173,
+    "ast_hash": "b0a54cbb29d81344df52a8936ef3e749",
+    "semantic_hash": ""
+  },
+  "public/images/projects/habit-tracker/habit-3.jpeg": {
+    "mtime": 1794432130.724518,
+    "seen": 1794520860.884619,
+    "ast_hash": "d032263ab3043d0d195a42e4f73240c3",
+    "semantic_hash": ""
+  },
+  "public/images/projects/habit-tracker/habits-dark.jpeg": {
+    "mtime": 1794432130.7247972,
+    "seen": 1794520860.8846211,
+    "ast_hash": "bf002288c0fe89e395afb9c49e39d187",
+    "semantic_hash": ""
+  },
+  "public/images/projects/note-app/notes-1.jpeg": {
+    "mtime": 1794520031.1343524,
+    "seen": 1794520860.884642,
+    "ast_hash": "f7f870ede644b9160f82b90f16234747",
+    "semantic_hash": ""
+  },
+  "public/images/projects/note-app/notes-2.jpeg": {
+    "mtime": 1794520031.1573522,
+    "seen": 1794520860.884644,
+    "ast_hash": "abaeecb1f4695fc21e386b2a0aa96758",
+    "semantic_hash": ""
+  },
+  "public/images/projects/note-app/notes-3.jpeg": {
+    "mtime": 1794520031.1763523,
+    "seen": 1794520860.8846464,
+    "ast_hash": "a67a4d96c0d106a35393d3c6951932f4",
+    "semantic_hash": ""
+  },
+  "public/images/projects/note-app/notes-4.jpeg": {
+    "mtime": 1794432130.7169774,
+    "seen": 1794520860.884649,
+    "ast_hash": "4fb9af6dce4c80b5dcdaf133a4fd43bd",
+    "semantic_hash": ""
+  },
+  "public/images/projects/note-app/notes-5.jpeg": {
+    "mtime": 1794432130.7171242,
+    "seen": 1794520860.884651,
+    "ast_hash": "c7ca5f26dc0fe3278ef0558da292e43f",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/about.webp": {
+    "mtime": 1794432130.730188,
+    "seen": 1794520860.8846529,
+    "ast_hash": "1cf14121f3c8defca5edaffa00a05f9a",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/article-detail.webp": {
+    "mtime": 1794432130.7310448,
+    "seen": 1794520860.8846545,
+    "ast_hash": "3cf382e3c2718fb0faa2cef57c2a9992",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/home.webp": {
+    "mtime": 1794432130.731711,
+    "seen": 1794520860.8846567,
+    "ast_hash": "4828f486b6f7ad08d3c6d605c8a4dc18",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/menu-open.webp": {
+    "mtime": 1794432130.7324622,
+    "seen": 1794520860.8846583,
+    "ast_hash": "a75d82563d27d2778d2ee70b1309f237",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/more-detail.webp": {
+    "mtime": 1794432130.733228,
+    "seen": 1794520860.8846602,
+    "ast_hash": "c0644d492af3bab518db3b0532b6d72c",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/pixelpulse-poster.webp": {
+    "mtime": 1794432130.7339406,
+    "seen": 1794520860.884662,
+    "ast_hash": "635aab42d7222c3d7bbb05e4d5a1bf6b",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/contact.webp": {
+    "mtime": 1794432130.7479582,
+    "seen": 1794520860.8846958,
+    "ast_hash": "c867d07b2cc5fa7f1a126234a16e5618",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/detail.webp": {
+    "mtime": 1794432130.7484932,
+    "seen": 1794520860.884698,
+    "ast_hash": "3cf3544d671cfd23e0edd882ef08367d",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/home.webp": {
+    "mtime": 1794432130.7489953,
+    "seen": 1794520860.8846996,
+    "ast_hash": "7d9c445fff03c65b17bd61126dc76c9d",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/project-detail.webp": {
+    "mtime": 1794432130.7496777,
+    "seen": 1794520860.8847017,
+    "ast_hash": "27a8a87b3ffe9aa8306106bfa22b05bf",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/projects.webp": {
+    "mtime": 1794432130.7501698,
+    "seen": 1794520860.8847034,
+    "ast_hash": "88f976840b8d28de8a6068538f60dc91",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/rahimdev-poster.webp": {
+    "mtime": 1794432130.7507346,
+    "seen": 1794520860.8847055,
+    "ast_hash": "a12b5132e96bbfab928614de7a1ce9fe",
+    "semantic_hash": ""
+  },
+  "src/assets/images/projects/habit-tracker/cover.webp": {
+    "mtime": 1794432137.5736914,
+    "seen": 1794520860.8847454,
+    "ast_hash": "b030381c39d48b07ba28e970fa121091",
+    "semantic_hash": ""
+  },
+  "src/assets/images/projects/note-app/cover.webp": {
+    "mtime": 1794520031.428352,
+    "seen": 1794520860.88475,
+    "ast_hash": "a5c14527fb3fe3e5316bfa14085307d6",
+    "semantic_hash": ""
+  },
+  "src/assets/images/projects/pixelpulse/cover.webp": {
+    "mtime": 1794432137.140688,
+    "seen": 1794520860.884752,
+    "ast_hash": "b1fe798ce1de6baf8b3c76dadde07942",
+    "semantic_hash": ""
+  },
+  "src/assets/images/projects/rahimdev/cover.webp": {
+    "mtime": 1794520031.671352,
+    "seen": 1794520860.8847566,
+    "ast_hash": "74e7bb9f86e670d54abf05e296483129",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/pixelpulse.webm": {
+    "mtime": 1794432130.741637,
+    "seen": 1794520860.8847637,
+    "ast_hash": "c29ea99795a64ee690aaf9fcf9a68edb",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/rahimdev.webm": {
+    "mtime": 1794432130.7636373,
+    "seen": 1794520860.884768,
+    "ast_hash": "0d0b66de18742c32134d2602bf9167dd",
     "semantic_hash": ""
   }
 }

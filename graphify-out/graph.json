@@ -156,18 +156,6 @@
       "source_location": "L34"
     },
     {
-      "id": "src_components_ui_navpills_isactive",
-      "label": "isActive()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "isactive()",
-      "source_file": "src/components/ui/NavPills.astro",
-      "source_location": "L13"
-    },
-    {
       "id": "src_lib_project_carousel_initprojectcarousel",
       "label": "initProjectCarousel()",
       "_callable": true,
@@ -201,7 +189,7 @@
       "file_type": "code",
       "norm_label": "initlazyvideo()",
       "source_file": "src/lib/lazy-video.ts",
-      "source_location": "L9"
+      "source_location": "L19"
     },
     {
       "id": "src_lib_projects_byorder",
@@ -274,6 +262,18 @@
       "norm_label": "tick()",
       "source_file": "src/components/ui/LocalClock.astro",
       "source_location": "L37"
+    },
+    {
+      "id": "src_components_ui_navpills_isactive",
+      "label": "isActive()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "isactive()",
+      "source_file": "src/components/ui/NavPills.astro",
+      "source_location": "L13"
     },
     {
       "id": "src_lib_url_externallinkprops",
@@ -886,28 +886,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_icons_close",
-      "label": "Close.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "close.astro",
-      "source_file": "src/components/icons/Close.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_icons_menu",
-      "label": "Menu.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "menu.astro",
-      "source_file": "src/components/icons/Menu.astro",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_projects_projectcard",
       "label": "ProjectCard.astro",
       "_origin": "ast",
@@ -960,50 +938,6 @@
       "file_type": "code",
       "norm_label": "cartoon.astro",
       "source_file": "src/components/ui/Cartoon.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_logo",
-      "label": "Logo.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "logo.astro",
-      "source_file": "src/components/ui/Logo.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_logo_logos",
-      "label": "logos",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "logos",
-      "source_file": "src/components/ui/Logo.astro",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_components_ui_mobilemenu",
-      "label": "MobileMenu.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "mobilemenu.astro",
-      "source_file": "src/components/ui/MobileMenu.astro",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_navpills",
-      "label": "NavPills.astro",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "FeaturedList.astro",
-      "file_type": "code",
-      "norm_label": "navpills.astro",
-      "source_file": "src/components/ui/NavPills.astro",
       "source_location": "L1"
     },
     {
@@ -1503,6 +1437,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_icons_close",
+      "label": "Close.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "close.astro",
+      "source_file": "src/components/icons/Close.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_icons_menu",
+      "label": "Menu.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "menu.astro",
+      "source_file": "src/components/icons/Menu.astro",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_layout_footer",
       "label": "Footer.astro",
       "_origin": "ast",
@@ -1555,6 +1511,50 @@
       "file_type": "code",
       "norm_label": "localclock.astro",
       "source_file": "src/components/ui/LocalClock.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_logo",
+      "label": "Logo.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "logo.astro",
+      "source_file": "src/components/ui/Logo.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_logo_logos",
+      "label": "logos",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "logos",
+      "source_file": "src/components/ui/Logo.astro",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_components_ui_mobilemenu",
+      "label": "MobileMenu.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "mobilemenu.astro",
+      "source_file": "src/components/ui/MobileMenu.astro",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_navpills",
+      "label": "NavPills.astro",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "navpills.astro",
+      "source_file": "src/components/ui/NavPills.astro",
       "source_location": "L1"
     },
     {
@@ -1646,6 +1646,540 @@
       "source_location": "L1"
     },
     {
+      "id": "src_content_projects_habit_tracker",
+      "label": "habit-tracker.md",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "R_HabitTracker",
+        "order": "8",
+        "category": "Mobile",
+        "description": "A habit-tracking app that helps you build lasting routines and see your progress at a glance.",
+        "tags": "[&quot;Mobile&quot;, &quot;Productivity&quot;, &quot;Wellness&quot;, &quot;Flutter&quot;]",
+        "role": "Design &amp; Development",
+        "platform": "Mobile (Android &amp; iOS)",
+        "year": "2025",
+        "cover": "../../assets/images/projects/habit-tracker/cover.webp",
+        "coverAlt": "R_HabitTracker \u2014 habit detail and history",
+        "coverAspect": "4/5"
+      },
+      "node_kind": "page",
+      "norm_label": "habit-tracker.md",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_development",
+      "label": "Development",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L62"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_important_decisions",
+      "label": "Important decisions",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "important decisions",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_the_approach",
+      "label": "The approach",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the approach",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_the_challenge",
+      "label": "The challenge",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the challenge",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_the_context",
+      "label": "The context",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the context",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_the_result",
+      "label": "The result",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the result",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L70"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_ui_design",
+      "label": "UI Design",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ui design",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_ux",
+      "label": "UX",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ux",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_content_projects_habit_tracker_what_i_learned",
+      "label": "What I learned",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "habit-tracker.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i learned",
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "src_content_projects_note_app",
+      "label": "note-app.md",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "R_noteApp",
+        "order": "7",
+        "category": "Mobile",
+        "description": "A clean and simple note-taking app that keeps your ideas organized, always within reach.",
+        "tags": "[&quot;Mobile&quot;, &quot;Productivity&quot;, &quot;Design&quot;, &quot;Flutter&quot;]",
+        "role": "Design &amp; Development",
+        "platform": "Mobile (Android &amp; iOS)",
+        "year": "2025",
+        "cover": "../../assets/images/projects/note-app/cover.webp",
+        "coverAlt": "R_noteApp \u2014 notes list on mobile",
+        "coverAspect": "3/4"
+      },
+      "node_kind": "page",
+      "norm_label": "note-app.md",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_projects_note_app_development",
+      "label": "Development",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "src_content_projects_note_app_important_decisions",
+      "label": "Important decisions",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "important decisions",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "src_content_projects_note_app_the_approach",
+      "label": "The approach",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the approach",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_content_projects_note_app_the_challenge",
+      "label": "The challenge",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the challenge",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_content_projects_note_app_the_context",
+      "label": "The context",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the context",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_content_projects_note_app_the_result",
+      "label": "The result",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the result",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "src_content_projects_note_app_ui_design",
+      "label": "UI Design",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ui design",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_content_projects_note_app_ux",
+      "label": "UX",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ux",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_content_projects_note_app_what_i_learned",
+      "label": "What I learned",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "note-app.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i learned",
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_content_projects_pixelpulse",
+      "label": "pixelpulse.md",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "PixelPulse",
+        "order": "5",
+        "category": "Web",
+        "description": "A modern blog platform where developers and tech enthusiasts can publish, read and discuss technology content.",
+        "tags": "[&quot;Web&quot;, &quot;Blog&quot;, &quot;Editorial&quot;, &quot;Next.js&quot;]",
+        "role": "Design &amp; Development",
+        "platform": "Web",
+        "year": "2025",
+        "link": "https://pixelpulse-blog.vercel.app/",
+        "cover": "../../assets/images/projects/pixelpulse/cover.webp",
+        "coverAlt": "PixelPulse \u2014 blog platform preview",
+        "coverAspect": "4/3"
+      },
+      "node_kind": "page",
+      "norm_label": "pixelpulse.md",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_development",
+      "label": "Development",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_important_decisions",
+      "label": "Important decisions",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "important decisions",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_the_approach",
+      "label": "The approach",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the approach",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_the_challenge",
+      "label": "The challenge",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the challenge",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_the_context",
+      "label": "The context",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the context",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_the_result",
+      "label": "The result",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the result",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_ui_design",
+      "label": "UI Design",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ui design",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_ux",
+      "label": "UX",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ux",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_content_projects_pixelpulse_what_i_learned",
+      "label": "What I learned",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "pixelpulse.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i learned",
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L86"
+    },
+    {
+      "id": "src_content_projects_rahimdev",
+      "label": "rahimdev.md",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "rahimdev.me",
+        "order": "2",
+        "category": "Web",
+        "description": "My first personal portfolio \u2014 the site that marked the beginning of my journey as a developer.",
+        "tags": "[&quot;Web&quot;, &quot;Portfolio&quot;, &quot;Personal&quot;, &quot;Next.js&quot;]",
+        "role": "Design &amp; Development",
+        "platform": "Web",
+        "year": "2025",
+        "link": "https://rahim-ali-dev.vercel.app/",
+        "cover": "../../assets/images/projects/rahimdev/cover.webp",
+        "coverAlt": "rahimdev.me \u2014 first portfolio preview",
+        "coverAspect": "16/9"
+      },
+      "node_kind": "page",
+      "norm_label": "rahimdev.md",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_projects_rahimdev_development",
+      "label": "Development",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "src_content_projects_rahimdev_important_decisions",
+      "label": "Important decisions",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "important decisions",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_content_projects_rahimdev_the_approach",
+      "label": "The approach",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the approach",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_content_projects_rahimdev_the_challenge",
+      "label": "The challenge",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the challenge",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_content_projects_rahimdev_the_context",
+      "label": "The context",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the context",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_content_projects_rahimdev_the_result",
+      "label": "The result",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the result",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L76"
+    },
+    {
+      "id": "src_content_projects_rahimdev_ui_design",
+      "label": "UI Design",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ui design",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_content_projects_rahimdev_ux",
+      "label": "UX",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ux",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_content_projects_rahimdev_what_i_learned",
+      "label": "What I learned",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "rahimdev.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i learned",
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L84"
+    },
+    {
       "id": "agents_agents_md_instructions_for_ai_coding_agents",
       "label": "Agents.md \u2014 Instructions for AI coding agents",
       "_origin": "ast",
@@ -1667,7 +2201,7 @@
       "node_kind": "heading",
       "norm_label": "architecture",
       "source_file": "AGENTS.md",
-      "source_location": "L176"
+      "source_location": "L178"
     },
     {
       "id": "agents_assets",
@@ -1691,7 +2225,7 @@
       "node_kind": "heading",
       "norm_label": "code conventions",
       "source_file": "AGENTS.md",
-      "source_location": "L210"
+      "source_location": "L213"
     },
     {
       "id": "agents_colors",
@@ -1715,7 +2249,7 @@
       "node_kind": "heading",
       "norm_label": "content & seo",
       "source_file": "AGENTS.md",
-      "source_location": "L221"
+      "source_location": "L224"
     },
     {
       "id": "agents_definition_of_done",
@@ -1727,7 +2261,7 @@
       "node_kind": "heading",
       "norm_label": "definition of done",
       "source_file": "AGENTS.md",
-      "source_location": "L254"
+      "source_location": "L257"
     },
     {
       "id": "agents_design_system_contract",
@@ -1751,7 +2285,7 @@
       "node_kind": "heading",
       "norm_label": "development server",
       "source_file": "AGENTS.md",
-      "source_location": "L244"
+      "source_location": "L247"
     },
     {
       "id": "agents_documentation",
@@ -1763,7 +2297,7 @@
       "node_kind": "heading",
       "norm_label": "documentation",
       "source_file": "AGENTS.md",
-      "source_location": "L274"
+      "source_location": "L277"
     },
     {
       "id": "agents_icons",
@@ -1859,7 +2393,7 @@
       "node_kind": "heading",
       "norm_label": "useful commands",
       "source_file": "AGENTS.md",
-      "source_location": "L234"
+      "source_location": "L237"
     },
     {
       "id": "agents_what_not_to_do",
@@ -1871,7 +2405,7 @@
       "node_kind": "heading",
       "norm_label": "what not to do",
       "source_file": "AGENTS.md",
-      "source_location": "L264"
+      "source_location": "L267"
     },
     {
       "id": "src_components_about_aboutcontact",
@@ -2961,7 +3495,7 @@
     },
     {
       "source": "src_pages_about",
-      "target": "src_lib_projects_getallprojects",
+      "target": "src_lib_projects_getfeaturedprojects",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4079,7 +4613,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L176",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -4101,7 +4635,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L210",
+      "source_location": "L213",
       "weight": 1.0
     },
     {
@@ -4112,7 +4646,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L221",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -4123,7 +4657,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L234",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
@@ -4134,7 +4668,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L244",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -4145,7 +4679,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L254",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
@@ -4156,7 +4690,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L264",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -4167,7 +4701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L274",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -4864,6 +5398,105 @@
       "weight": 1.0
     },
     {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_the_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_the_challenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_the_approach",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_ux",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_ui_design",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_important_decisions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_the_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_habit_tracker",
+      "target": "src_content_projects_habit_tracker_what_i_learned",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/habit-tracker.md",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
       "source": "src_content_projects_murmur",
       "target": "src_content_projects_murmur_the_context",
       "relation": "contains",
@@ -4963,6 +5596,204 @@
       "weight": 1.0
     },
     {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_the_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_the_challenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_the_approach",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_ux",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_ui_design",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_important_decisions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_the_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_note_app",
+      "target": "src_content_projects_note_app_what_i_learned",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/note-app.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_the_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_the_challenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_the_approach",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_ux",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_ui_design",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_important_decisions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_the_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_pixelpulse",
+      "target": "src_content_projects_pixelpulse_what_i_learned",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/pixelpulse.md",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
       "source": "src_content_projects_rahim_design",
       "target": "src_content_projects_rahim_design_what_i_learned",
       "relation": "contains",
@@ -5059,6 +5890,105 @@
       "confidence_score": 1.0,
       "source_file": "src/content/projects/rahim-design.md",
       "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_the_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_the_challenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_the_approach",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_ux",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_ui_design",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_important_decisions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_the_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "src_content_projects_rahimdev",
+      "target": "src_content_projects_rahimdev_what_i_learned",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/projects/rahimdev.md",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -5267,7 +6197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/lazy-video.ts",
-      "source_location": "L9",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -5816,5 +6746,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "17d9fe4494c905f9d3e9b5786a831486081f36ed"
+  "built_at_commit": "0b787ed94e21da747a2b278835d881ff42f8dbd6"
 }

@@ -6,12 +6,12 @@ import Frame from "@/components/layout/Frame.astro";
 import Overline from "@/components/ui/Overline.astro";
 import { about } from "@/data/about";
 import Layout from "@/layouts/Layout.astro";
-import { getAllProjects } from "@/lib/projects";
+import { getFeaturedProjects } from "@/lib/projects";
 import { routes } from "@/lib/routes";
 
-const projects = await getAllProjects();
+const featuredProjects = await getFeaturedProjects();
 
-const selectedWork = projects.map((project) => ({
+const selectedWork = featuredProjects.map((project) => ({
   name: project.data.title,
   detail: `${project.data.category} — ${project.data.year}`,
   href: routes.project(project.id),

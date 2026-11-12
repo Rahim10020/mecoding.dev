@@ -1,16 +1,16 @@
-# Graph Report - mecoding.dev  (2026-11-11)
+# Graph Report - mecoding.dev  (2026-11-12)
 
 ## Corpus Check
-- 74 files · ~57,505 words
+- 78 files · ~88,731 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 218 nodes · 288 edges · 31 communities (15 shown, 2 thin omitted)
+- 258 nodes · 324 edges · 35 communities (19 shown, 2 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `17d9fe44`
+- Built from commit: `0b787ed9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,6 +32,10 @@
 - content.config.ts
 - scripts
 - project-carousel.ts
+- habit-tracker.md
+- note-app.md
+- pixelpulse.md
+- rahimdev.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Agents.md — Instructions for AI coding agents` - 15 edges
@@ -39,11 +43,11 @@
 3. `scripts` - 8 edges
 4. `mecoding` - 8 edges
 5. `site` - 6 edges
-6. `getAllProjects()` - 6 edges
+6. `getAllProjects()` - 5 edges
 7. `Design System Contract` - 5 edges
-8. `about` - 3 edges
-9. `projectDetail` - 3 edges
-10. `Project` - 3 edges
+8. `getFeaturedProjects()` - 4 edges
+9. `about` - 3 edges
+10. `projectDetail` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `getStaticPaths()` --calls--> `getAllProjects()`  [EXTRACTED]
@@ -52,7 +56,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (31 total, 2 thin omitted)
+## Communities (35 total, 2 thin omitted)
 
 ### Community 0 - "package.json"
 Cohesion: 0.08
@@ -63,8 +67,8 @@ Cohesion: 0.19
 Nodes (7): columns, projectDetail, byOrder(), getAllProjects(), getFeaturedProjects(), Project, getStaticPaths()
 
 ### Community 3 - "site.ts"
-Cohesion: 0.24
-Nodes (8): year, render(), tick(), NavItem, site, Social, SocialId, canonical
+Cohesion: 0.15
+Nodes (9): year, render(), tick(), logos, NavItem, site, Social, SocialId (+1 more)
 
 ### Community 4 - "Agents.md — Instructions for AI coding agents"
 Cohesion: 0.11
@@ -103,8 +107,8 @@ Cohesion: 0.29
 Nodes (6): astro/tsconfigs/strict, compilerOptions, paths, exclude, extends, include
 
 ### Community 13 - "FeaturedList.astro"
-Cohesion: 0.16
-Nodes (5): string, copies, logos, home, routes
+Cohesion: 0.26
+Nodes (4): string, copies, home, routes
 
 ### Community 17 - "scripts"
 Cohesion: 0.25
@@ -114,22 +118,38 @@ Nodes (8): scripts, astro, build, check, dev, fonts, icons, preview
 Cohesion: 0.67
 Nodes (3): CarouselElements, initProjectCarousel(), read()
 
+### Community 31 - "habit-tracker.md"
+Cohesion: 0.20
+Nodes (9): Development, Important decisions, The approach, The challenge, The context, The result, UI Design, UX (+1 more)
+
+### Community 32 - "note-app.md"
+Cohesion: 0.20
+Nodes (9): Development, Important decisions, The approach, The challenge, The context, The result, UI Design, UX (+1 more)
+
+### Community 33 - "pixelpulse.md"
+Cohesion: 0.20
+Nodes (9): Development, Important decisions, The approach, The challenge, The context, The result, UI Design, UX (+1 more)
+
+### Community 34 - "rahimdev.md"
+Cohesion: 0.20
+Nodes (9): Development, Important decisions, The approach, The challenge, The context, The result, UI Design, UX (+1 more)
+
 ## Knowledge Gaps
-- **110 isolated node(s):** `name`, `type`, `version`, `node`, `dev` (+105 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 133 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **146 isolated node(s):** `name`, `type`, `version`, `node`, `dev` (+141 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 169 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `routes` connect `FeaturedList.astro` to `[id].astro`, `site.ts`, `about.astro`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `Agents.md — Instructions for AI coding agents` connect `Agents.md — Instructions for AI coding agents` to `mecoding`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Agents.md — Instructions for AI coding agents` be split into smaller, more focused modules?**

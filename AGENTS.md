@@ -170,14 +170,16 @@ regenerate. Do not hand-edit the generated files.
   `Placeholder.astro`
 - Favicons are generated from the logo source:
   `pnpm icons` → `favicon.svg`, `favicon.ico` (16/32/48), `apple-touch-icon.png`
-- Project images are placeholders for now. When real assets arrive, put them in
-  `src/assets/images/projects/` and let Astro process them
+- Project assets: the card cover lives in
+  `src/assets/images/projects/<slug>/cover.webp` (800×800, processed by Astro);
+  the media used by the detail markdown lives in `public/images/projects/<slug>/`
+  and is served as-is (screenshots, posters, videos)
 
 ## Architecture
 
 ```text
 src/
-├── assets/images/        logos + placeholder
+├── assets/images/        logos, project covers, placeholder
 ├── components/
 │   ├── icons/            SVG icon components (currentColor)
 │   ├── layout/           Frame, Stage

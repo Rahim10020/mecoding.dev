@@ -32,7 +32,7 @@ pnpm check     # Astro + TypeScript diagnostics
 
 ```text
 src/
-├── assets/images/        logos + image placeholder
+├── assets/images/        logos, project covers, image placeholder
 ├── components/
 │   ├── icons/            inline SVG icons (currentColor)
 │   ├── layout/           Frame, Stage
