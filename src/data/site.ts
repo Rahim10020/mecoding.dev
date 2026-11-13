@@ -16,10 +16,13 @@ export interface NavItem {
 /** Lien WhatsApp unique, partagé par la page About et les socials. */
 const whatsappHref = "https://wa.me/22891796115";
 
+/** Domaine canonique courant — repasser sur `https://mecoding.dev` après le DNS. */
+const siteUrl = "https://mecoding-dev.vercel.app";
+
 export const site = {
   /** Wordmark et nom du site. */
   name: "mecoding.dev",
-  url: "https://mecoding-dev.vercel.app",
+  url: siteUrl,
   lang: "en",
   locale: "en_US",
 
@@ -41,13 +44,16 @@ export const site = {
   whatsappHref,
 
   /**
-   * Formulaire de contact. Sans `accessKey`, le formulaire retombe sur
-   * `mailto:` ; renseigner la clé Web3Forms active l'envoi via leur API.
+   * Formulaire de contact. La clé Web3Forms active l'envoi via leur API ;
+   * sans clé, le formulaire retombe sur `mailto:` (et casse les audits HTTPS
+   * de Lighthouse : une action de formulaire non-HTTPS est du mixed content).
    */
   contact: {
     endpoint: "https://api.web3forms.com/submit",
-    accessKey: "",
+    accessKey: "cbcc83a2-a2eb-4154-9b48-a64b4a67b3d4",
     subject: "New message from mecoding.dev",
+    /** Retour après envoi : ancre affichée par `:target` sur la page About. */
+    redirect: `${siteUrl}/about/#contact-sent`,
   },
 
   nav: [

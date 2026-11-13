@@ -6,6 +6,7 @@ import Analytics from "@vercel/analytics/astro";
 import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import { site } from "@/data/site";
+import { siteSchema } from "@/lib/schema";
 
 interface Props {
   title?: string;
@@ -14,6 +15,8 @@ interface Props {
   image?: string;
   /** Texte alternatif de l'image Open Graph. */
   imageAlt?: string;
+  /** Nœuds JSON-LD supplémentaires, ajoutés au graphe global. */
+  structuredData?: Record<string, unknown>[];
   noindex?: boolean;
   /** Le shell (header + footer) est rendu par défaut. La home le compose elle-même. */
   shell?: boolean;
@@ -30,6 +33,7 @@ const {
   description = site.description,
   image = DEFAULT_OG_IMAGE,
   imageAlt = DEFAULT_OG_ALT,
+  structuredData = [],
   noindex = false,
   shell = true,
   headerClass,
@@ -37,6 +41,11 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [...siteSchema(), ...structuredData],
+}).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -89,6 +98,8 @@ const ogImage = new URL(image, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={imageAlt} />
+
+    <script type="application/ld+json" set:html={jsonLd} />
   </head>
 
   <body>

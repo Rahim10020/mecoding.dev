@@ -8,7 +8,7 @@ import { about } from "@/data/about";
 import { site } from "@/data/site";
 
 const usesEndpoint = site.contact.accessKey.length > 0;
-const action = usesEndpoint ? site.contact.endpoint : `mailto:${site.email}`;
+const action = site.contact.endpoint;
 
 const highlightClass =
   "inline-block max-w-full bg-black px-1 text-white transition-colors duration-200 hover:bg-black-80";
@@ -24,12 +24,15 @@ const highlightClass =
       Get in touch
     </Overline>
 
-    <form
-      action={action}
-      method="post"
-      enctype={usesEndpoint ? undefined : "text/plain"}
-      class="mt-stack flex flex-col gap-4"
+    <p
+      id="contact-sent"
+      role="status"
+      class="contact-sent mt-meta text-body text-black-80"
     >
+      Thanks — your message is on its way. I usually reply within a day or two.
+    </p>
+
+    <form action={action} method="post" class="mt-stack flex flex-col gap-4">
       {usesEndpoint && (
         <>
           <input
@@ -39,6 +42,7 @@ const highlightClass =
           />
           <input type="hidden" name="subject" value={site.contact.subject} />
           <input type="hidden" name="from_name" value={site.name} />
+          <input type="hidden" name="redirect" value={site.contact.redirect} />
           <input
             type="checkbox"
             name="botcheck"
@@ -93,7 +97,12 @@ const highlightClass =
       </Overline>
       <ul class="mt-meta flex flex-col items-start gap-1 text-body">
         <li>
-          <a href={`mailto:${site.email}`} class={highlightClass}>
+          <a
+            href={`mailto:${site.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={highlightClass}
+          >
             {site.email}
           </a>
         </li>
@@ -131,3 +140,14 @@ const highlightClass =
     </div>
   </div>
 </section>
+
+<style>
+  /* Confirmation d'envoi : Web3Forms redirige vers `/about/#contact-sent`. */
+  .contact-sent {
+    display: none;
+  }
+
+  .contact-sent:target {
+    display: block;
+  }
+</style>

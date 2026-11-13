@@ -18,9 +18,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1793998638.32455,
-    "seen": 1794222336.9624732,
-    "ast_hash": "aad35fbf307ac10f1ca4a76561f3d4d0",
+    "mtime": 1794562898.0140696,
+    "seen": 1794568587.4288664,
+    "ast_hash": "fdedaef41d2d585b4341444a8bbf53b0",
     "semantic_hash": ""
   },
   "scripts/build-fonts.sh": {
@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/components/about/AboutContact.astro": {
-    "mtime": 1794417015.5941694,
-    "seen": 1794417321.0653136,
-    "ast_hash": "c19be9d020d3f4001eb90cfe4ee486a5",
+    "mtime": 1794568137.0742106,
+    "seen": 1794568587.4288716,
+    "ast_hash": "4651e7c02b3bae713d52f14acd67ec8d",
     "semantic_hash": ""
   },
   "src/components/about/AboutList.astro": {
@@ -276,15 +276,15 @@
     "semantic_hash": ""
   },
   "src/data/site.ts": {
-    "mtime": 1794561726.089091,
-    "seen": 1794562357.663323,
-    "ast_hash": "1f8e4ab73600f90542a06807fd5ff3e0",
+    "mtime": 1794568072.019279,
+    "seen": 1794568587.428941,
+    "ast_hash": "c30b42a7a483bfc4b91207ac3c656562",
     "semantic_hash": ""
   },
   "src/layouts/Layout.astro": {
-    "mtime": 1794561718.8741307,
-    "seen": 1794562357.6633246,
-    "ast_hash": "c0d9569ff5975e62235c54f42f2f48e9",
+    "mtime": 1794568306.2312446,
+    "seen": 1794568587.428942,
+    "ast_hash": "3b631665491e494a5e8cb870f8a9dd81",
     "semantic_hash": ""
   },
   "src/lib/project-carousel.ts": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/pages/projects/[id].astro": {
-    "mtime": 1794425528.5808125,
-    "seen": 1794425555.9230723,
-    "ast_hash": "5e16a8bf175489146dd84552aee30e27",
+    "mtime": 1794568324.9917288,
+    "seen": 1794568587.4289572,
+    "ast_hash": "a6c7d2dbad84597db7d0de6567f4bd47",
     "semantic_hash": ""
   },
   "src/pages/projects/index.astro": {
@@ -336,15 +336,15 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1794561878.9420817,
-    "seen": 1794562357.663352,
-    "ast_hash": "2fd0534e2eb4354df0a108c572b03fb0",
+    "mtime": 1794568481.359057,
+    "seen": 1794568587.4289644,
+    "ast_hash": "8c29858f4131e7ef02342a59ede7a84d",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794520837.1777823,
-    "seen": 1794520860.8845575,
-    "ast_hash": "ac63ad7faac4eea10bbd087cfce94e50",
+    "mtime": 1794562754.2808506,
+    "seen": 1794568587.4289653,
+    "ast_hash": "0a363e3d7e52c4393154fc5b86be1ef3",
     "semantic_hash": ""
   },
   "pnpm-workspace.yaml": {
@@ -365,34 +365,28 @@
     "ast_hash": "c6f93cbcd99fab5db4f999706478a671",
     "semantic_hash": ""
   },
-  "public/robots.txt": {
-    "mtime": 1794425351.5558486,
-    "seen": 1794425457.8340142,
-    "ast_hash": "cf578930f5ce6db86ce6a956dbcb3359",
-    "semantic_hash": ""
-  },
   "src/content/projects/focusly.md": {
-    "mtime": 1794307441.0903268,
-    "seen": 1794307636.8267372,
-    "ast_hash": "e98289b9c9099d4c1f1631b57609d48d",
+    "mtime": 1794568235.427072,
+    "seen": 1794568587.4289706,
+    "ast_hash": "c1f2c1a0c38f750d5c22389db4b332f5",
     "semantic_hash": ""
   },
   "src/content/projects/murmur.md": {
-    "mtime": 1794225381.9537916,
-    "seen": 1794226222.7370224,
+    "mtime": 1794568197.5779932,
+    "seen": 1794568587.428973,
     "ast_hash": "9d519e355d323af8c1b15c1d90465fc3",
     "semantic_hash": ""
   },
   "src/content/projects/rahim-design.md": {
-    "mtime": 1794307448.7894797,
-    "seen": 1794307636.8267415,
-    "ast_hash": "d3287c16449b741465f0ec35a24e6a63",
+    "mtime": 1794568235.427072,
+    "seen": 1794568587.428977,
+    "ast_hash": "c7de34e1868e2094911ba6737d81cb66",
     "semantic_hash": ""
   },
   "src/content/projects/twocoderz.md": {
-    "mtime": 1794307455.1986067,
-    "seen": 1794307636.8267436,
-    "ast_hash": "4d9b0cb1bbeee7767c244b416eb8270b",
+    "mtime": 1794568235.428072,
+    "seen": 1794568587.4289799,
+    "ast_hash": "e05d1695133cebc1f61ba9f8b441a83b",
     "semantic_hash": ""
   },
   "todo.txt": {
@@ -774,9 +768,9 @@
     "semantic_hash": ""
   },
   "src/lib/lazy-video.ts": {
-    "mtime": 1794561776.260794,
-    "seen": 1794562357.6633267,
-    "ast_hash": "8213cb35419d48be906987200b471311",
+    "mtime": 1794568223.8393507,
+    "seen": 1794568587.4289434,
+    "ast_hash": "09e60774decd97cf1ae1f72ddb198273",
     "semantic_hash": ""
   },
   "src/data/home.ts": {
@@ -792,27 +786,27 @@
     "semantic_hash": ""
   },
   "src/content/projects/habit-tracker.md": {
-    "mtime": 1794520110.593499,
-    "seen": 1794520860.8845727,
+    "mtime": 1794568197.5778615,
+    "seen": 1794568587.4289718,
     "ast_hash": "257d40f753afe873fbbe332d3cf8d847",
     "semantic_hash": ""
   },
   "src/content/projects/note-app.md": {
-    "mtime": 1794520110.593314,
-    "seen": 1794520860.884578,
+    "mtime": 1794568197.5781207,
+    "seen": 1794568587.4289744,
     "ast_hash": "cb00a244ce99224a4eaea8aa9ae0bf2b",
     "semantic_hash": ""
   },
   "src/content/projects/pixelpulse.md": {
-    "mtime": 1794520110.5931222,
-    "seen": 1794520860.8845806,
-    "ast_hash": "c1ce2201236d6ae94742b5c98d8d7ee9",
+    "mtime": 1794568235.427072,
+    "seen": 1794568587.4289756,
+    "ast_hash": "a1d4632ae92b162e8f6e69fd064fc055",
     "semantic_hash": ""
   },
   "src/content/projects/rahimdev.md": {
-    "mtime": 1794520110.5920596,
-    "seen": 1794520860.8845854,
-    "ast_hash": "29903e35d3cf747e82f69b5eb8ae78be",
+    "mtime": 1794568235.428072,
+    "seen": 1794568587.4289787,
+    "ast_hash": "eb6837870749b24920c461896c04a7ae",
     "semantic_hash": ""
   },
   "public/images/projects/habit-tracker/habit-1.jpeg": {
@@ -981,6 +975,54 @@
     "mtime": 1794561719.2971284,
     "seen": 1794562357.663396,
     "ast_hash": "ab4309d14eeece663f890d28ee63fdcc",
+    "semantic_hash": ""
+  },
+  "src/lib/schema.ts": {
+    "mtime": 1794568285.9787872,
+    "seen": 1794568587.4289494,
+    "ast_hash": "aeef3e8192d8b6e71cfcca0b4b45449a",
+    "semantic_hash": ""
+  },
+  "src/pages/robots.txt.ts": {
+    "mtime": 1794568255.5815725,
+    "seen": 1794568587.42896,
+    "ast_hash": "41a62cbc1f6fd4d225c060220a377039",
+    "semantic_hash": ""
+  },
+  "vercel.json": {
+    "mtime": 1794568249.2047324,
+    "seen": 1794568587.4289627,
+    "ast_hash": "89ec18db9473dcccf256eeaf377e445a",
+    "semantic_hash": ""
+  },
+  "public/images/projects/focusly/focusly.mp4": {
+    "mtime": 1794568257.9585125,
+    "seen": 1794568587.4290905,
+    "ast_hash": "be7f1f9678dcd3b44994d8890ea438c1",
+    "semantic_hash": ""
+  },
+  "public/images/projects/pixelpulse/pixelpulse.mp4": {
+    "mtime": 1794568364.5156062,
+    "seen": 1794568587.4290931,
+    "ast_hash": "23f7c1ad79f0a47a3b47ef89a69bc299",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahim-design/rahim-design.mp4": {
+    "mtime": 1794568336.283413,
+    "seen": 1794568587.4290957,
+    "ast_hash": "b2f83d735fc1d14717967e2b5efd3b71",
+    "semantic_hash": ""
+  },
+  "public/images/projects/rahimdev/rahimdev.mp4": {
+    "mtime": 1794568283.0908635,
+    "seen": 1794568587.4290981,
+    "ast_hash": "8d641bab300ceb766382c1d4e4e79d10",
+    "semantic_hash": ""
+  },
+  "public/images/projects/twocoderz/twocoderz.mp4": {
+    "mtime": 1794568310.2710073,
+    "seen": 1794568587.4291005,
+    "ast_hash": "a130760773bded76e236455e93b546c3",
     "semantic_hash": ""
   }
 }

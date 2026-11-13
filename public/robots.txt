@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mecoding.dev/sitemap-index.xml

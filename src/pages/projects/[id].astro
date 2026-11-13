@@ -1,5 +1,6 @@
 ---
 import { render } from "astro:content";
+import { getImage } from "astro:assets";
 
 import ArrowLeft from "@/components/icons/ArrowLeft.astro";
 import ArrowUpRight from "@/components/icons/ArrowUpRight.astro";
@@ -11,6 +12,7 @@ import { projectDetail } from "@/data/project-detail";
 import Layout from "@/layouts/Layout.astro";
 import { getAllProjects } from "@/lib/projects";
 import { routes } from "@/lib/routes";
+import { projectSchema } from "@/lib/schema";
 import type { Project } from "@/lib/projects";
 
 export async function getStaticPaths() {
@@ -35,12 +37,38 @@ interface Props {
 const { project, previous, next } = Astro.props;
 const { Content } = await render(project);
 const { data } = project;
+
+const projectUrl = new URL(routes.project(project.id), Astro.site).href;
+const coverUrl = data.cover
+  ? new URL(
+      (
+        await getImage({
+          src: data.cover,
+          width: 800,
+          height: 800,
+          fit: "cover",
+        })
+      ).src,
+      Astro.site,
+    ).href
+  : new URL("/images/og-image.jpg", Astro.site).href;
 ---
 
 <Layout
   title={`${data.title} — mecoding`}
   description={data.description}
   headerClass="sticky top-0 z-40"
+  structuredData={[
+    projectSchema({
+      title: data.title,
+      description: data.description,
+      category: data.category,
+      year: data.year,
+      url: projectUrl,
+      image: coverUrl,
+      tags: data.tags,
+    }),
+  ]}
 >
   <ReadingProgress />
 

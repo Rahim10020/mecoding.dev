@@ -12,7 +12,7 @@ cover: "../../assets/images/projects/rahimdev/cover.webp"
 coverAlt: "rahimdev.me — first portfolio preview"
 coverAspect: "16/9"
 ---
-<video class="media-video" poster="/images/projects/rahimdev/rahimdev-poster.webp" src="/images/projects/rahimdev/rahimdev.webm" aria-label="rahimdev.me demo video — browsing the portfolio" loop muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/rahimdev/rahimdev-poster.webp" aria-label="rahimdev.me demo video — browsing the portfolio" loop muted playsinline preload="none"><source src="/images/projects/rahimdev/rahimdev.webm" type='video/webm; codecs="vp9"' /><source src="/images/projects/rahimdev/rahimdev.mp4" type='video/mp4; codecs="avc1.640028"' /></video>
 
 ## The context
 
@@ -77,7 +77,7 @@ The live website is available at: [rahim-ali-dev.vercel.app](https://rahim-ali-d
 
 **And finally, it looks like this.**
 
-<video class="media-video" poster="/images/projects/rahimdev/rahimdev-poster.webp" src="/images/projects/rahimdev/rahimdev.webm" aria-label="rahimdev.me demo video — hero, projects and contact" loop muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/rahimdev/rahimdev-poster.webp" aria-label="rahimdev.me demo video — hero, projects and contact" loop muted playsinline preload="none"><source src="/images/projects/rahimdev/rahimdev.webm" type='video/webm; codecs="vp9"' /><source src="/images/projects/rahimdev/rahimdev.mp4" type='video/mp4; codecs="avc1.640028"' /></video>
 
 A first portfolio that did its job: it introduced me, showcased my work, and gave me a place to send potential clients. It also, quietly, became the starting point of everything that followed.
 

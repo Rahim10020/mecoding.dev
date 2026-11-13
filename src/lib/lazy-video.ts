@@ -28,6 +28,21 @@ interface NetworkInformation {
 }
 
 /**
+ * Formats réellement proposés dans le Markdown. Le VP9 est le format léger,
+ * le H.264 sert de secours aux navigateurs qui ne décodent pas le WebM
+ * (iOS avant 26.2 notamment).
+ */
+const SOURCE_TYPES = [
+  'video/webm; codecs="vp9"',
+  'video/mp4; codecs="avc1.640028"',
+];
+
+/** Faux quand aucun des formats proposés n'est lisible par le navigateur. */
+function canPlayAny(video: HTMLVideoElement): boolean {
+  return SOURCE_TYPES.some((type) => video.canPlayType(type) !== "");
+}
+
+/**
  * Vrai quand la vidéo ne doit pas démarrer toute seule : petit écran,
  * économiseur de données ou connexion 2G/3G.
  */
@@ -57,13 +72,14 @@ export function initLazyVideo(): void {
     return rect.bottom > -MARGIN && rect.top < window.innerHeight + MARGIN;
   };
 
-  const play = (video: HTMLVideoElement): void => {
+  const play = (video: HTMLVideoElement): Promise<void> | undefined => {
     // La vidéo a pu quitter l'écran entre l'observation et la lecture.
     if (!isNearViewport(video)) return;
 
     const attempt = video.play();
     // iOS en mode économie d'énergie peut refuser : le poster reste affiché.
-    if (attempt) void attempt.catch(() => {});
+    if (attempt) attempt.catch(() => {});
+    return attempt;
   };
 
   /**
@@ -74,6 +90,9 @@ export function initLazyVideo(): void {
   const addToggle = (video: HTMLVideoElement): void => {
     const parent = video.parentElement;
     if (!parent || parent.querySelector(".media-video-toggle")) return;
+    // Pas de bouton si le navigateur ne sait décoder aucun des formats :
+    // un contrôle qui ne fait rien est pire que pas de contrôle.
+    if (!canPlayAny(video)) return;
 
     parent.classList.add("media-video-host");
 
@@ -91,7 +110,12 @@ export function initLazyVideo(): void {
 
     toggle.addEventListener("click", () => {
       if (video.paused || video.ended) {
-        play(video);
+        const attempt = play(video);
+        // Décodage impossible malgré `canPlayType` : on retire le contrôle.
+        attempt?.catch(() => {
+          toggle.remove();
+          parent.classList.remove("media-video-host");
+        });
       } else {
         video.pause();
       }

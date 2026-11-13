@@ -129,6 +129,10 @@ Usage:
   stays and a play/pause button appears, so no video bytes load before a tap.
   Autoplay is kept under `prefers-reduced-motion` (same as rahim-design); the
   button gives the control back.
+- Each video ships two sources: WebM/VP9 first, MP4/H.264 second. iOS (before
+  26.2) does not decode VP9, so it falls back to the MP4; browsers only
+  download the source they pick. When neither format is supported,
+  `lazy-video.ts` skips the button entirely — no dead control.
 - Client JS is limited to: mobile menu, local clock, project carousel, the
   Work masonry scroll, the project videos (lazy autoplay + play/pause) and
   Vercel Web Analytics (`@vercel/analytics/astro` in `Layout.astro`).
@@ -178,10 +182,16 @@ regenerate. Do not hand-edit the generated files.
 - Project assets: the card cover lives in
   `src/assets/images/projects/<slug>/cover.webp` (800×800, processed by Astro);
   the media used by the detail markdown lives in `public/images/projects/<slug>/`
-  and is served as-is (screenshots, posters, videos). Videos are 1280px wide,
-  8-second VP9 loops without audio (~0.1–0.7MB each)
+  and is served as-is (screenshots, posters, videos). Videos are 8-second loops
+  without audio, shipped twice per project:
+  - `*.webm` — VP9, 1280px wide (~0.1–0.7MB), the default source
+  - `*.mp4` — H.264 High, 800px wide (~0.5–1.2MB), the iOS fallback
+  Both start on the poster's frame and share the same aspect ratio
 - Open Graph card: `public/images/og-image.jpg` (1200×630), emitted by
   `Layout.astro` on every page with its dimensions, alt and locale
+- `vercel.json` sets the cache headers for `/images/*` (7 days + SWR) and
+  `/fonts/*` (30 days + SWR). Filenames are not content-hashed, so never use
+  `immutable` there — a regenerated font or video would stay stale
 
 ## Architecture
 
@@ -242,6 +252,15 @@ Rules:
 - `site` is set in `astro.config.mjs` and must match the live deployment
   (currently `https://mecoding-dev.vercel.app`); sitemap is generated
   automatically
+- `robots.txt` is generated from `site.url` by `src/pages/robots.txt.ts` —
+  never hand-edit a static copy, it would drift when the domain changes
+- JSON-LD: `Layout.astro` emits the `Person` + `WebSite` graph from
+  `src/lib/schema.ts` on every page; project pages add a `CreativeWork` node
+- Contact form: Web3Forms (`site.contact.accessKey`). On success it redirects
+  to `/about/#contact-sent`, revealed by `:target`. Without a key the form
+  must not fall back to a `mailto:` action — Lighthouse counts a non-HTTPS
+  form action as mixed content (BP drops to 77). Email and WhatsApp links open
+  in a new tab (`target="_blank" rel="noopener noreferrer"`)
 - No lorem ipsum and no placeholder copy in production
 
 ## Useful Commands

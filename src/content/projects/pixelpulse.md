@@ -12,7 +12,7 @@ cover: "../../assets/images/projects/pixelpulse/cover.webp"
 coverAlt: "PixelPulse — blog platform preview"
 coverAspect: "4/3"
 ---
-<video class="media-video" poster="/images/projects/pixelpulse/pixelpulse-poster.webp" src="/images/projects/pixelpulse/pixelpulse.webm" aria-label="PixelPulse demo video — browsing the blog platform" loop muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/pixelpulse/pixelpulse-poster.webp" aria-label="PixelPulse demo video — browsing the blog platform" loop muted playsinline preload="none"><source src="/images/projects/pixelpulse/pixelpulse.webm" type='video/webm; codecs="vp9"' /><source src="/images/projects/pixelpulse/pixelpulse.mp4" type='video/mp4; codecs="avc1.640028"' /></video>
 
 ## The context
 
@@ -79,7 +79,7 @@ The live website is available at: [pixelpulse-blog.vercel.app](https://pixelpuls
 
 **And finally, it looks like this.**
 
-<video class="media-video" poster="/images/projects/pixelpulse/pixelpulse-poster.webp" src="/images/projects/pixelpulse/pixelpulse.webm" aria-label="PixelPulse demo video — reading, writing and discussing tech" loop muted playsinline preload="none"></video>
+<video class="media-video" poster="/images/projects/pixelpulse/pixelpulse-poster.webp" aria-label="PixelPulse demo video — reading, writing and discussing tech" loop muted playsinline preload="none"><source src="/images/projects/pixelpulse/pixelpulse.webm" type='video/webm; codecs="vp9"' /><source src="/images/projects/pixelpulse/pixelpulse.mp4" type='video/mp4; codecs="avc1.640028"' /></video>
 
 A blog platform that feels alive — where reading, writing and discussing technology are part of the same calm, well-designed experience.
 
