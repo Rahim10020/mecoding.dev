@@ -129,7 +129,8 @@ Usage:
   Autoplay is kept under `prefers-reduced-motion` (same as rahim-design); the
   button gives the control back.
 - Client JS is limited to: mobile menu, local clock, project carousel, the
-  Work masonry scroll and the project videos (lazy autoplay + play/pause).
+  Work masonry scroll, the project videos (lazy autoplay + play/pause) and
+  Vercel Web Analytics (inline loader in `Layout.astro`, no dependency).
   Everything else must be CSS — the reading progress rail uses
   `animation-timeline: scroll(root block)`, no JavaScript.
 - Mobile menu: a curtain. The panel slides from `translateY(-100%)` to `0`
