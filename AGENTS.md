@@ -24,6 +24,7 @@ Primary goals:
 - Language: TypeScript 6 (strict) — `astro check` does not support TS 7 yet
 - Package manager: pnpm 12
 - Image tooling: `sharp` (devDependency, also used by Astro)
+- Analytics: `@vercel/analytics` (Web Analytics, Astro component in `Layout.astro`)
 - Deployment target: static (Cloudflare Pages / Netlify / Vercel)
 
 ## Design System Contract
@@ -130,7 +131,7 @@ Usage:
   button gives the control back.
 - Client JS is limited to: mobile menu, local clock, project carousel, the
   Work masonry scroll, the project videos (lazy autoplay + play/pause) and
-  Vercel Web Analytics (inline loader in `Layout.astro`, no dependency).
+  Vercel Web Analytics (`@vercel/analytics/astro` in `Layout.astro`).
   Everything else must be CSS — the reading progress rail uses
   `animation-timeline: scroll(root block)`, no JavaScript.
 - Mobile menu: a curtain. The panel slides from `translateY(-100%)` to `0`
