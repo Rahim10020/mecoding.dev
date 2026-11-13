@@ -273,6 +273,11 @@
     outline-offset: 3px;
   }
 
+  /* Le menu mobile est un rideau noir : l'anneau noir y serait invisible. */
+  [data-menu-panel] :focus-visible {
+    outline-color: var(--color-white);
+  }
+
   /* Les ancres ne doivent pas passer sous le header fixe. */
   :target {
     scroll-margin-top: 6rem;

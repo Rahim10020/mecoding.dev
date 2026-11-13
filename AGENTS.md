@@ -123,11 +123,14 @@ Usage:
 - `prefers-reduced-motion` is handled globally in `global.css`; do not
   circumvent it. The only override is the reading-progress rail: its CSS
   scroll timeline follows the scroll position, it is not autonomous motion.
-- Accepted exception: project videos autoplay muted on a loop, without native
-  controls, even under `prefers-reduced-motion` (same as rahim-design).
+- Project videos play muted on a loop, without native controls. Autoplay is
+  desktop-only: on mobile (≤ 809px), under `saveData` or on 2G/3G the poster
+  stays and a play/pause button appears, so no video bytes load before a tap.
+  Autoplay is kept under `prefers-reduced-motion` (same as rahim-design); the
+  button gives the control back.
 - Client JS is limited to: mobile menu, local clock, project carousel, the
-  Work masonry scroll and the project videos (lazy autoplay). Everything else
-  must be CSS — the reading progress rail uses
+  Work masonry scroll and the project videos (lazy autoplay + play/pause).
+  Everything else must be CSS — the reading progress rail uses
   `animation-timeline: scroll(root block)`, no JavaScript.
 - Mobile menu: a curtain. The panel slides from `translateY(-100%)` to `0`
   in 500ms `ease-soft` and slides back out in 420ms. `hidden`
@@ -173,7 +176,10 @@ regenerate. Do not hand-edit the generated files.
 - Project assets: the card cover lives in
   `src/assets/images/projects/<slug>/cover.webp` (800×800, processed by Astro);
   the media used by the detail markdown lives in `public/images/projects/<slug>/`
-  and is served as-is (screenshots, posters, videos)
+  and is served as-is (screenshots, posters, videos). Videos are 1280px wide,
+  8-second VP9 loops without audio (~0.1–0.7MB each)
+- Open Graph card: `public/images/og-image.jpg` (1200×630), emitted by
+  `Layout.astro` on every page with its dimensions, alt and locale
 
 ## Architecture
 
@@ -231,7 +237,9 @@ Rules:
 - `featured: true` marks projects for the home selection
 - Identity, nav, socials, email and location live in `src/data/site.ts`
 - Each page passes `title` and `description` to `Layout.astro`
-- `site` is set in `astro.config.mjs`; sitemap is generated automatically
+- `site` is set in `astro.config.mjs` and must match the live deployment
+  (currently `https://mecoding-dev.vercel.app`); sitemap is generated
+  automatically
 - No lorem ipsum and no placeholder copy in production
 
 ## Useful Commands

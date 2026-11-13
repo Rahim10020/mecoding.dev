@@ -5,7 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mecoding.dev",
+  // Domaine canonique actuel (déploiement Vercel). Repasser sur
+  // `https://mecoding.dev` quand le DNS du domaine sera branché.
+  site: "https://mecoding-dev.vercel.app",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

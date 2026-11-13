@@ -10,6 +10,8 @@ interface Props {
   description?: string;
   /** Image Open Graph relative à la racine du site. */
   image?: string;
+  /** Texte alternatif de l'image Open Graph. */
+  imageAlt?: string;
   noindex?: boolean;
   /** Le shell (header + footer) est rendu par défaut. La home le compose elle-même. */
   shell?: boolean;
@@ -17,17 +19,22 @@ interface Props {
   headerClass?: string;
 }
 
+/** Carte de partage par défaut : 1200 × 630, servie depuis `public/`. */
+const DEFAULT_OG_IMAGE = "/images/og-image.jpg";
+const DEFAULT_OG_ALT = "Rahim ALI — Web developer and UX/UI designer";
+
 const {
   title = site.title,
   description = site.description,
-  image,
+  image = DEFAULT_OG_IMAGE,
+  imageAlt = DEFAULT_OG_ALT,
   noindex = false,
   shell = true,
   headerClass,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = image ? new URL(image, Astro.site) : undefined;
+const ogImage = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -40,6 +47,7 @@ const ogImage = image ? new URL(image, Astro.site) : undefined;
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={site.author} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -65,18 +73,20 @@ const ogImage = image ? new URL(image, Astro.site) : undefined;
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
 
-    <meta
-      name="twitter:card"
-      content={ogImage ? "summary_large_image" : "summary"}
-    />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
   </head>
 
   <body>

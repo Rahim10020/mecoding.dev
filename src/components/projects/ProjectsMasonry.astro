@@ -37,9 +37,13 @@ const copies = Array.from({ length: COPIES }, (_, copy) => copy);
           aria-hidden={copy === ACTIVE ? undefined : "true"}
           data-masonry-copy
         >
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <li class="break-inside-avoid pb-12">
-              <ProjectCard project={project} interactive={copy === ACTIVE} />
+              <ProjectCard
+                project={project}
+                interactive={copy === ACTIVE}
+                priority={copy === ACTIVE && index === 0}
+              />
             </li>
           ))}
         </ul>

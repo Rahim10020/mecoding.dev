@@ -143,6 +143,40 @@ const { class: className } = Astro.props;
     object-fit: cover;
   }
 
+  /* Bouton play/pause — mobile et connexions lentes ---------------------- */
+  .project-prose .media-video-host {
+    position: relative;
+    max-width: 48rem;
+  }
+
+  .project-prose .media-video-toggle {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    opacity: 0.85;
+    transition: opacity 200ms var(--ease-kelo);
+  }
+
+  .project-prose .media-video-toggle:hover,
+  .project-prose .media-video-toggle:focus-visible {
+    opacity: 1;
+  }
+
+  /* Anneau blanc à l'intérieur du bouton noir : contraste garanti quel que
+     soit le poster affiché dessous. */
+  .project-prose .media-video-toggle:focus-visible {
+    outline-color: var(--color-white);
+    outline-offset: -5px;
+  }
+
   /* Un média seul (image ou vidéo) occupe la largeur du contenu et reste dans
      un cadre 16:9. Les captures verticales sont recadrées depuis le haut :
      l'image ne s'étire plus sur toute sa hauteur. */

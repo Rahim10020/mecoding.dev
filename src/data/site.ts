@@ -19,7 +19,7 @@ const whatsappHref = "https://wa.me/22891796115";
 export const site = {
   /** Wordmark et nom du site. */
   name: "mecoding.dev",
-  url: "https://mecoding.dev",
+  url: "https://mecoding-dev.vercel.app",
   lang: "en",
   locale: "en_US",
 

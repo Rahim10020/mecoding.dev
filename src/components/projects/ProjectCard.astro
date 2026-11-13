@@ -9,9 +9,11 @@ interface Props {
   project: CollectionEntry<"projects">;
   /** La copie accessible rend ses liens focusables ; les copies de boucle non. */
   interactive?: boolean;
+  /** Charge l'image en priorité : réservé au premier média visible. */
+  priority?: boolean;
 }
 
-const { project, interactive = true } = Astro.props;
+const { project, interactive = true, priority = false } = Astro.props;
 const { data } = project;
 
 /** Classes littérales pour que Tailwind génère chaque ratio. */
@@ -44,7 +46,8 @@ const aspect = aspects[data.coverAspect] ?? aspects["1/1"];
         width={800}
         height={800}
         fit="cover"
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchpriority={priority ? "high" : undefined}
         class="h-full w-full object-cover grayscale transition-[filter,transform] duration-600 ease-kelo group-hover:scale-[1.03] group-hover:grayscale-0 group-focus-visible:scale-[1.03] group-focus-visible:grayscale-0 max-md:grayscale-0"
       />
     ) : (

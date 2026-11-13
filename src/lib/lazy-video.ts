@@ -2,13 +2,13 @@
  * Lecture paresseuse des vidéos de projet.
  *
  * Le Markdown pose `preload="none"` et aucun `autoplay` : rien n'est
- * téléchargé tant que `play()` n'est pas appelé. On branche donc la lecture
- * quand la vidéo approche du viewport, et on la met en pause dès qu'elle en
- * sort pour ne pas décoder une vidéo invisible.
+ * téléchargé tant que `play()` n'est pas appelé.
  *
- * La lecture attend aussi la fin du chargement de la page : le poster reste
- * affiché pendant que les ressources critiques se chargent, et la vidéo ne
- * leur dispute pas la bande passante.
+ * Sur mobile et sur les connexions lentes (2G/3G, économiseur de données),
+ * l'autoplay est désactivé : le poster reste affiché et un bouton play/pause
+ * permet de lancer la démo à la demande. Ailleurs, la lecture démarre quand
+ * la vidéo approche du viewport, après le chargement de la page pour ne pas
+ * disputer la bande passante aux ressources critiques.
  */
 
 /** Marge autour du viewport, en pixels. */
@@ -16,14 +16,41 @@ const MARGIN = 300;
 /** Délai maximal avant de lancer la lecture, une fois la page prête. */
 const IDLE_TIMEOUT = 1200;
 
+const PLAY_ICON =
+  '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z" fill="currentColor"/></svg>';
+const PAUSE_ICON =
+  '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
+
+/** API Network Information, non standard et absente de Firefox/Safari. */
+interface NetworkInformation {
+  saveData?: boolean;
+  effectiveType?: string;
+}
+
+/**
+ * Vrai quand la vidéo ne doit pas démarrer toute seule : petit écran,
+ * économiseur de données ou connexion 2G/3G.
+ */
+function isLiteMode(): boolean {
+  if (window.matchMedia("(max-width: 809px)").matches) return true;
+
+  const connection = (
+    navigator as Navigator & { connection?: NetworkInformation }
+  ).connection;
+
+  if (!connection) return false;
+  if (connection.saveData) return true;
+
+  return ["slow-2g", "2g", "3g"].includes(connection.effectiveType ?? "");
+}
+
 export function initLazyVideo(): void {
   const videos = Array.from(
     document.querySelectorAll<HTMLVideoElement>(".media-video"),
   );
   if (!videos.length) return;
 
-  let pageReady = document.readyState === "complete";
-  const pending = new Set<HTMLVideoElement>();
+  const lite = isLiteMode();
 
   const isNearViewport = (video: HTMLVideoElement): boolean => {
     const rect = video.getBoundingClientRect();
@@ -39,33 +66,80 @@ export function initLazyVideo(): void {
     if (attempt) void attempt.catch(() => {});
   };
 
-  const requestPlay = (video: HTMLVideoElement): void => {
-    if (!pageReady) {
-      pending.add(video);
-      return;
-    }
+  /**
+   * Ajoute un bouton play/pause sur le poster. Le parent direct (le `<p>` du
+   * Markdown) devient le repère de positionnement et reprend la largeur d'un
+   * média seul, que `:only-child` ne peut plus détecter à cause du bouton.
+   */
+  const addToggle = (video: HTMLVideoElement): void => {
+    const parent = video.parentElement;
+    if (!parent || parent.querySelector(".media-video-toggle")) return;
 
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(() => play(video), { timeout: IDLE_TIMEOUT });
-    } else {
-      play(video);
-    }
+    parent.classList.add("media-video-host");
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "media-video-toggle";
+    toggle.setAttribute("aria-label", "Play video");
+    toggle.innerHTML = PLAY_ICON;
+
+    const sync = (): void => {
+      const playing = !video.paused && !video.ended;
+      toggle.innerHTML = playing ? PAUSE_ICON : PLAY_ICON;
+      toggle.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+    };
+
+    toggle.addEventListener("click", () => {
+      if (video.paused || video.ended) {
+        play(video);
+      } else {
+        video.pause();
+      }
+    });
+
+    video.addEventListener("play", sync);
+    video.addEventListener("pause", sync);
+    video.addEventListener("ended", sync);
+
+    parent.append(toggle);
   };
 
-  if (!pageReady) {
-    window.addEventListener(
-      "load",
-      () => {
-        pageReady = true;
-        for (const video of pending) play(video);
-        pending.clear();
-      },
-      { once: true },
-    );
+  let requestPlay: (video: HTMLVideoElement) => void = () => {};
+
+  if (lite) {
+    for (const video of videos) addToggle(video);
+  } else {
+    let pageReady = document.readyState === "complete";
+    const pending = new Set<HTMLVideoElement>();
+
+    requestPlay = (video) => {
+      if (!pageReady) {
+        pending.add(video);
+        return;
+      }
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => play(video), { timeout: IDLE_TIMEOUT });
+      } else {
+        play(video);
+      }
+    };
+
+    if (!pageReady) {
+      window.addEventListener(
+        "load",
+        () => {
+          pageReady = true;
+          for (const video of pending) play(video);
+          pending.clear();
+        },
+        { once: true },
+      );
+    }
   }
 
   if (!("IntersectionObserver" in window)) {
-    for (const video of videos) requestPlay(video);
+    if (!lite) for (const video of videos) requestPlay(video);
     return;
   }
 
@@ -75,7 +149,7 @@ export function initLazyVideo(): void {
         const video = entry.target as HTMLVideoElement;
 
         if (entry.isIntersecting) {
-          requestPlay(video);
+          if (!lite) requestPlay(video);
         } else {
           video.pause();
         }
