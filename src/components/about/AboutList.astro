@@ -34,35 +34,33 @@ const titleId = `about-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
       columns === 2 && "sm:grid sm:grid-cols-2 sm:gap-x-stack",
     ]}
   >
-    {
-      entries.map((entry) => (
-        <li>
-          {entry.href ? (
-            <a
-              href={entry.href}
-              {...externalLinkProps(entry.href)}
-              class="group inline-flex items-baseline gap-1 font-semibold text-black-80 transition-colors duration-200 hover:text-black"
-            >
-              <span class="underline-offset-4 group-hover:underline">
-                {entry.name}
-              </span>
-              <ArrowUpRight
-                size={9}
-                class="translate-y-px text-black-80 transition-colors duration-200 group-hover:text-black"
-              />
-            </a>
-          ) : (
-            <span class="font-semibold">{entry.name}</span>
-          )}
-
-          {entry.detail && (
-            <span class="whitespace-nowrap text-black-70">
-              <span aria-hidden="true"> • </span>
-              {entry.detail}
+    {entries.map((entry) => (
+      <li>
+        {entry.href ? (
+          <a
+            href={entry.href}
+            {...externalLinkProps(entry.href)}
+            class="group inline-flex items-baseline gap-1 font-semibold text-black-80 transition-colors duration-200 hover:text-black"
+          >
+            <span class="underline-offset-4 underline lg:no-underline lg:group-hover:underline">
+              {entry.name}
             </span>
-          )}
-        </li>
-      ))
-    }
+            <ArrowUpRight
+              size={9}
+              class="translate-y-px text-black-80 transition-colors duration-200 group-hover:text-black"
+            />
+          </a>
+        ) : (
+          <span class="font-semibold">{entry.name}</span>
+        )}
+
+        {entry.detail && (
+          <span class="whitespace-nowrap text-black-70">
+            <span aria-hidden="true"> • </span>
+            {entry.detail}
+          </span>
+        )}
+      </li>
+    ))}
   </ul>
 </section>
