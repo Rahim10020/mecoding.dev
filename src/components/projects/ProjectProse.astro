@@ -143,28 +143,23 @@ const { class: className } = Astro.props;
     object-fit: cover;
   }
 
-  /* Un média seul (image ou vidéo) occupe la largeur du contenu. Une image
-     garde son ratio naturel : les captures mobiles sont verticales, un
-     cadrage 16:9 les réduirait à une bande. */
+  /* Un média seul (image ou vidéo) occupe la largeur du contenu et reste dans
+     un cadre 16:9. Les captures verticales sont recadrées depuis le haut :
+     l'image ne s'étire plus sur toute sa hauteur. */
   .project-prose p:has(> :is(img, video):only-child) {
     max-width: 48rem;
   }
 
+  .project-prose > img,
   .project-prose p > img:only-child {
     display: block;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    max-width: 48rem;
     height: auto;
+    aspect-ratio: 16 / 9;
     margin-inline: auto;
-    background-color: var(--color-black-5);
-  }
-
-  /* Astro rend les balises `<img>` brutes comme enfants directs du contenu. */
-  .project-prose > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-inline: auto;
+    object-fit: cover;
+    object-position: top;
     background-color: var(--color-black-5);
   }
 

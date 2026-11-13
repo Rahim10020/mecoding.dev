@@ -396,8 +396,8 @@
     "semantic_hash": ""
   },
   "todo.txt": {
-    "mtime": 1794425791.7650907,
-    "seen": 1794520860.8845906,
+    "mtime": 1794527283.4777844,
+    "seen": 1794527974.6176968,
     "ast_hash": "b8721fad83af28aa0d81081825085385",
     "semantic_hash": ""
   },
@@ -750,9 +750,9 @@
     "semantic_hash": ""
   },
   "src/components/projects/ProjectProse.astro": {
-    "mtime": 1794307488.2682602,
-    "seen": 1794307636.8266513,
-    "ast_hash": "a8d5700e3afbfae5e6205f8be1361bb6",
+    "mtime": 1794527733.3357866,
+    "seen": 1794527974.6175852,
+    "ast_hash": "ea038c0c4a86106fbe6f627aeb583998",
     "semantic_hash": ""
   },
   "src/components/projects/ReadingProgress.astro": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "src/lib/lazy-video.ts": {
-    "mtime": 1794520674.6369848,
-    "seen": 1794520860.88453,
-    "ast_hash": "c7ba0dfcb66dcd6e6a7d64b87235fa84",
+    "mtime": 1794521061.4618096,
+    "seen": 1794527974.6176357,
+    "ast_hash": "718d7cdc2b01f7491af7a63520ec3b71",
     "semantic_hash": ""
   },
   "src/data/home.ts": {
